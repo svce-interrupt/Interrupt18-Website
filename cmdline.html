@@ -20,6 +20,7 @@
 				width: 95%;
 				margin: 5% 2.5%;
 				font-size: 130%;
+				white-space: pre;
 			}
 			#terminal-input{
 				width: 0;
@@ -60,7 +61,7 @@
 		/*These following script statements are for the text to be displayed when the page is loaded*/
 		//We display all these strings one by one when the page loads with a slight delay to keep up the illusion of a proper working terminal
 		
-		var typeText="<span style='color: yellow'>Welcome to the Interrupt Command Prompt! <br> Last login: "+Date().substring(0,24)+" on console</span> <br><br>"+
+		var typeText="<span style='color: yellow'>Welcome to the Interrupt Command Prompt! <br>Last login: "+Date().substring(0,24)+" on console</span> <br><br>"+
 		"<span style='color: lightgreen'><span class='underline'>Type or click</span> the commands to see what happens.</span><br><br>";
 
 		var cmdlinks1="<a href='home.html' class='cmd-links'>home</a> <br>"+
@@ -147,9 +148,61 @@
 			if(input=="home"){ //We then compare the input against different inputs. We then append the required output or do the required action.
 				window.location.href="file:///Users/Arjun1001/Documents/Javafiles/HTML%20Files/Interrupt18-Website/home.html";
 			}
-			else if(input=="contact-us"){
-				var outputResult="This feature will be added shortly.<br>"; 
+			else if(input=="registration"){ //For registrations, we display a computer picture followed by the output.
+				var outputResult="<br>.--.<br>"+
+				"|__| .--------.<br>"+
+				"|=.| |.------.|<br>"+
+				"|--| || COMP ||<br>"+
+				"|  | |'------'|<br>"+
+				"|__|~')___-__('<br><br>"+
+				"-bash: Registrations are not open yet. :/<br>";
+				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="contact-us"){ //For the contact cmd, we display a picture of a phone.
+				var outputResult="<br>   _______<br>"+
+				" /` _____ `\\;,<br>"+
+				"/__(^===^)__\\;,<br>"+
+				"  /  :::  \\   ,;<br>"+
+				" |   :::   | ,;'<br>"+
+				" '._______.'`<br><br>"+
+				"-bash: Contact any one of the following in-charges for queries.<br>"+
+				"-bash: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="shipwreck"){ //here, it's a picture of a ship
+				var outputResult="<br>                 __/___<br>"+
+				"           _____/______|<br>"+
+				"   _______/_____\\_______\\_____<br>"+
+				"   \\              < < <       |<br>"+
+				"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br><br>"+
+				"-rules: Character will be given on stage.<br>"+
+				"-rules: Each participant is given a max of 2 mins on stage.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="quiz"){ //For quiz, we output a picture of mickey mouse. Why not?
+				var outputResult="<br>         .-\"\"\"-.<br>"+
+				"        /       \\<br>"+
+				"        \\       /<br>"+
+				" .-\"\"\"-.-`.-.-.<  _<br>"+
+				"/      _,-\\ ()()_/:)<br>"+
+				"\\     / ,  `     `|<br>"+
+				" '-..-| \\-.,___,  /<br>"+
+				"      \\ `-.__/  /<br>"+
+				"       `-.__.-'`<br><br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="clear"){ //For the clear cmd, we clear the screen but add a cursor-blink elem so that the JS doesnt throw an error in line 224. This is because if a JS stmt refers a HTML element which isnt there, then the whole JS execution stops.
+				var outputResult="";
+				
+				document.getElementById("terminal-output").innerHTML="";
+				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
 			}
 			else if(input=="arjun"){
 				window.location.href="http://www.arjunaravind.in";
@@ -161,7 +214,7 @@
 				var outputResult="My bae. <3 <br>";
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else{
+			else{				
 				var outputResult="-bash: "+input+": This is not a recognised command.<br>";
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
