@@ -1,0 +1,237 @@
+<html>
+	<head>
+		<title>Interrupt '18 | Command Prompt</title>
+		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
+		<style>
+			body, html{
+				background-color: black;
+				font-family: "Share Tech Mono", monospace;
+				color: white;
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				width: 95%;
+				margin: 2.5% 2.4%;
+				border: 1px dashed white;
+			}
+			
+			#terminal-output{
+				width: 95%;
+				margin: 5% 2.5%;
+				font-size: 130%;
+			}
+			#terminal-input{
+				width: 0;
+				background-color: black;
+				border: none;
+			}
+			.ter-inp{
+				color: yellow;
+			}
+			.cmd-links{
+				text-decoration: none;
+				color: #B3E5FC;
+				cursor: pointer;
+			}
+			.underline{
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+
+	
+	<body id="terminal">
+		
+		<p id="terminal-output"></p> <!-- This is where all the terminal output is displayed. Pure javascript. -->
+		
+		<input type="text" name="terminal-in" id="terminal-input" autocomplete="off"> <!-- The invisible textfield -->
+
+	</body>
+	
+	<script>
+		document.getElementById("terminal-input").focus(); //We transfer focus to the terminal-textbox after page loads.
+		document.getElementById("terminal").addEventListener("click", function(){
+			document.getElementById("terminal-input").focus();
+		}); //Wherever the user clicks, the focus is on the textbox
+		
+		/*========================================*/
+		/*========================================*/
+		/*These following script statements are for the text to be displayed when the page is loaded*/
+		//We display all these strings one by one when the page loads with a slight delay to keep up the illusion of a proper working terminal
+		
+		var typeText="<span style='color: yellow'>Welcome to the Interrupt Command Prompt! <br> Last login: "+Date().substring(0,24)+" on console</span> <br><br>"+
+		"<span style='color: lightgreen'><span class='underline'>Type or click</span> the commands to see what happens.</span><br><br>";
+
+		var cmdlinks1="<a href='home.html' class='cmd-links'>home</a> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(1)'>registration</span> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(2)'>contact-us</span> <br><br>";
+		
+		var cmdlinks2="<span style='color: lightgreen'><span class='underline'>Type or click</span> the name of the event.</span><br><br>"+
+		"<span class='cmd-links' onclick='setTerminalText(3)'>shipwreck</span> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(4)'>quiz</span> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(5)'>dumbc</span> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(6)'>paper-presentation</span> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(7)'>adzap</span> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(8)'>junk-art</span> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(9)'>fifa</span> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(10)'>robotics</span> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(11)'>drone-racing</span> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(12)'>webdev</span> <br>"+
+		"<br><br>";
+		
+		var dt=Date();
+		
+		var userTerminal="<span style='color: blue;'>("+getDateTime()+") </span><span style='color:orange'>root<span style='color:yellow;''>@</span><span style='color:orange'>interrupt18</span>:~$</span> ";
+		
+		window.setTimeout(function(){
+			document.getElementById("terminal-output").innerHTML+=typeText;
+		}, 500);
+		
+		window.setTimeout(function(){
+			document.getElementById("terminal-output").innerHTML+=cmdlinks1;
+		}, 750);
+		
+		window.setTimeout(function(){
+			document.getElementById("terminal-output").innerHTML+=cmdlinks2;
+		}, 1000);
+		
+		var idNum=1;
+		window.setTimeout(function(){
+			document.getElementById("terminal-output").innerHTML+=userTerminal;
+			document.getElementById("terminal-output").innerHTML+="<span class='ter-inp' id='terminal-form-input"+idNum+"'></span>";
+			document.getElementById("terminal-output").innerHTML+="<span style='width:5%;' id='cursor-blink"+idNum+"'>|</span>";
+			
+			document.getElementById("terminal-input").addEventListener("keyup", addTerminalOutput);
+			window.setInterval(blink,500);
+		}, 1250); //We intro the 'cursor' element here. It's actually a div whose background changes color every second.
+		
+		var blinkNum=0;
+		function blink(){
+			if(blinkNum==0){
+				document.getElementById("cursor-blink"+idNum).style.backgroundColor="white";
+				document.getElementById("cursor-blink"+idNum).style.color="white";
+				blinkNum=1;
+			}
+			else{
+				document.getElementById("cursor-blink"+idNum).style.backgroundColor="black";
+				document.getElementById("cursor-blink"+idNum).style.color="black";
+				blinkNum=0;
+			}
+		} //This is the function which makes sure the cursor element 'blinks'.
+			
+		function getDateTime(){
+			var dt=Date();
+			return dt.substring(16,21);
+		}
+		
+		/*This is where the scripts for the text to be displayed on load ends.*/
+		/*========================================*/
+		/*========================================*/
+		
+		/*========================================*/
+		/*========================================*/
+		/*The function which analyse the input into the textfield and then mirror it into the <p> tag*/
+		
+		function addTerminalOutput(e){
+			var input=document.getElementById("terminal-input").value;
+			document.getElementById("terminal-form-input"+idNum).innerHTML=input;
+			if(e.keyCode==13){
+				analyseInput();
+			}
+		} //This function reads the text which is in the textbox and then mirrors the text in the <span> element in the p tag.
+		
+		function analyseInput(){ //This function analyses the command given and outputs a response. It also creates new 'blink' and 'terminal-form' elem
+			var input=document.getElementById("terminal-input").value; //We get the value in the 'invisible' textfield.
+			
+			if(input=="home"){ //We then compare the input against different inputs. We then append the required output or do the required action.
+				window.location.href="file:///Users/Arjun1001/Documents/Javafiles/HTML%20Files/Interrupt%202K18%20Website/home.html";
+			}
+			else if(input=="contact-us"){
+				var outputResult="This feature will be added shortly.<br>"; 
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="arjun"){
+				window.location.href="http://www.arjunaravind.in";
+			}
+			else if(input=="aravind"){
+				window.location.href="http://www.aravindbalakrishnan.com";
+			}
+			else if(input=="divya"){
+				var outputResult="My bae. <3 <br>";
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else{
+				var outputResult="-bash: "+input+": This is not a recognised command.<br>";
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			
+			//Every command entered requires a new cursor element and a new terminal-form element.
+			//Below, we make sure the previous cursor becomes black so that it is not seen.
+			document.getElementById("cursor-blink"+idNum).style.backgroundColor="black"; 
+			document.getElementById("cursor-blink"+idNum).style.color="black";
+			
+			//We then start to create new cursor and terminal-form elements. 
+			//We then display these newly created elements along with the user-terminal string into the <p> "terminal-output" tag.
+			idNum+=1;
+			var userTerminal1="<span style='color: blue;'>("+getDateTime()+") </span><span style='color:orange'>root<span style='color:yellow;''>@</span><span style='color:orange'>interrupt18</span>:~$</span> ";
+			document.getElementById("terminal-output").innerHTML+=("<br>"+userTerminal1+" <span class='ter-inp' id='terminal-form-input"+idNum+"'></span>");
+			document.getElementById("terminal-output").innerHTML+=("<span style='width:5%;' id='cursor-blink"+idNum+"'>|</span>");
+			document.getElementById("terminal-input").value=""; //We set the value of the invisible textfield to null.
+		}
+		
+		function setTerminalText(num){
+			//When a command is clicked, it calls this function with a particular argument. By using the argument, we then set a value into the invisible textfield. We then call the analyseInput() function which will then analyse to see what is there in the textfield and give the correct output.
+			
+			clearInterval(highlightChange);
+			
+			var str="";
+			
+			if(num==1){
+				str="registration";
+			}
+			else if(num==2){
+				str="contact-us";
+			}
+			else if(num==3){
+				str="shipwreck";
+			}
+			else if(num==4){
+				str="quiz";
+			}
+			else if(num==5){
+				str="dumbc";
+			}
+			else if(num==6){
+				str="paper-presentation";
+			}
+			else if(num==7){
+				str="adzap";
+			}
+			else if(num==8){
+				str="junk-art";
+			}
+			else if(num==9){
+				str="fifa";
+			}
+			else if(num==10){
+				str="robotics";
+			}
+			else if(num==11){
+				str="dracing";
+			}
+			else if(num==12){
+				str="webdev";
+			}
+			
+			document.getElementById("terminal-form-input"+idNum).innerHTML=str;
+			document.getElementById("terminal-input").value=str;
+			analyseInput();
+		} //This function gets the number of the command clicked and then puts it into the input and called the prev func.
+		
+		/*========================================*/
+		/*========================================*/
+		
+	</script>
+
+</html>
