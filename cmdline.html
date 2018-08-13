@@ -145,7 +145,7 @@
 			var input=document.getElementById("terminal-input").value; //We get the value in the 'invisible' textfield.
 			
 			if(input=="home"){ //We then compare the input against different inputs. We then append the required output or do the required action.
-				window.location.href="file:///Users/Arjun1001/Documents/Javafiles/HTML%20Files/Interrupt%202K18%20Website/home.html";
+				window.location.href="file:///Users/Arjun1001/Documents/Javafiles/HTML%20Files/Interrupt18-Website/home.html";
 			}
 			else if(input=="contact-us"){
 				var outputResult="This feature will be added shortly.<br>"; 
@@ -182,8 +182,6 @@
 		
 		function setTerminalText(num){
 			//When a command is clicked, it calls this function with a particular argument. By using the argument, we then set a value into the invisible textfield. We then call the analyseInput() function which will then analyse to see what is there in the textfield and give the correct output.
-			
-			clearInterval(highlightChange);
 			
 			var str="";
 			
