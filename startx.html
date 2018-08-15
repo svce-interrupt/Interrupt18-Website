@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <title>Interrupt '18 | Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <pre><span id="title"> <!-- The title itself. -->
+  _____       _                             _     ___  _   __  ___   
+ |_   _|     | |                           | |   |__ \| | /_ |/ _ \  
+   | |  _ __ | |_ ___ _ __ _ __ _   _ _ __ | |_     ) | | _| | (_) | 
+   | | | '_ \| __/ _ \ '__| '__| | | | '_ \| __|   / /| |/ / |> _ <  
+  _| |_| | | | ||  __/ |  | |  | |_| | |_) | |_   / /_|   <| | (_) | 
+ |_____|_| |_|\__\___|_|  |_|   \__,_| .__/ \__| |____|_|\_\_|\___/  
+                                     | |                             
+                                     |_|                             
+		</span></pre>
+    <p  class="intro-text intro-body" id="intro-about"></p>
+    <!-- The typing effect is done here -->
+    <a href="loading.html" class="home-links">Go Back To Interrupt Command Prompt &crarr;</a>
+    <!-- The buttons on the home page. -->
+    <a id="events" class="home-links red">View events &crarr;</a>
+    <div class="container">
+        <a class="home-links yellow accordion" id="event1">Event 1</a>
+        <div class="panel">
+        	<div class="logo"><img src="img/adidas-black.png"></div>
+            <span class="text"><p>Rules:<ul>
+            	<li>3 persons per team</li>
+            	<li>No cheating</li>
+            	<li>Bring your own laptops</li>
+            </ul>
+        	Contact:<br><ul>
+        		<li>9042034324 (Lorerewr)</li>
+        		<li>53453453455 (Tyrwer)</li>
+        	</ul></p></span>
+        </div>
+        <a class="home-links yellow accordion" id="event2">Event 2</a>
+        <div class="panel">
+        	<div class="logo"><img src="img/adidas-black.png"></div>
+            <span class="text">Lorem ipsum...</span>
+        </div>
+        <a class="home-links yellow accordion" id="event3">Event 3</a>
+        <div class="panel">
+        	<div class="logo"><img src="img/adidas-black.png" style="width: 100px; height: 100px;"></div>
+            <span class="text">Lorem30 ipsum...</span>
+        </div>
+        <a class="home-links yellow accordion" id="event4">Event 4</a>
+        <div class="panel">
+        	<div class="logo"><img src="img/adidas-black.png"></div>
+            <span class="text">Lorem ipsum...</span>
+        </div>
+        <a class="home-links yellow accordion" id="event5">Event 5</a>
+        <div class="panel">
+        	<div class="logo"><img src="img/adidas-black.png"></div>
+            <span class="text">Lorem ipsum...</span>
+        </div>
+        <a class="home-links yellow accordion" id="event6">Event 6</a>
+        <div class="panel">
+        	<div class="logo"><img src="img/adidas-black.png"></div>
+            <span class="text">Lorem ipsum...</span>
+        </div>
+        <a class="home-links yellow accordion" id="event7">Event 7</a>
+        <div class="panel">
+        	<div class="logo"><img src="img/adidas-black.png"></div>
+            <span class="text">Lorem ipsum...</span>
+        </div>
+        <a class="home-links yellow accordion" id="event8">Event 8</a>
+        <div class="panel">
+        	<div class="logo"><img src="img/adidas-black.png"></div>
+            <span class="text">Lorem ipsum...</span>
+        </div>
+        <a class="home-links yellow accordion" id="event9">Event 9</a>
+        <div class="panel">
+        	<div class="logo"><img src="img/adidas-black.png"></div>
+            <span class="text">Lorem ipsum...</span>
+        </div>
+        <a class="home-links yellow accordion" id="event10">Event 10</a>
+        <div class="panel">
+        	<div class="logo"><img src="img/adidas-black.png"></div>
+            <span class="text">Lorem ipsum...</span>
+        </div>
+    </div>
+    </a>
+    <a href="loading.html" class="home-links red">Transport Details &crarr;</a>
+    <a href="sponsors.html" class="home-links red">Our Sponsors &crarr;</a>
+
+    <script src="js/startx.js"></script>
+    <script>
+		var colorNum=1;
+		window.setInterval(colorChange, 1000); //This function calls the colorChange() function every 1 second.
+
+		function colorChange(){
+			if(colorNum==1){
+				document.getElementById("title").style.color="purple";
+				colorNum=2;
+			}
+			else if(colorNum==2){
+				document.getElementById("title").style.color="blue";
+				colorNum=3;
+			}
+			else if(colorNum==3){
+				document.getElementById("title").style.color="green";
+				colorNum=4;
+			}
+			else if(colorNum==4){
+				document.getElementById("title").style.color="yellow";
+				colorNum=5;
+			}
+			else if(colorNum==5){
+				document.getElementById("title").style.color="orange";
+				colorNum=6;
+			}
+			else if(colorNum==6){
+				document.getElementById("title").style.color="red";
+				colorNum=1;
+			}
+		} //This function is used to change the color of the interrupt title every time it is called.
+		</script>
+</body>

@@ -60,6 +60,7 @@ body {
     border: 1px dashed #29B6F6;
     padding: 1% 0%;
     font-size: 120%;
+    cursor: pointer;
 }
 
 .home-links:hover {
@@ -108,3 +109,46 @@ body {
 .underline {
     text-decoration: underline;
 }
+
+/* STARTX - EVENTS */
+
+.container {
+	display: none;
+}
+
+.accordian {
+	text-decoration: none;
+    color: #29B6F6;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 3%;
+    display: block;
+    text-align: center;
+    border: 1px dashed #29B6F6;
+    padding: 1% 0%;
+    font-size: 120%;
+}
+
+.panel {
+    padding: 10px;
+    width: 30%;
+    display: none;
+    margin: 0 auto;
+    background-color: black;
+    overflow: hidden;
+}
+
+img {
+	width: 100px;
+	height: 100px;
+	vertical-align: middle;
+}
+
+.active {
+	display: flex;
+}
+
+.show {
+	display: block;
+}
+
