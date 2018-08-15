@@ -68,6 +68,8 @@
 		"<span class='cmd-links' onclick='setTerminalText(1)'>registration</span> <br>"+
 		"<span class='cmd-links' onclick='setTerminalText(2)'>contact-us</span> <br><br>";
 		
+		
+		//The following strings will have span elems at the end. This is to provide an easy way for us to adjust the space between elements in a row. As of now, the commands (names of events) are arranged in columns of 3 and rows of 3.
 		var cmdlinks2="<span style='color: lightgreen'><span class='underline'>CLICK</span> or TYPE the name of the event.</span><br><br>"+
 		"<span class='cmd-links' onclick='setTerminalText(3)'>Good Will Hunting (10:00AM)</span> <span style='margin-left: 12%;'></span>"+
 		"<span class='cmd-links' onclick='setTerminalText(4)'>The Game Of Codes (10:00AM)</span> <span style='margin-left: 10%;'></span>"+
@@ -146,7 +148,7 @@
 			var input=document.getElementById("terminal-input").value; //We get the value in the 'invisible' textfield.
 			
 			if(input=="home"){ //We then compare the input against different inputs. We then append the required output or do the required action.
-				window.location.href="file:///Users/Arjun1001/Documents/Javafiles/HTML%20Files/Interrupt18-Website/home.html";
+				window.location.href="http://www.arjunaravind.in/interrupt/home.html";
 			}
 			else if(input=="registration"){ //For registrations, we display a computer picture followed by the output.
 				var outputResult="<br>.--.<br>"+
@@ -205,17 +207,7 @@
 				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
 			}
 			else if(input=="run"){
-				window.location.href="file:///Users/Arjun1001/Documents/Javafiles/HTML%20Files/Interrupt18-Website/cmdline.html";
-			}
-			else if(input=="arjun"){
-				window.location.href="http://www.arjunaravind.in";
-			}
-			else if(input=="aravind"){
-				window.location.href="http://www.aravindbalakrishnan.com";
-			}
-			else if(input=="divya"){
-				var outputResult="My bae. <3 <br>";
-				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+				window.location.href="http://www.arjunaravind.in/interrupt/cmdline.html";
 			}
 			else{
 				var outputResult="-bash: "+input+": This is not a recognised command.<br>";
