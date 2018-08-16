@@ -213,8 +213,17 @@
 				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
 			}
 			else if(input=="run"){
-				window.location.href="http://wwww.arjunaravind.in/interrupt/cmdline.html";
+				window.location.href="http://www.arjunaravind.in/interrupt/cmdline.html";
 			}
+			else if(input=="Good Will Hunting"){
+				var outputResult="-event-description: It is a reverse-coding event. It is also a code relay.<br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate."+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input)
 			else{
 				var outputResult="-bash: "+input+": This is not a recognised command.<br>";
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
