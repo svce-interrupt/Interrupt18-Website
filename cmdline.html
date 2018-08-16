@@ -45,7 +45,6 @@
 	<body id="terminal">
 		
 		<p id="terminal-output"></p> <!-- This is where all the terminal output is displayed. Pure javascript. -->
-		
 		<input type="text" name="terminal-in" id="terminal-input" autocomplete="off"> <!-- The invisible textfield -->
 
 	</body>
@@ -56,6 +55,8 @@
 			document.getElementById("terminal-input").focus();
 		}); //Wherever the user clicks, the focus is on the textbox
 		
+		
+		/*========================================*/
 		/*========================================*/
 		/*========================================*/
 		/*These following script statements are for the text to be displayed when the page is loaded*/
@@ -89,15 +90,15 @@
 		
 		window.setTimeout(function(){
 			document.getElementById("terminal-output").innerHTML+=typeText;
-		}, 500);
+		}, 500); //We append the typeText string to the <p> tag
 		
 		window.setTimeout(function(){
 			document.getElementById("terminal-output").innerHTML+=cmdlinks1;
-		}, 750);
+		}, 750); //We append the cmdlinks1 string to the <p> tag
 		
 		window.setTimeout(function(){
 			document.getElementById("terminal-output").innerHTML+=cmdlinks2;
-		}, 1000);
+		}, 1000); //We append the cmdlinks2 string to the <p> tag
 		
 		var idNum=1;
 		window.setTimeout(function(){
@@ -131,7 +132,11 @@
 		/*This is where the scripts for the text to be displayed on load ends.*/
 		/*========================================*/
 		/*========================================*/
+		/*========================================*/
 		
+		
+		
+		/*========================================*/
 		/*========================================*/
 		/*========================================*/
 		/*The function which analyse the input into the textfield and then mirror it into the <p> tag*/
@@ -148,7 +153,7 @@
 			var input=document.getElementById("terminal-input").value; //We get the value in the 'invisible' textfield.
 			
 			if(input=="home"){ //We then compare the input against different inputs. We then append the required output or do the required action.
-				window.location.href="http://www.arjunaravind.in/interrupt/home.html";
+				window.location.href="file:///Users/Arjun1001/Documents/Javafiles/HTML%20Files/Interrupt18-Website/home.html";
 			}
 			else if(input=="registration"){ //For registrations, we display a computer picture followed by the output.
 				var outputResult="<br>.--.<br>"+
@@ -173,18 +178,6 @@
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input=="shipwreck"){ //here, it's a picture of a ship
-				var outputResult="<br>                 __/___<br>"+
-				"           _____/______|<br>"+
-				"   _______/_____\\_______\\_____<br>"+
-				"   \\              < < <       |<br>"+
-				"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br><br>"+
-				"-rules: Character will be given on stage.<br>"+
-				"-rules: Each participant is given a max of 2 mins on stage.<br>"+
-				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
-				
-				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
-			}
 			else if(input=="quiz"){ //For quiz, we output a picture of mickey mouse. Why not?
 				var outputResult="<br>         .-\"\"\"-.<br>"+
 				"        /       \\<br>"+
@@ -200,6 +193,19 @@
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
+			else if(input=="ls"){ //While displaying ls, the page will display a list of available commands. The 'ls' command, when called, clears the screen and then displays available commands.
+				
+				var outputResult="";
+				
+				document.getElementById("terminal-output").innerHTML="";
+				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
+				
+				var outputResult="<br>These are the list of available commands. ";
+				outputResult+="<span style='color: lightgreen'><span class='underline'>CLICK</span> or TYPE these commands.</span> <br><br>";
+				outputResult+=cmdlinks1+cmdlinks2;
+				
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
 			else if(input=="clear"){ //For the clear cmd, we clear the screen but add a cursor-blink elem so that the JS doesnt throw an error in line 224. This is because if a JS stmt refers a HTML element which isnt there, then the whole JS execution stops.
 				var outputResult="";
 				
@@ -207,7 +213,7 @@
 				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
 			}
 			else if(input=="run"){
-				window.location.href="http://www.arjunaravind.in/interrupt/cmdline.html";
+				window.location.href="file:///Users/Arjun1001/Documents/Javafiles/HTML%20Files/Interrupt18-Website/cmdline.html";
 			}
 			else{
 				var outputResult="-bash: "+input+": This is not a recognised command.<br>";
@@ -233,6 +239,7 @@
 			
 			var str="";
 			
+
 			if(num==1){
 				str="registration";
 			}
@@ -240,34 +247,37 @@
 				str="contact-us";
 			}
 			else if(num==3){
-				str="shipwreck";
+				str="Good Will Hunting";
 			}
 			else if(num==4){
-				str="quiz";
+				str="The Game Of Codes";
 			}
 			else if(num==5){
-				str="dumbc";
+				str="The Predestination";
 			}
 			else if(num==6){
-				str="paper-presentation";
+				str="The Digital Fortress";
 			}
 			else if(num==7){
-				str="adzap";
+				str="The Terminal Of Secrets";
 			}
 			else if(num==8){
-				str="junk-art";
+				str="Unicorn of Silicon";
 			}
 			else if(num==9){
-				str="fifa";
+				str="Fish Bowl Conversations";
 			}
 			else if(num==10){
-				str="robotics";
+				str="Quizzerati";
 			}
 			else if(num==11){
-				str="dracing";
+				str="Mini Project";
 			}
 			else if(num==12){
-				str="webdev";
+				str="Presentation Frankenstein";
+			}
+			else if(num==13){
+				str="clear"; //This is there because we need to clear the screen automatically when entering 'ls'.
 			}
 			
 			document.getElementById("terminal-form-input"+idNum).innerHTML=str;
