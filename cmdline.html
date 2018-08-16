@@ -216,16 +216,42 @@
 				window.location.href="http://www.arjunaravind.in/interrupt/cmdline.html";
 			}
 			else if(input=="Good Will Hunting"){
-				var outputResult="-event-description: It is a reverse-coding event. It is also a code relay.<br>"+
+				var drawing="<br><br>   ___________<br>"+
+			         "  |.---------.|<br>"+
+			         "  ||         ||<br>"+
+			         "  ||         ||<br>"+
+			         "  ||         ||<br>"+
+			         "  |'---------'|<br>"+
+			         "   `)__ ____('<br>"+
+			         "   [=== -- o ]--.<br>"+
+			         " __'---------'__ \\<br>"+
+			         "[::::::::::: :::] )<br>"+
+			         " `\"\"'\"\"\"\"\"'\"\"\"\"`/T\\<br>"+
+			         "                \\_/<br><br>";
+				
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
 				"-rules: Maximum of 2 members per team.<br>"+
-				"-rules: Teams will have to register online before they participate."+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
 				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input)
-			else{
-				var outputResult="-bash: "+input+": This is not a recognised command.<br>";
+			else{ //We've put this whole ascii art for the 'command not found' error.
+				var drawing="<br><br> _    _     ___     _    _        _       _<br>"+
+			       "|:|  |:|   /:::\\   |:|  |:|      |  |\\/| | \\ <br>"+
+			       "|:|  |:|  /:/'\\:\\  |:|  |:|      |_ |  | |_/<br>"+
+			       "|:|__|:| |:|   |:| |:|__|:|           _  ___<br>"+
+			       "|::::::| |:|   |:| |::::::|     |\\ | / \\  |<br>"+
+			       "'\"\"\"\"|:| |:|   |:| '\"\"\"\"|:|     | \\| \\_/  |<br>"+
+			       "     |:| |:|   |:|      |:|   _  _            _<br>"+
+			       "     |:| |:\\   |:|      |:|  |_ / \\ | | |\\ | | \\<br>"+
+			       "     |:|  \\:\\_/:/       |:|  |  \\_/ \\_/ | \\| |_/<br>"+
+			       "     |:|   \\:::/        |:|<br>"+
+			       "     '\"'    '\"'         '\"'<br><br>";
+				
+				
+				var outputResult=drawing+"-bash: "+input+": This is not a recognised command.<br>";
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
 			
