@@ -66,7 +66,7 @@
 		"<span style='color: lightgreen'><span class='underline'>CLICK</span> or TYPE the commands to see what happens.</span><br><br>";
 
 		var cmdlinks1="<a href='home.html' class='cmd-links'>home</a> <br>"+
-		"<span class='cmd-links' onclick='setTerminalText(1)'>registration</span> <br>"+
+		"<a href='register.html' class='cmd-links'>register</a> <br>"+
 		"<span class='cmd-links' onclick='setTerminalText(2)'>contact-us</span> <br><br>";
 		
 		
@@ -153,18 +153,10 @@
 			var input=document.getElementById("terminal-input").value; //We get the value in the 'invisible' textfield.
 			
 			if(input=="home"){ //We then compare the input against different inputs. We then append the required output or do the required action.
-				window.location.href="file:///Users/Arjun1001/Documents/Javafiles/HTML%20Files/Interrupt18-Website/home.html";
+				window.location.href="http://www.arjunaravind.in/interrupt/home.html";
 			}
-			else if(input=="registration"){ //For registrations, we display a computer picture followed by the output.
-				var outputResult="<br>.--.<br>"+
-				"|__| .--------.<br>"+
-				"|=.| |.------.|<br>"+
-				"|--| || COMP ||<br>"+
-				"|  | |'------'|<br>"+
-				"|__|~')___-__('<br><br>"+
-				"-bash: Registrations are not open yet. :/<br>";
-				
-				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			else if(input=="register"){ //For registrations, we display a computer picture followed by the output.
+				window.location.href="http://www.arjunaravind.in/interrupt/register.html";
 			}
 			else if(input=="contact-us"){ //For the contact cmd, we display a picture of a phone.
 				var outputResult="<br>   _______<br>"+
@@ -213,7 +205,7 @@
 				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
 			}
 			else if(input=="run"){
-				window.location.href="file:///Users/Arjun1001/Documents/Javafiles/HTML%20Files/Interrupt18-Website/cmdline.html";
+				window.location.href="http://www.arjunaravind.in/interrupt/cmdline.html";
 			}
 			else if(input=="Good Will Hunting"){
 				var drawing="<br><br>   ___________<br>"+
