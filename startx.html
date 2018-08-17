@@ -3,14 +3,123 @@
 <head>
     <title>Interrupt '18 | Startx</title>
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <style>
+    body,
+    html {
+        background-color: black !important;
+        font-family: "Share Tech Mono", monospace;
+        color: white;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        width: 95%;
+        margin: 2.5% 2.4%;
+        border: 1px dashed white;
+    }
+    /* HOME, STARTX*/
+
+    #title {
+        width: 100%;
+        display: block;
+        margin-top: 3%;
+        font-size: 120%;
+        text-align: center;
+        white-space: pre;
+        word-wrap: normal;
+        color: red;
+    }
+
+    .home-links {
+        text-decoration: none;
+        color: #29B6F6;
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 3%;
+        display: block;
+        text-align: center;
+        border: 1px dashed #29B6F6;
+        padding: 1% 0%;
+        font-size: 120%;
+        cursor: pointer;
+    }
+
+    .home-links:hover {
+        color: yellow;
+        border: 1px dashed yellow;
+    }
+
+    .red {
+        margin-top: 1%;
+        color: red;
+        border: 1px dashed red;
+    }
+
+    .yellow {
+        margin-top: 1%;
+        color: yellow;
+        border: 1px dashed yellow;
+    }
+
     .container-fluid {
-        border-style: dotted;
-        border-color: red;
+        display: none;
+        margin: 5%;
+    }
+
+    .panel {
+        padding: 10px;
+        width: 30%;
+        display: none;
+        margin: 0 auto;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        vertical-align: middle;
+    }
+
+    .show {
+        display: block;
+    }
+    /* CARD */
+
+    .card {
+        display: block;
+        border-style: dashed;
+        margin: 15px;
+    }
+
+    .logo {
+        display: inline-block;
+        vertical-align: middle;
+        /*border-style: dashed;*/
+        height: 50%;
+    }
+
+    .text {
+        width: 70%;
+        display: inline-block;
+        /*border-style: dashed;*/
+        text-align: center;
+        vertical-align: middle;
+        word-wrap: break-word;
+    }
+
+    .helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .logo img {
+        vertical-align: middle;
     }
     </style>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
 </head>
 
 <body>
@@ -24,7 +133,6 @@
                                      | |                             
                                      |_|                             
 		</span></pre>
-
     <a href="loading.html" class="home-links">Go Back To Interrupt Command Prompt &crarr;</a>
     <a id="events" class="home-links red">View events &crarr;</a>
     <div class="container-fluid">
@@ -33,7 +141,8 @@
                 <div class="card">
                     <div class="logo">
                         <span class="helper"></span><img src="img/adidas-black.png" alt="">
-                    </div> <!-- logo -->
+                    </div>
+                    <!-- logo -->
                     <div class="text">
                         <h2>Event 1</h2>
                         <p class="card-text">
@@ -50,14 +159,18 @@
                                 <li>53453453455 (Tyrwer)</li>
                             </ul>
                         </p>
-                    </div> <!-- text -->
-                </div> <!-- card -->
-            </div> <!-- col-md-4 -->
+                    </div>
+                    <!-- text -->
+                </div>
+                <!-- card -->
+            </div>
+            <!-- col-md-4 -->
             <div class="col-md-4">
                 <div class="card">
                     <div class="logo">
                         <span class="helper"></span><img src="img/adidas-black.png" alt="">
-                    </div> <!-- logo -->
+                    </div>
+                    <!-- logo -->
                     <div class="text">
                         <h2>Event 1</h2>
                         <p class="card-text">
@@ -74,14 +187,18 @@
                                 <li>53453453455 (Tyrwer)</li>
                             </ul>
                         </p>
-                    </div> <!-- text -->
-                </div> <!-- card -->
-            </div> <!-- col-md-4 -->
+                    </div>
+                    <!-- text -->
+                </div>
+                <!-- card -->
+            </div>
+            <!-- col-md-4 -->
             <div class="col-md-4">
                 <div class="card">
                     <div class="logo">
                         <span class="helper"></span><img src="img/adidas-black.png" alt="">
-                    </div> <!-- logo -->
+                    </div>
+                    <!-- logo -->
                     <div class="text">
                         <h2>Event 1</h2>
                         <p class="card-text">
@@ -98,16 +215,21 @@
                                 <li>53453453455 (Tyrwer)</li>
                             </ul>
                         </p>
-                    </div> <!-- text -->
-                </div> <!-- card -->
-            </div> <!-- col-md-4 -->
-        </div> <!-- row -->
+                    </div>
+                    <!-- text -->
+                </div>
+                <!-- card -->
+            </div>
+            <!-- col-md-4 -->
+        </div>
+        <!-- row -->
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
                     <div class="logo">
                         <span class="helper"></span><img src="img/adidas-black.png" alt="">
-                    </div> <!-- logo -->
+                    </div>
+                    <!-- logo -->
                     <div class="text">
                         <h2>Event 1</h2>
                         <p class="card-text">
@@ -124,14 +246,18 @@
                                 <li>53453453455 (Tyrwer)</li>
                             </ul>
                         </p>
-                    </div> <!-- text -->
-                </div> <!-- card -->
-            </div> <!-- col-md-4 -->
+                    </div>
+                    <!-- text -->
+                </div>
+                <!-- card -->
+            </div>
+            <!-- col-md-4 -->
             <div class="col-md-4">
                 <div class="card">
                     <div class="logo">
                         <span class="helper"></span><img src="img/adidas-black.png" alt="">
-                    </div> <!-- logo -->
+                    </div>
+                    <!-- logo -->
                     <div class="text">
                         <h2>Event 1</h2>
                         <p class="card-text">
@@ -148,14 +274,18 @@
                                 <li>53453453455 (Tyrwer)</li>
                             </ul>
                         </p>
-                    </div> <!-- text -->
-                </div> <!-- card -->
-            </div> <!-- col-md-4 -->
+                    </div>
+                    <!-- text -->
+                </div>
+                <!-- card -->
+            </div>
+            <!-- col-md-4 -->
             <div class="col-md-4">
                 <div class="card">
                     <div class="logo">
                         <span class="helper"></span><img src="img/adidas-black.png" alt="">
-                    </div> <!-- logo -->
+                    </div>
+                    <!-- logo -->
                     <div class="text">
                         <h2>Event 1</h2>
                         <p class="card-text">
@@ -172,16 +302,21 @@
                                 <li>53453453455 (Tyrwer)</li>
                             </ul>
                         </p>
-                    </div> <!-- text -->
-                </div> <!-- card -->
-            </div> <!-- col-md-4 -->
-        </div> <!-- row -->
+                    </div>
+                    <!-- text -->
+                </div>
+                <!-- card -->
+            </div>
+            <!-- col-md-4 -->
+        </div>
+        <!-- row -->
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
                     <div class="logo">
                         <span class="helper"></span><img src="img/adidas-black.png" alt="">
-                    </div> <!-- logo -->
+                    </div>
+                    <!-- logo -->
                     <div class="text">
                         <h2>Event 1</h2>
                         <p class="card-text">
@@ -198,14 +333,18 @@
                                 <li>53453453455 (Tyrwer)</li>
                             </ul>
                         </p>
-                    </div> <!-- text -->
-                </div> <!-- card -->
-            </div> <!-- col-md-4 -->
+                    </div>
+                    <!-- text -->
+                </div>
+                <!-- card -->
+            </div>
+            <!-- col-md-4 -->
             <div class="col-md-4">
                 <div class="card">
                     <div class="logo">
                         <span class="helper"></span><img src="img/adidas-black.png" alt="">
-                    </div> <!-- logo -->
+                    </div>
+                    <!-- logo -->
                     <div class="text">
                         <h2>Event 1</h2>
                         <p class="card-text">
@@ -222,14 +361,18 @@
                                 <li>53453453455 (Tyrwer)</li>
                             </ul>
                         </p>
-                    </div> <!-- text -->
-                </div> <!-- card -->
-            </div> <!-- col-md-4 -->
+                    </div>
+                    <!-- text -->
+                </div>
+                <!-- card -->
+            </div>
+            <!-- col-md-4 -->
             <div class="col-md-4">
                 <div class="card">
                     <div class="logo">
                         <span class="helper"></span><img src="img/adidas-black.png" alt="">
-                    </div> <!-- logo -->
+                    </div>
+                    <!-- logo -->
                     <div class="text">
                         <h2>Event 1</h2>
                         <p class="card-text">
@@ -246,38 +389,46 @@
                                 <li>53453453455 (Tyrwer)</li>
                             </ul>
                         </p>
-                    </div> <!-- text -->
-                </div> <!-- card -->
-            </div> <!-- col-md-4 -->
-        </div> <!-- row -->
+                    </div>
+                    <!-- text -->
+                </div>
+                <!-- card -->
+            </div>
+            <!-- col-md-4 -->
+        </div>
+        <!-- row -->
         <div class="row">
             <div class="col-md-4 offset-md-4">
                 <div class="card">
                     <div class="logo">
                         <span class="helper"></span><img src="img/adidas-black.png" alt="">
-                    </div> <!-- logo -->
+                    </div>
+                    <!-- logo -->
                     <div class="text">
                         <h2>Event 1</h2>
                         <p class="card-text">
-                            <h4>Rules:</h4>
-                                3 persons per team<br>
-                                No cheating<br>
-                                Bring your own laptops <br>
-                            Contact:
+                            <h4>Rules:</h4> 3 persons per team
+                            <br> No cheating
+                            <br> Bring your own laptops
+                            <br> Contact:
                             <br>
                             <ul>
                                 <li>9042034324 (Lorerewr)</li>
                                 <li>53453453455 (Tyrwer)</li>
                             </ul>
                         </p>
-                    </div> <!-- text -->
-                </div> <!-- card -->
-            </div> <!-- col-md-4 -->
-        </div> <!-- row -->
-    </div> <!-- container-fluid -->
+                    </div>
+                    <!-- text -->
+                </div>
+                <!-- card -->
+            </div>
+            <!-- col-md-4 -->
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container-fluid -->
     <a href="#" class="home-links red">Registration &crarr;</a>
     <a href="sponsors.html" class="home-links red">Contact Us &crarr;</a>
-    <script src="js/startx.js"></script>
     <script>
     var colorNum = 1;
     window.setInterval(colorChange, 1000); //This function calls the colorChange() function every 1 second.
@@ -303,5 +454,13 @@
             colorNum = 1;
         }
     } //This function is used to change the color of the interrupt title every time it is called.
+
+    // This function is used to toggle the events container
+    var events = document.getElementById("events");
+
+    events.addEventListener("click", function() {
+        console.log(this.nextElementSibling);
+        this.nextElementSibling.classList.toggle("show");
+    });
     </script>
 </body>
