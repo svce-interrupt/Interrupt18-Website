@@ -117,10 +117,10 @@
 			var input=document.getElementById("terminal-input").value; //We get the value in the 'invisible' textfield.
 			
 			if(input=="home"){ //We then compare the input against different inputs. We then append the required output or do the required action.
-				window.location.href="http://www.arjunaravind.in/interrupt/";
+				window.location.href="../home.html";     //delete the index.html out at deployment
 			}
 			else if(input=="register"){ //For registrations, we display a computer picture followed by the output.
-				window.location.href="http://www.arjunaravind.in/interrupt/register/";
+				window.location.href="../register/index.html";          //delete the index.html out at deployment
 			}
 			else if(input=="contact-us"){ //For the contact cmd, we display a picture of a phone.
 				var outputResult="<br>   _______<br>"+
@@ -169,7 +169,7 @@
 				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
 			}
 			else if(input=="run"){
-				window.location.href="http://www.arjunaravind.in/interrupt/cmd/";
+				window.location.href="";
 			}
 			else if(input=="Good Will Hunting"){
 				var drawing="<br><br>   ___________<br>"+
@@ -192,6 +192,9 @@
 				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if (input=="startx") {
+				window.location.href = "startx.html";
 			}
 			else{ //We've put this whole ascii art for the 'command not found' error.
 				var drawing="<br><br> _    _     ___     _    _        _       _<br>"+
