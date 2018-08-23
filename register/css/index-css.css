@@ -132,3 +132,13 @@ body{
 	border: 1px dashed #EF9A9A;
 	color: #EF9A9A;
 }
+
+.submit-butt{
+	border: none;
+	background-color: black;
+	color: white;
+	border: 1px dashed white;
+	width: 25%;
+	margin-left: 37%;
+	margin-top: 6%;
+}
