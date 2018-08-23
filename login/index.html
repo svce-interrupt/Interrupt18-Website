@@ -1,0 +1,257 @@
+<html>
+	<head>
+		<title>Interrupt '18 | Register</title>
+		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
+		<link href="css/index-css.css" rel="stylesheet">
+	</head>
+
+	
+	<body>
+		
+		
+		<pre><span id="title">
+  _____            _     _             _   _             
+ |  __ \          (_)   | |           | | (_)            
+ | |__) |___  __ _ _ ___| |_ _ __ __ _| |_ _  ___  _ __  
+ |  _  // _ \/ _` | / __| __| '__/ _` | __| |/ _ \| '_ \ 
+ | | \ \  __/ (_| | \__ \ |_| | | (_| | |_| | (_) | | | |
+ |_|  \_\___|\__, |_|___/\__|_|  \__,_|\__|_|\___/|_| |_|
+              __/ |                                      
+             |___/                                       
+		</span></pre>
+		
+		<span id="changeHere">
+			<p class="home-links dark-red" id="login">Login &rarr;</p>
+			<p class="home-links purple below" id="signup">Signup &rarr;</p>
+			<a href="../home.html" class="home-links">Go Back To Home &crarr;</a>
+			<a href="../cmd/loading.html" class="home-links below">Go To Command Prompt &crarr;</a>
+		</span>
+			
+		
+		
+	</body>
+
+
+	<script>
+		
+		var colorNum=1;
+		window.setInterval(colorChange, 1000); //This function calls the colorChange() function every 1 second.
+
+		function colorChange(){
+			if(colorNum==1){
+				document.getElementById("title").style.color="purple";
+				colorNum=2;
+			}
+			else if(colorNum==2){
+				document.getElementById("title").style.color="blue";
+				colorNum=3;
+			}
+			else if(colorNum==3){
+				document.getElementById("title").style.color="green";
+				colorNum=4;
+			}
+			else if(colorNum==4){
+				document.getElementById("title").style.color="yellow";
+				colorNum=5;
+			}
+			else if(colorNum==5){
+				document.getElementById("title").style.color="orange";
+				colorNum=6;
+			}
+			else if(colorNum==6){
+				document.getElementById("title").style.color="red";
+				colorNum=1;
+			}
+		} //This function is used to change the color of the interrupt title every time it is called.
+		
+		document.getElementById("signup").addEventListener("click", function(){
+			
+			var registerHTML="<form id='register-form'>"+
+								"<input type='text' name='nameInput' class='home-links form-input' placeholder='Name'>"+
+								"<input type='number' name='numberInput' class='home-links form-input' placeholder='Number'>"+
+								"<input type='text' name='collegeInput' class='home-links form-input long' placeholder='College Name'><br>"+
+								"<input type='email' name='emailInput' class='home-links form-input end' placeholder='Email'>"+
+								"<input type='password' name='passInput' class='home-links form-input end' placeholder='Password'><br><br>"+
+								
+								"<p class='form-text'>Click on the names of the events that you would like to register for! <span style='width:5%;' id='cursor-blink'>|</span></p>"+
+								
+								"<span class='home-links check blue top' id='check1'>Good Will Hunting</span>"+
+								"<span class='home-links check orange top' id='check2'>The Game Of Codes</span>"+
+								"<span class='home-links check red1 top' id='check3'>Predestination</span>"+
+
+								"<span class='home-links check red1' id='check4'>The Digital Fortress</span>"+
+								"<span class='home-links check blue' id='check5'>The Secret Society</span>"+
+								"<span class='home-links check orange' id='check6'>Unicorn Of Silicon</span>"+
+
+								"<span class='home-links check orange' id='check7'>Fish Bowl Conversation</span>"+
+								"<span class='home-links check red1' id='check8'>Inquizitive</span>"+
+								"<span class='home-links check blue' id='check9'>Mini Project</span>"+
+								"<span class='home-links check red1' id='check10'>Presentation Frankenstein</span>"+
+								
+								"<button type='button' class='home-links submit-butt'>Create Account!</button>"+
+							"</form>";
+			
+			document.getElementById("changeHere").innerHTML=registerHTML;
+			
+			var check1=0;
+			document.getElementById("check1").addEventListener("click", function(){
+				if(check1==0){
+					document.getElementById("check1").style.border="1px dashed yellow";
+					document.getElementById("check1").style.color="yellow";
+					check1=1;
+				}
+				else{
+					document.getElementById("check1").style.border="1px dashed #29b6f6";
+					document.getElementById("check1").style.color="#29b6f6";
+					check1=0;
+				}
+			});
+		
+			var check2=0;
+			document.getElementById("check2").addEventListener("click", function(){
+				if(check2==0){
+					document.getElementById("check2").style.border="1px dashed yellow";
+					document.getElementById("check2").style.color="yellow";
+					check2=1;
+				}
+				else{
+					document.getElementById("check2").style.border="1px dashed #FB8C00";
+					document.getElementById("check2").style.color="#FB8C00";
+					check2=0;
+				}
+			});
+		
+			var check3=0;
+			document.getElementById("check3").addEventListener("click", function(){
+				if(check3==0){
+					document.getElementById("check3").style.border="1px dashed yellow";
+					document.getElementById("check3").style.color="yellow";
+					check3=1;
+				}
+				else{
+					document.getElementById("check3").style.border="1px dashed #EF9A9A";
+					document.getElementById("check3").style.color="#EF9A9A";
+					check3=0;
+				}
+			});
+		
+			var check4=0;
+			document.getElementById("check4").addEventListener("click", function(){
+				if(check4==0){
+					document.getElementById("check4").style.border="1px dashed yellow";
+					document.getElementById("check4").style.color="yellow";
+					check4=1;
+				}
+				else{
+					document.getElementById("check4").style.border="1px dashed #EF9A9A";
+					document.getElementById("check4").style.color="#EF9A9A";
+					check4=0;
+				}
+			});
+		
+			var check5=0;
+			document.getElementById("check5").addEventListener("click", function(){
+				if(check5==0){
+					document.getElementById("check5").style.border="1px dashed yellow";
+					document.getElementById("check5").style.color="yellow";
+					check5=1;
+				}
+				else{
+					document.getElementById("check5").style.border="1px dashed #29b6f6";
+					document.getElementById("check5").style.color="#29b6f6";
+					check5=0;
+				}
+			});
+		
+			var check6=0;
+			document.getElementById("check6").addEventListener("click", function(){
+				if(check6==0){
+					document.getElementById("check6").style.border="1px dashed yellow";
+					document.getElementById("check6").style.color="yellow";
+					check6=1;
+				}
+				else{
+					document.getElementById("check6").style.border="1px dashed #FB8C00";
+					document.getElementById("check6").style.color="#FB8C00";
+					check6=0;
+				}
+			});
+		
+			var check7=0;
+			document.getElementById("check7").addEventListener("click", function(){
+				if(check7==0){
+					document.getElementById("check7").style.border="1px dashed yellow";
+					document.getElementById("check7").style.color="yellow";
+					check7=1;
+				}
+				else{
+					document.getElementById("check7").style.border="1px dashed #FB8C00";
+					document.getElementById("check7").style.color="#FB8C00";
+					check7=0;
+				}
+			});
+		
+			var check8=0;
+			document.getElementById("check8").addEventListener("click", function(){
+				if(check8==0){
+					document.getElementById("check8").style.border="1px dashed yellow";
+					document.getElementById("check8").style.color="yellow";
+					check8=1;
+				}
+				else{
+					document.getElementById("check8").style.border="1px dashed #EF9A9A";
+					document.getElementById("check8").style.color="#EF9A9A";
+					check8=0;
+				}
+			});
+		
+			var check9=0;
+			document.getElementById("check9").addEventListener("click", function(){
+				if(check9==0){
+					document.getElementById("check9").style.border="1px dashed yellow";
+					document.getElementById("check9").style.color="yellow";
+					check9=1;
+				}
+				else{
+					document.getElementById("check9").style.border="1px dashed #29b6f6";
+					document.getElementById("check9").style.color="#29b6f6";
+					check9=0;
+				}
+			});
+		
+			var check10=0;
+			document.getElementById("check10").addEventListener("click", function(){
+				if(check10==0){
+					document.getElementById("check10").style.border="1px dashed yellow";
+					document.getElementById("check10").style.color="yellow";
+					check10=1;
+				}
+				else{
+					document.getElementById("check10").style.border="1px dashed #EF9A9A";
+					document.getElementById("check10").style.color="#EF9A9A";
+					check10=0;
+				}
+			});
+			
+		});
+		
+
+		window.setInterval(blink,500);
+		
+		var blinkNum=0;
+		function blink(){
+			if(blinkNum==0){
+				document.getElementById("cursor-blink").style.backgroundColor="white";
+				document.getElementById("cursor-blink").style.color="white";
+				blinkNum=1;
+			}
+			else{
+				document.getElementById("cursor-blink").style.backgroundColor="black";
+				document.getElementById("cursor-blink").style.color="black";
+				blinkNum=0;
+			}
+		} //This function changed the background of the <span> character from black to white, making the 'cursor' blink.
+		
+	</script>
+
+</html>
