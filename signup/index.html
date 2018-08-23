@@ -31,18 +31,26 @@
 
 				<p class='form-text'>Click on the names of the events that you would like to register for! <span style='width:5%;' id='cursor-blink'>|</span></p>
 
-				<span class='home-links check blue top' id='check1'>Good Will Hunting</span>
-				<span class='home-links check orange top' id='check2'>The Game Of Codes</span>
-				<span class='home-links check red1 top' id='check3'>Predestination</span>
-
-				<span class='home-links check red1' id='check4'>The Digital Fortress</span>
-				<span class='home-links check blue' id='check5'>The Secret Society</span>
-				<span class='home-links check orange' id='check6'>Unicorn Of Silicon</span>
-
-				<span class='home-links check orange' id='check7'>Fish Bowl Conversation</span>
-				<span class='home-links check red1' id='check8'>Inquizitive</span>
-				<span class='home-links check blue' id='check9'>Mini Project</span>
-				<span class='home-links check red1' id='check10'>Presentation Frankenstein</span>
+				<input type="hidden" id="input1" name="event_sel" value="0">
+					<span class='home-links check blue top' id='check1'>Good Will Hunting</span>
+				<input type="hidden" id="input2" name="event_sel" value="0">
+					<span class='home-links check orange top' id='check2'>The Game Of Codes</span>
+				<input type="hidden" id="input3" name="event_sel" value="0">
+					<span class='home-links check red1 top' id='check3'>Predestination</span>
+				<input type="hidden" id="input4" name="event_sel" value="0">
+					<span class='home-links check red1' id='check4'>The Digital Fortress</span>
+				<input type="hidden" id="input5" name="event_sel" value="0">
+					<span class='home-links check blue' id='check5'>The Secret Society</span>
+				<input type="hidden" id="input6" name="event_sel" value="0">
+					<span class='home-links check orange' id='check6'>Unicorn Of Silicon</span>
+				<input type="hidden" id="input7" name="event_sel" value="0">
+					<span class='home-links check orange' id='check7'>Fish Bowl Conversation</span>
+				<input type="hidden" id="input8" name="event_sel" value="0">
+					<span class='home-links check red1' id='check8'>Inquizitive</span>
+				<input type="hidden" id="input9" name="event_sel" value="0">
+					<span class='home-links check blue' id='check9'>Mini Project</span>
+				<input type="hidden" id="input10" name="event_sel" value="0">
+					<span class='home-links check red1' id='check10'>Presentation Frankenstein</span>
 
 				<button type='button' class='home-links submit-butt'>Create Account!</button>
 			</form>
@@ -50,7 +58,7 @@
 		</span>
 		
 	</body>
-	
+	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script>
 		var check1=0;
 		document.getElementById("check1").addEventListener("click", function(){
@@ -192,5 +200,17 @@
 			}
 		});
 	</script>
-		
+	<script>
+		$('.check').click(function() {
+			var $input = $('#' + this.id).prev();
+
+			if ($input.val() == 0) {
+				$input.val('1');
+			} else {
+				$input.val('0');
+			}
+			
+			console.log($("#" + this.id).prev().val());
+		});
+	</script>
 </html>
