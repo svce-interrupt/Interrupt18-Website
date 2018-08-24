@@ -53,10 +53,10 @@ if (!$connect) {
 
     }
 
-    // else{
-    // 	header('Location: index.html?signup=invalid');
+    else{
+    	header('Location: index.html?signup=invalid');
 
-    // }
+    }
 
 
 //a function to validate email address
