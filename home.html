@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Interrupt '18 | Home</title>
-		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
 		<link href="css/home-css.css" rel="stylesheet">
 	</head>
 
@@ -65,17 +65,17 @@
 		var typeText="Interrupt is a national-level symposium conducted by the students of the Computer Science department of SVCE, Sri Perumbudur. It has been conducted continously for the past 25 years. Interrupt is meant to be a platform on which budding engineers can showcase their talent and ideas. This year's edition will have 15+ events with exciting prizes! Do turn up! [["+
 			"Venue: Sri Venkateswara College of Engineering ["+
 			"Date: 5th September, 2018 ["+
-			"Time: 9:00 AM - 3:00PM [";
+			"Time: 9:00 AM - 3:00PM  ";
 			
 					
 		var typeTextLen=typeText.length;
-		
+
 		function typewrite(){
 			if(typeNum!=(typeTextLen-1)){
 				if(typeText[typeNum]!='['){
 					document.getElementById("intro-about").innerHTML+=typeText[typeNum];
 				}
-				else{
+				else if(typeText[typeNum]=='['){
 					document.getElementById("intro-about").innerHTML+="<br>";
 				}
 				typeNum+=1;
