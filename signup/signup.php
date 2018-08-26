@@ -1,8 +1,8 @@
 <?php
 
 $dbservername="localhost";
-$dbusername= "root";
-$dbpassword="";
+$dbusername= "arjun1098";
+$dbpassword="Superman123!";
 $dbname="register";
 
 $connect=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
@@ -44,7 +44,7 @@ if (!$connect) {
 
 	//sql cmd fr querying 
 
-	$sql="INSERT INTO users (mobileNo,password,college,name,email) VALUES ('$mobile', '$password','$college','$name','$email');INSERT INTO events (mobileNo,GoodWillHunting,TheGameOfCodes,Predestination,TheDigitalFortress,TheSecretSociety,UnicornOfSilicon,FishBowlConversation,Inquizitive,MiniProject,PresentationFrankenstein) VALUES ('$mobile','$GoodWillHunting','$TheGameOfCodes','$Predestination','$TheDigitalFortress','$TheSecretSociety','$UnicornOfSilicon','$FishBowlConversation','$Inquizitive','$MiniProject','$PresentationFrankenstein');";
+	$sql="INSERT INTO users (mobileNo,password,college,name,email) VALUES ('$mobile', '$password','$college','$name','$email'); INSERT INTO events (mobileNo,GoodWillHunting,TheGameOfCodes,Predestination,TheDigitalFortress,TheSecretSociety,UnicornOfSilicon,FishBowlConversation,Inquizitive,MiniProject,PresentationFrankenstein) VALUES ('$mobile','$GoodWillHunting','$TheGameOfCodes','$Predestination','$TheDigitalFortress','$TheSecretSociety','$UnicornOfSilicon','$FishBowlConversation','$Inquizitive','$MiniProject','$PresentationFrankenstein');";
 
  	//sending those queries to db
 
