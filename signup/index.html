@@ -250,7 +250,6 @@
 					if(checkEmailUsername(username)==false || checkDomain(domain)==false){
 						return false;
 					}
-					
 					return true;
 				}
 				i+=1;
@@ -259,29 +258,28 @@
 		}
 
 		function checkEmailUsername(str){
-                        var len=str.length;
-                        var i=0;
+            var len=str.length;
+            var i=0;
 
-                        while(i<len){ //The else-if statements are ordered in terms of frequency to make this block more efficient while comparing
-                        	if(str[i]>='a' && str[i]<='z'){
-                                	//We do nothing
-                                }
-                                else if(str[i]>='0' && str[i]<='9'){
-                                	//We do nothing
-                                }
-                                else if(str[i]=='.' || str[i]=='_'){
-                                       	//We do nothing
-                                }
-                                else if(str[i]>='A' && str[i]<='Z'){
-                                       	//We do nothing
-                                }
-                                else{
-                                  	return false;
-				                                
+            while(i<len){ //The else-if statements are ordered in terms of frequency to make this block more efficient while comparing
+            	if(str[i]>='a' && str[i]<='z'){
+                	//We do nothing
+                }
+                else if(str[i]>='0' && str[i]<='9'){
+                	//We do nothing
+                }
+                else if(str[i]=='.' || str[i]=='_'){
+                       	//We do nothing
+                }
+                else if(str[i]>='A' && str[i]<='Z'){
+                       	//We do nothing
+                }
+                else{
+                  	return false;
+			                                
 				}
 				i+=1;
 			}
-			
 			return true;
 		}
 
@@ -309,7 +307,7 @@
 		/* The functions end here. */
 
 		/* This functions are for other input forms */
-		function checkMobileNumber(number){
+		function checkMobileNumber(number){ //This function checks if the number is a valid mobile number
 			var len=number.length;
 			var i=0;
 
@@ -329,7 +327,28 @@
 
 			return false;	
 		}
-
+		
+		function checkIfNumberUnique(number){ //This function checks if the number has already been used
+			var xmlhttp = new XMLHttpRequest();
+	        xmlhttp.onreadystatechange = function() {
+	            if (this.readyState == 4 && this.status == 200) {
+					var result=this.responseText;
+					printMess(this.responseText);
+	            }
+				else{
+					alert(this.status);
+				}
+	        };
+	        xmlhttp.open("GET", "http://www.arjunaravind.in/interrupt/signup/uniqueNumber.php?number="+number, true);
+	        xmlhttp.send();
+		}
+		
+		checkIfNumberUnique("8939227285");
+		
+		function printMess(str){
+			alert(str+"");
+		}
+		
 	</script>
 	<script>
 		$('.check').click(function() {
