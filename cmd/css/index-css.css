@@ -32,4 +32,6 @@ body{
 }
 .underline{
 	text-decoration: underline;
+	font-size: 130%;
+	color: yellow;
 }
