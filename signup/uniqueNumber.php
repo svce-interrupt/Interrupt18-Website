@@ -5,7 +5,7 @@
     $password="Superman123!";
     $dbname="INTERRUPT";
 
-	$number=$_REQUEST['number'];
+	$number= $_REQUEST['number'];
 	$sql_stmt="SELECT mobileNo FROM users WHERE mobileNo='$number';";
 	
 	try{
