@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Interrupt '18 | Events</title>
+		<title>Interrupt '18 | Registered Events</title>
 		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
 		<style>
 			body, html{
@@ -60,8 +60,15 @@
 			}
 			.below{
 				margin-top: 1%;
+				margin-left: 37%;
 			}
-			
+			.save{
+				color: red;
+				border: 1px dashed red;
+				margin-top: 6%;
+				margin-left: 37%;
+				background-color: transparent;
+			}
 			
 			#register-form{
 				margin-top: 3%;
@@ -159,7 +166,7 @@
 			
 		<form id='register-form' method="post" action="">	
 			
-			<p class='form-text'>Click on the names of the events that you would like to register for! <span style='width:5%;' id='cursor-blink'>|</span></p>
+			<p class='form-text'>The highlighted ones are events you've already registered for! If you'd like to register for more events click on them, and click on the highlighted events again to register from the respected event! <span style='width:5%;' </span></p>
 
 			<input type="hidden" id="input1" name="event1" value="0">
 			<span class='home-links check blue top' id='check1'>Good Will Hunting</span>
@@ -190,12 +197,15 @@
 			
 			<input type="hidden" id="input10" name="event10" value="0">
 			<span class='home-links check red1' id='check10'>Presentation Frankenstein</span>
+			
+			<button type='button' onclick="window.location.href='events.html'" class='home-links save'>Save</button>
 
-			<button type='submit' class='home-links submit-butt'>Create Account!</button>
+			
 		</form>
-									<a href="../home.html" class="home-links">Go Back To Home &crarr;</a>
-									<a href="../cmd/loading.html" class="home-links below">Go To Command Prompt &crarr;</a>
 									
+									<a href="../home.html" class="home-links below">Go Back To Home &crarr;</a>
+									<a href="../cmd/loading.html" class="home-links below">Go To Command Prompt &crarr;</a>
+								
 									
 		
 	</body>
