@@ -69,6 +69,11 @@
 	</body>
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script>
+
+		/*===================================================================*/
+		/* Functions for selecting and un-selecting the checkboxes for events */
+		/*=================================================================== */
+
 		var check1=0;
 		document.getElementById("check1").addEventListener("click", function(){
 			if(check1==0){
@@ -226,7 +231,104 @@
 		} //This function changed the background of the <span> character from black to white, making the 'cursor' blink.
 
 		
-		
+		/* The things that we need are a function to check email validity, mobile number validity, etc. We need to display the errors on the same page */
+
+		/*=============================*/
+		/* Functions for form-checking */
+		/*=============================*/
+
+		/* These are functions for checking if the email is valid or not. */
+		function checkEmail(email){
+			var len=email.length;
+			var i=0;
+	
+			while(i<len){
+				if(email[i]=='@'){ //If an @ is encountered, then we must check the string before it and the string after it
+					var username=email.substring(0,i);
+					var domain=email.substring(i+1,len);
+
+					if(checkEmailUsername(username)==false || checkDomain(domain)==false){
+						return false;
+					}
+					
+					return true;
+				}
+				i+=1;
+			}
+			return false;
+		}
+
+		function checkEmailUsername(str){
+                        var len=str.length;
+                        var i=0;
+
+                        while(i<len){ //The else-if statements are ordered in terms of frequency to make this block more efficient while comparing
+                        	if(str[i]>='a' && str[i]<='z'){
+                                	//We do nothing
+                                }
+                                else if(str[i]>='0' && str[i]<='9'){
+                                	//We do nothing
+                                }
+                                else if(str[i]=='.' || str[i]=='_'){
+                                       	//We do nothing
+                                }
+                                else if(str[i]>='A' && str[i]<='Z'){
+                                       	//We do nothing
+                                }
+                                else{
+                                  	return false;
+				                                
+				}
+				i+=1;
+			}
+			
+			return true;
+		}
+
+		function checkDomain(str){
+			var len=str.length;
+			var i=0;
+			var dotIsThere=0;
+			
+			while(i<len){
+				if(str[i]>='0' && str[i]<='9'){
+					return false;
+				}
+				else if(str[i]=='.'){
+					dotIsThere=1;
+				}
+				i+=1;
+			}
+
+			if(dotIsThere==1){
+				return true;
+			}
+			
+			return false;
+		}
+		/* The functions end here. */
+
+		/* This functions are for other input forms */
+		function checkMobileNumber(number){
+			var len=number.length;
+			var i=0;
+
+			while(i<len){
+				if(number[i]>='0' && number[i]<='9'){
+					//We do nothing
+				}
+				else{
+					return false;
+				}
+				i+=1;
+			}
+
+			if(len==10){
+				return true;
+			}
+
+			return false;	
+		}
 
 	</script>
 	<script>
