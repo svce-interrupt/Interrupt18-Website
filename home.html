@@ -59,16 +59,19 @@
 			}
 		} //This function is used to change the color of the interrupt title every time it is called.
 		
-		var typeNum=0;
-		var typeChange=window.setInterval(typewrite, 1);
 		
-		var typeText="Interrupt is a national-level symposium conducted by the students of the Computer Science department of SVCE, Sri Perumbudur. It has been conducted continously for the past 25 years. Interrupt is meant to be a platform on which budding engineers can showcase their talent and ideas. This year's edition will have 15+ events with exciting prizes! Do turn up! [["+
-			"Venue: Sri Venkateswara College of Engineering ["+
+		//The following functions and variables are for the 'typing' effect that is found on the main page.
+		var typeNum=0;
+		var typeChange=window.setInterval(typewrite, 30);
+		
+		var bodyText="Interrupt is a national-level symposium conducted by the students of the Computer Science department of SVCE, Sri Perumbudur. It has been conducted continously for the past 25 years. Interrupt is meant to be a platform on which budding engineers can showcase their talent and ideas. This year's edition will have 15+ events with exciting prizes! Do turn up! <br><br>";
+		var typeText="Venue: Sri Venkateswara College of Engineering ["+
 			"Date: 5th September, 2018 ["+
 			"Time: 9:00 AM - 3:00PM  ";
 			
 					
 		var typeTextLen=typeText.length;
+		document.getElementById("intro-about").innerHTML=bodyText;
 
 		function typewrite(){
 			if(typeNum!=(typeTextLen-1)){
