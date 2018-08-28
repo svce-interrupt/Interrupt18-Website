@@ -30,8 +30,11 @@ body{
 	color: #B3E5FC;
 	cursor: pointer;
 }
+.cmd-links:hover{
+	text-decoration: underline;
+}
 .underline{
 	text-decoration: underline;
-	font-size: 130%;
+	font-size: 120%;
 	color: yellow;
 }

@@ -149,25 +149,25 @@
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input=="ls"){ //While displaying ls, the page will display a list of available commands. The 'ls' command, when called, clears the screen and then displays available commands.
+			else if(input=="ls" || input=="clear"){ //While displaying ls, the page will display a list of available commands. The 'ls' command, when called, clears the screen and then displays available commands. For now, the ls command and the clear commands will do the same thing. They will clear the screen and show the available commands.
 				
 				var outputResult="";
 				
 				document.getElementById("terminal-output").innerHTML="";
 				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
 				
-				var outputResult="<br>These are the list of available commands. ";
+				var outputResult="";
 				outputResult+="<span style='color: lightgreen'><span class='underline'>CLICK</span> or TYPE these commands.</span> <br><br>";
 				outputResult+=cmdlinks1+cmdlinks2;
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input=="clear"){ //For the clear cmd, we clear the screen but add a cursor-blink elem so that the JS doesnt throw an error in line 224. This is because if a JS stmt refers a HTML element which isnt there, then the whole JS execution stops.
+			/*else if(input=="clear"){ //For the clear cmd, we clear the screen but add a cursor-blink elem so that the JS doesnt throw an error in line 224. This is because if a JS stmt refers a HTML element which isnt there, then the whole JS execution stops.
 				var outputResult="";
 				
 				document.getElementById("terminal-output").innerHTML="";
 				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
-			}
+			}*/
 			else if(input=="run"){
 				window.location.href="";
 			}
