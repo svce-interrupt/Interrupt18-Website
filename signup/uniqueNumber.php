@@ -14,12 +14,17 @@
 		
 		$sql=$conn->query($sql_stmt);
 	 	$results = $sql->fetchAll(PDO::FETCH_ASSOC);
+		$ifThere=0;
 		
-		if($results){
-			return "1";
+		foreach($results as $row){
+			if($row['mobileNo']==$number){
+				echo "true";
+				$ifThere=1;
+			}
 		}
-		else{
-			return "0";
+		
+		if($ifThere==0){
+			echo "false";
 		}
 	} catch (PDOException $e){
 		echo "<br>";

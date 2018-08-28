@@ -327,26 +327,16 @@
 
 			return false;	
 		}
-		
-		function checkIfNumberUnique(number){ //This function checks if the number has already been used
+
+		function checkIfNumberUnique(num1){ //This function checks if the number has already been used. Returns true if already there, false if not
 			var xmlhttp = new XMLHttpRequest();
-	        xmlhttp.onreadystatechange = function() {
-	            if (this.readyState == 4 && this.status == 200) {
+	       	xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
 					var result=this.responseText;
-					printMess(this.responseText);
-	            }
-				else{
-					alert(this.status);
 				}
-	        };
-	        xmlhttp.open("GET", "http://www.arjunaravind.in/interrupt/signup/uniqueNumber.php?number="+number, true);
+			};
+	        xmlhttp.open("GET", "uniqueNumber.php?number="+num1, true);
 	        xmlhttp.send();
-		}
-		
-		checkIfNumberUnique("8939227285");
-		
-		function printMess(str){
-			alert(str+"");
 		}
 		
 	</script>
@@ -363,6 +353,4 @@
 			console.log($("#" + this.id).prev().val());
 		});
 	</script>
-</html>
-		
 </html>
