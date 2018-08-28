@@ -1,4 +1,6 @@
+<?php session_start(); ?>
 <html>
+	
 	<head>
 		<title>Interrupt '18 | Registered Events</title>
 		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
@@ -161,14 +163,14 @@
 		</span></pre>
 	
 			
-		<form id='register-form'>	
+		<form id='register-form' action="eventsdirect.php" method='post'>	
 			
 			<p class='form-text'>The highlighted ones are events you've already registered for! If you'd like to register for more events click on them, and click on the highlighted events again to register from the respected event! <span style='width:5%;' </span></p>
 
-			<input type="hidden" id="input1" name="event1" value="0">
+			<input type="hidden" id="input1" name='event1'>
 			<span class='home-links check blue top' id='check1'>Good Will Hunting</span>
 			
-			<input type="hidden" id="input2" name="event2" value="0">
+			<input type="hidden" id="input2" name='event2'>
 			<span class='home-links check orange top' id='check2'>The Game Of Codes</span>
 			
 			<input type="hidden" id="input3" name="event3" value="0">
@@ -195,7 +197,7 @@
 			<input type="hidden" id="input10" name="event10" value="0">
 			<span class='home-links check red1' id='check10'>Presentation Frankenstein</span>
 			
-			<input type='submit' value="Save" class='home-links save'>
+			<input type='submit' name='submit' value="Save" class='home-links save'>
 
 			
 		</form>
@@ -242,41 +244,125 @@
 		
 		
 			
-			document.getElementById("changeHere").innerHTML=registerHTML;
+			// document.getElementById("changeHere").innerHTML=registerHTML;
+			// console.log(mob);
+
+			// var events = document.getElementByClass("check");
 			
-			var check1=<?php echovar("GoodWillHunting"); ?>;
+			var check1=<?php echo $_SESSION['ev'][0] ?>;
+
+			var check2=<?php echo $_SESSION['ev'][1] ?>;
+
+			var check3=<?php echo $_SESSION['ev'][2] ?>;
+
+			var check4=<?php echo $_SESSION['ev'][3] ?>;
+
+			var check5=<?php echo $_SESSION['ev'][4] ?>;
+
+			var check6=<?php echo $_SESSION['ev'][5] ?>;
+
+			var check7=<?php echo $_SESSION['ev'][6]?>;
+
+			var check8=<?php echo $_SESSION['ev'][7]?>;
+
+			var check9=<?php echo $_SESSION['ev'][8]?>;
+
+			var check10=<?php echo $_SESSION['ev'][9] ?>;
+
+			if (check1 == 1) {
+				document.getElementById("check1").style.border="1px dashed yellow";
+				document.getElementById("check1").style.color="yellow";
+			}
+
+			if (check2 == 1) {
+				document.getElementById("check2").style.border="1px dashed yellow";
+				document.getElementById("check2").style.color="yellow";
+			}
+
+			if (check3 == 1) {
+				document.getElementById("check3").style.border="1px dashed yellow";
+				document.getElementById("check3").style.color="yellow";
+			}
+
+			if (check4 == 1) {
+				document.getElementById("check4").style.border="1px dashed yellow";
+				document.getElementById("check4").style.color="yellow";
+			}
+
+			if (check5 == 1) {
+				document.getElementById("check5").style.border="1px dashed yellow";
+				document.getElementById("check5").style.color="yellow";
+			}
+
+			if (check6 == 1) {
+				document.getElementById("check6").style.border="1px dashed yellow";
+				document.getElementById("check6").style.color="yellow";
+			}
+
+			if (check7 == 1) {
+				document.getElementById("check7").style.border="1px dashed yellow";
+				document.getElementById("check7").style.color="yellow";
+			}
+
+			if (check8 == 1) {
+				document.getElementById("check8").style.border="1px dashed yellow";
+				document.getElementById("check8").style.color="yellow";
+			}
+
+			if (check9 == 1) {
+				document.getElementById("check9").style.border="1px dashed yellow";
+				document.getElementById("check9").style.color="yellow";
+			}
+
+			if (check10 == 1) {
+				document.getElementById("check10").style.border="1px dashed yellow";
+				document.getElementById("check10").style.color="yellow";
+			}
+
+			
+
+
+				// <?php 
+
+				// 	for ( $i = 1; $i <= 10; $i++) {
+				// 		echo "$_SESSION['ev$i']";
+				// 	}
+				// ?>
+			
+			var check1=<?php echo $_SESSION['ev'][0] ?>;
 			console.log(check1);
 			document.getElementById("check1").addEventListener("click", function(){
-				console.log(check1);
 				if(check1==0){
-					console.log("Entered check1 0");
+					
 					document.getElementById("check1").style.border="1px dashed yellow";
 					document.getElementById("check1").style.color="yellow";
 					check1=1;
 				}
 				else{
-					console.log("Entered check1 1");
+					
 					document.getElementById("check1").style.border="1px dashed #29b6f6";
 					document.getElementById("check1").style.color="#29b6f6";
 					check1=0;
 				}
 			});
 		
-			var check2=echovar("GameOfCodes");
+			var check2=<?php echo $_SESSION['ev'][1] ?>;
 			document.getElementById("check2").addEventListener("click", function(){
 				if(check2==0){
+					console.log("Entered check1 0");
 					document.getElementById("check2").style.border="1px dashed yellow";
 					document.getElementById("check2").style.color="yellow";
 					check2=1;
 				}
 				else{
+					console.log("Entered check1 1");
 					document.getElementById("check2").style.border="1px dashed #FB8C00";
 					document.getElementById("check2").style.color="#FB8C00";
 					check2=0;
 				}
 			});
 		
-			var check3=echovar("Predestination");
+			var check3=<?php echo $_SESSION['ev'][2] ?>;
 			document.getElementById("check3").addEventListener("click", function(){
 				if(check3==0){
 					document.getElementById("check3").style.border="1px dashed yellow";
@@ -289,8 +375,8 @@
 					check3=0;
 				}
 			});
-		
-			var check4=echovar("TheDigitalFortress");
+	
+			var check4=<?php echo $_SESSION['ev'][3] ?>;
 			document.getElementById("check4").addEventListener("click", function(){
 				if(check4==0){
 					document.getElementById("check4").style.border="1px dashed yellow";
@@ -304,7 +390,7 @@
 				}
 			});
 		
-			var check5=echovar("TheSecretSociety");
+			var check5=<?php echo $_SESSION['ev'][4] ?>;
 			document.getElementById("check5").addEventListener("click", function(){
 				if(check5==0){
 					document.getElementById("check5").style.border="1px dashed yellow";
@@ -315,11 +401,12 @@
 					document.getElementById("check5").style.border="1px dashed #29b6f6";
 					document.getElementById("check5").style.color="#29b6f6";
 					check5=0;
+			
 				}
 			});
-		
-			var check6=0;
-			document.getElementById("UnicornOfSilicon").addEventListener("click", function(){
+							
+			var check6=<?php echo $_SESSION['ev'][5] ?>;
+			document.getElementById("check6").addEventListener("click", function(){
 				if(check6==0){
 					document.getElementById("check6").style.border="1px dashed yellow";
 					document.getElementById("check6").style.color="yellow";
@@ -332,8 +419,8 @@
 				}
 			});
 		
-			var check7=0;
-			document.getElementById("FishBowlConversation").addEventListener("click", function(){
+			var check7=<?php echo $_SESSION['ev'][6] ?>;
+			document.getElementById("check7").addEventListener("click", function(){
 				if(check7==0){
 					document.getElementById("check7").style.border="1px dashed yellow";
 					document.getElementById("check7").style.color="yellow";
@@ -346,8 +433,8 @@
 				}
 			});
 		
-			var check8=0;
-			document.getElementById("Inquizitive").addEventListener("click", function(){
+			var check8=<?php echo $_SESSION['ev'][7] ?>;
+			document.getElementById("check8").addEventListener("click", function(){
 				if(check8==0){
 					document.getElementById("check8").style.border="1px dashed yellow";
 					document.getElementById("check8").style.color="yellow";
@@ -360,8 +447,8 @@
 				}
 			});
 		
-			var check9=0;
-			document.getElementById("MiniProject").addEventListener("click", function(){
+			var check9=<?php echo $_SESSION['ev'][8] ?>;
+			document.getElementById("check9").addEventListener("click", function(){
 				if(check9==0){
 					document.getElementById("check9").style.border="1px dashed yellow";
 					document.getElementById("check9").style.color="yellow";
@@ -374,8 +461,8 @@
 				}
 			});
 		
-			var check10=0;
-			document.getElementById("PresentationFrankenstein").addEventListener("click", function(){
+			var check10=<?php echo $_SESSION['ev'][9] ?>;
+			document.getElementById("check10").addEventListener("click", function(){
 				if(check10==0){
 					document.getElementById("check10").style.border="1px dashed yellow";
 					document.getElementById("check10").style.color="yellow";
