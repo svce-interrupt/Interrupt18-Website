@@ -24,9 +24,9 @@
 			
 			<form id='register-form' method="post" action="signup.php">
 				<input type='text' name='nameInput' class='home-links form-input' placeholder='Name'>
-				<input type='number' name='numberInput' class='home-links form-input' placeholder='Number'>
+				<input type='number' name='numberInput' class='home-links form-input' id='account-number' placeholder='Number'>
 				<input type='text' name='collegeInput' class='home-links form-input long' placeholder='College Name'><br>
-				<input type='email' name='emailInput' class='home-links form-input end' placeholder='Email'>
+				<input type='email' name='emailInput' class='home-links form-input end' id='account-email' placeholder='Email'>
 				<input type='password' name='passInput' class='home-links form-input end' placeholder='Password'><br><br>
 
 				<p class='form-text'>Click on the names of the events that you would like to register for! <span style='width:5%;' id='cursor-blink'>|</span></p>
@@ -61,7 +61,7 @@
 				<input type="hidden" id="input10" name="event10" value="0">
 				<span class='home-links check red1' id='check10'>Presentation Frankenstein</span>
 
-				<button type='submit' class='home-links submit-butt'>Create Account!</button>
+				<button type='button' class='home-links submit-butt' id='create-account'>Create Account!</button>
 			</form>
 			
 		</span>
@@ -241,7 +241,11 @@
 		function checkEmail(email){
 			var len=email.length;
 			var i=0;
-	
+			
+			if(len==0){
+				return false;
+			}
+			
 			while(i<len){
 				if(email[i]=='@'){ //If an @ is encountered, then we must check the string before it and the string after it
 					var username=email.substring(0,i);
@@ -254,6 +258,7 @@
 				}
 				i+=1;
 			}
+			
 			return false;
 		}
 
@@ -305,11 +310,16 @@
 			return false;
 		}
 		/* The functions end here. */
-
+		
+		
 		/* This functions are for other input forms */
 		function checkMobileNumber(number){ //This function checks if the number is a valid mobile number
 			var len=number.length;
 			var i=0;
+			
+			if(len==0){
+				return false;
+			}
 
 			while(i<len){
 				if(number[i]>='0' && number[i]<='9'){
@@ -333,11 +343,37 @@
 	       	xmlhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
 					var result=this.responseText;
+					if(result=="true"){
+						alert("There is an existing account with this mobile number. Please re-enter your number or login using that account.")
+					}
+					else{
+						document.getElementById("register-form").submit();
+					}
 				}
 			};
 	        xmlhttp.open("GET", "uniqueNumber.php?number="+num1, true);
 	        xmlhttp.send();
 		}
+		
+		
+		/* These functions are the eventListener functions for the create-account button */
+		document.getElementById("create-account").addEventListener("click", function(){ //When the button is clicked, we check if the email and mobile number are valid. we then check if the mobile number already exists in the db. We generate the required error messages.
+			var email_input=document.getElementById("account-email").value;
+			var mobile_input=document.getElementById("account-number").value;
+			
+			if(checkEmail(email_input)!=true){
+				alert("Oops! Your email seems to be invalid. Please enter a valid ID.");
+			}
+			else{
+				if(checkMobileNumber(mobile_input)!=true){
+					alert("Oops! Your mobile number seems to be invalid. Please enter a valid mobile number.");
+				}
+				else{
+					checkIfNumberUnique(mobile_input);
+				}
+			}
+			
+		});
 		
 	</script>
 	<script>

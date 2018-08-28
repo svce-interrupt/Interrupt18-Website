@@ -49,7 +49,7 @@ if (!$connect) {
 
 		if(mysqli_multi_query($connect, $sql)) {
 	          echo "<script>alert('You signed up successfully! You can edit your selected events by using the 'login' option. Thanks!');</script>";
-			  echo "<script>window.location.href='http://www.arjunaravind.in/interrupt/signup/';</script>";
+			  echo "<script>window.location.href='http://www.arjunaravind.in/interrupt/register/';</script>";
 		}
 
     }
