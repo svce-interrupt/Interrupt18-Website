@@ -1,9 +1,9 @@
 <?php
 
 $dbservername="localhost";
-$dbusername= "arjun1098";
-$dbpassword="Superman123!";
-$dbname="INTERRUPT";
+$dbusername= "root";
+$dbpassword="";
+$dbname="interrupt";
 
 $connect=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
 if (!$connect) {
@@ -18,11 +18,14 @@ if (!$connect) {
 	$college=$_POST['collegeInput'];
 	$email;
 	$mobile;
+	$subject="INTERRUPT'18 Registration Successful";
+	$message="Hurrah! Get ready to get interrupted! Your registration process for the INTERRUPT'18 is successful.Thank you for signing up.You can always change your events or check your points by logging in.See you there :-)";
+	$headers="From: shriramgobu@gmail.com" . "\r\n";
 
 	$checkEmail=validEmail($_POST['emailInput']);
 	$checkMobile=validMobile($_POST['numberInput']);
 	$password=$_POST['passInput'];
-
+	$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 	$GoodWillHunting=$_POST['event1'];
 	$TheGameOfCodes=$_POST['event2'];
@@ -43,13 +46,15 @@ if (!$connect) {
 
 		//sql cmd fr querying 
 
-		$sql="INSERT INTO users (mobileNo,password,college,name,email) VALUES ('$mobile', '$password','$college','$name','$email'); INSERT INTO events (mobileNo,GoodWillHunting,TheGameOfCodes,Predestination,TheDigitalFortress,TheSecretSociety,UnicornOfSilicon,FishBowlConversation,Inquizitive,MiniProject,PresentationFrankenstein) VALUES ('$mobile','$GoodWillHunting','$TheGameOfCodes','$Predestination','$TheDigitalFortress','$TheSecretSociety','$UnicornOfSilicon','$FishBowlConversation','$Inquizitive','$MiniProject','$PresentationFrankenstein');";
+		$sql="INSERT INTO users (mobileNo,password,college,name,email) VALUES ('$mobile', '$hashed_password','$college','$name','$email'); INSERT INTO events (mobileNo,GoodWillHunting,TheGameOfCodes,Predestination,TheDigitalFortress,TheSecretSociety,UnicornOfSilicon,FishBowlConversation,Inquizitive,MiniProject,PresentationFrankenstein) VALUES ('$mobile','$GoodWillHunting','$TheGameOfCodes','$Predestination','$TheDigitalFortress','$TheSecretSociety','$UnicornOfSilicon','$FishBowlConversation','$Inquizitive','$MiniProject','$PresentationFrankenstein');";
+
 
 	 	//sending those queries to db
 
 		if(mysqli_multi_query($connect, $sql)) {
 	          echo "<script>alert('You signed up successfully! You can edit your selected events by using the 'login' option. Thanks!');</script>";
-			  echo "<script>window.location.href='http://www.arjunaravind.in/interrupt/register/';</script>";
+	          mail($email,$subject,$message,$headers); //can only be checked in a proper server,can't be checked in local server :-(
+			  echo "<script>window.location.href='http://www.arjunaravind.in/interrupt/signup/';</script>";
 		}
 
     }
