@@ -115,6 +115,7 @@
 		
 		function analyseInput(){ //This function analyses the command given and outputs a response. It also creates new 'blink' and 'terminal-form' elem
 			var input=document.getElementById("terminal-input").value; //We get the value in the 'invisible' textfield.
+			document.getElementsByTagName("html")[0].style.overflowY="scroll"; //We change the overflow-y property to scroll because it was 'hidden' in the css. This was done because we needed to fix the bug of the scroll bar appearing erratically on the side. So, only when a command is entered do we show scroll.
 			
 			if(input=="home"){ //We then compare the input against different inputs. We then append the required output or do the required action.
 				window.location.href="../";     //delete the index.html out at deployment
