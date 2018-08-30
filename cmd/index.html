@@ -105,25 +105,29 @@
 		/*========================================*/
 		/*The function which analyse the input into the textfield and then mirror it into the <p> tag*/
 		
+		var noOfEnteredCommands=0; //This var keeps track of the no of cmds entered
+
 		function addTerminalOutput(e){
 			var input=document.getElementById("terminal-input").value;
 			document.getElementById("terminal-form-input"+idNum).innerHTML=input;
-			if(e.keyCode==13){
+			if(e.keyCode==13){ //The keyCode for the 'enter' key is 13
 				analyseInput();
 			}
 		} //This function reads the text which is in the textbox and then mirrors the text in the <span> element in the p tag.
 		
 		function analyseInput(){ //This function analyses the command given and outputs a response. It also creates new 'blink' and 'terminal-form' elem
 			var input=document.getElementById("terminal-input").value; //We get the value in the 'invisible' textfield.
+			input=input.toUpperCase(); //We make it uppercase and then cmp it with uppercase inputs to make it 'case-insensitive'.
+
 			document.getElementsByTagName("html")[0].style.overflowY="scroll"; //We change the overflow-y property to scroll because it was 'hidden' in the css. This was done because we needed to fix the bug of the scroll bar appearing erratically on the side. So, only when a command is entered do we show scroll.
 			
-			if(input=="home"){ //We then compare the input against different inputs. We then append the required output or do the required action.
+			if(input=="HOME"){ //We then compare the input against different inputs. We then append the required output or do the required action.
 				window.location.href="../";     //delete the index.html out at deployment
 			}
-			else if(input=="register"){ //For registrations, we display a computer picture followed by the output.
+			else if(input=="REGISTER"){ //For registrations, we display a computer picture followed by the output.
 				window.location.href="../register/";          //delete the index.html out at deployment
 			}
-			else if(input=="contact-us"){ //For the contact cmd, we display a picture of a phone.
+			else if(input=="CONTACT-US"){ //For the contact cmd, we display a picture of a phone.
 				var outputResult="<br>   _______<br>"+
 				" /` _____ `\\;,<br>"+
 				"/__(^===^)__\\;,<br>"+
@@ -135,7 +139,7 @@
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input=="quiz"){ //For quiz, we output a picture of mickey mouse. Why not?
+			else if(input=="QUIZ"){ //For quiz, we output a picture of mickey mouse. Why not?
 				var outputResult="<br>         .-\"\"\"-.<br>"+
 				"        /       \\<br>"+
 				"        \\       /<br>"+
@@ -150,7 +154,7 @@
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input=="ls" || input=="clear"){ //While displaying ls, the page will display a list of available commands. The 'ls' command, when called, clears the screen and then displays available commands. For now, the ls command and the clear commands will do the same thing. They will clear the screen and show the available commands.
+			else if(input=="LS" || input=="CLEAR" || input=="HELP"){ //While displaying ls, the page will display a list of available commands. The 'ls' command, when called, clears the screen and then displays available commands. For now, the ls command and the clear commands will do the same thing. They will clear the screen and show the available commands. The help command does the same thing.
 				
 				var outputResult="";
 				
@@ -163,16 +167,16 @@
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			/*else if(input=="clear"){ //For the clear cmd, we clear the screen but add a cursor-blink elem so that the JS doesnt throw an error in line 224. This is because if a JS stmt refers a HTML element which isnt there, then the whole JS execution stops.
+			/*else if(input=="CLEAR"){ //For the clear cmd, we clear the screen but add a cursor-blink elem so that the JS doesnt throw an error in line 224. This is because if a JS stmt refers a HTML element which isnt there, then the whole JS execution stops.
 				var outputResult="";
 				
 				document.getElementById("terminal-output").innerHTML="";
 				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
 			}*/
-			else if(input=="run"){
+			else if(input=="RUN"){
 				window.location.href="";
 			}
-			else if(input=="Good Will Hunting"){
+			else if(input=="GOOD WILL HUNTING"){
 				var drawing="<br><br>   ___________<br>"+
 			         "  |.---------.|<br>"+
 			         "  ||         ||<br>"+
@@ -194,7 +198,7 @@
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if (input=="startx") {
+			else if (input=="STARTX") {
 				window.location.href = "startx.html";
 			}
 			else{ //We've put this whole ascii art for the 'command not found' error.
@@ -236,7 +240,11 @@
 			
 
 			if(num==1){
-				str="registration";
+dNum+=1;
+                        var userTerminal1="<span style='color: blue;'>("+getDateTime()+") </span><span style='color:orange'>root<span style='color:yellow;''>@</span><span style='color:orange'>interrupt18</span>:~$</span> ";
+                        document.getElementById("terminal-output").innerHTML+=("<br>"+userTerminal1+" <span class='ter-inp' id='terminal-form-input"+idNum+"'></span>");
+                        document.getElementById("terminal-output").innerHTML+=("<span style='width:5%;' id='cursor-blink"+idNum+"'>|</span>");
+                        document.getElementById("terminal-input").value=""; //We set the value of the invisible textfield to null.				str="registration";
 			}
 			else if(num==2){
 				str="contact-us";
@@ -278,7 +286,7 @@
 			document.getElementById("terminal-form-input"+idNum).innerHTML=str;
 			document.getElementById("terminal-input").value=str;
 			analyseInput();
-		} //This function gets the number of the command clicked and then puts it into the input and called the prev func.
+		} //This function gets the number of the command clicked and then puts it into the input and called the prev func.		
 		
 		/*========================================*/
 		/*========================================*/
