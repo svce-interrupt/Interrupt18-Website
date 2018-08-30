@@ -1,9 +1,9 @@
 <?php
 
 $dbservername="localhost";
-$dbusername= "arjun1098";
-$dbpassword="Superman123!";
-$dbname="INTERRUPT";
+$dbusername= "root";
+$dbpassword="";
+$dbname="register";
 
 $connect=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
 if (!$connect) {
@@ -18,6 +18,9 @@ if (!$connect) {
 	$college=$_POST['collegeInput'];
 	$email;
 	$mobile;
+	$subject="INTERRUPT'18 Registration Successful";
+	$message="Hurrah! Get ready to get interrupted! Your registration process for the INTERRUPT'18 is successful.Thank you for signing up.You can always change your events or check your points by logging in.See you there :-)";
+	$headers="From: shriramgobu@gmail.com" . "\r\n";
 
 	$checkEmail=validEmail($_POST['emailInput']);
 	$checkMobile=validMobile($_POST['numberInput']);
@@ -49,6 +52,7 @@ if (!$connect) {
 
 		if(mysqli_multi_query($connect, $sql)) {
 	          echo "<script>alert('You signed up successfully! You can edit your selected events by using the 'login' option. Thanks!');</script>";
+	          mail($email,$subject,$message,$headers);
 			  echo "<script>window.location.href='http://www.arjunaravind.in/interrupt/signup/';</script>";
 		}
 
