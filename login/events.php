@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start(); ob_start() ?>
 <html>
 	
 	<head>
@@ -43,7 +43,7 @@
 			//sending those queries to db and if query successful, redirect to login/index.php
 			if(mysqli_query($connect,$sql))
 			{
-				echo "<script>alert('Your changes have been updated!. Thanks!');</script>";
+				$_SESSION['message'] = "Your changes have been updated! Thanks!";
 				echo "<script>window.location.href='index.php'</script>";
 			} else {
 		    	echo "<script>alert('Sorry for the inconvenience! Please try again!');</script>";
@@ -54,8 +54,8 @@
 		if(isset($_SESSION['mobile'])) {
 			header('Location: ');
 		} else {
-			// $_SESSION['message'] = "Please login";
-			header('Location: ../login/index.php');
+			$_SESSION['message'] = "Error: Please login";
+			echo "<script>window.location.href='index.php'</script>";
 		}
 	?>
 	
