@@ -6,7 +6,7 @@ $dbpassword="";
 $dbname="interrupt";
 $connect= mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname); // connecting to db
 //initialisation of variables
-
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$mobile = $_POST["numberInput"];
 	$password=$_POST['passInput'];
 	
@@ -38,12 +38,15 @@ $connect= mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname); // conn
 			$_SESSION['ev'][7] = $row2['Inquizitive'];
 			$_SESSION['ev'][8] = $row2['MiniProject'];
 			$_SESSION['ev'][9] = $row2['PresentationFrankenstein'];
-			echo "<script>window.location.href='events.php'</script>";
+			header('Location: events.php');
 		}
 	else
 	{
 		echo "<script> alert('Invalid username or password!');</script>";
-		echo "<script>window.location.href='index.html'</script>";
+		header('Location: ../try/');
 	}
+} else {
+	header('Location: ../try/');
+}
 
 	?>	

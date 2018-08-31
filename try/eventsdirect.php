@@ -12,7 +12,7 @@ if (!$connect) {
 }
 	
 	$mob = $_SESSION['mobile'];
-	echo $mob;
+	// echo $mob;
 
 	global $GoodWillHunting;
 	global $TheGameOfCodes;
@@ -42,6 +42,7 @@ if (!$connect) {
 
 
 		//sql cmd fr updating
+    	//updates only the row with correct mobileNo
 
 		$sql="UPDATE events set GoodWillHunting='$GoodWillHunting',TheGameOfCodes='$TheGameOfCodes',Predestination='$Predestination',TheDigitalFortress='$TheDigitalFortress',TheSecretSociety='$TheSecretSociety',UnicornOfSilicon='$UnicornOfSilicon',FishBowlConversation='$FishBowlConversation',Inquizitive='$Inquizitive',MiniProject='$MiniProject',PresentationFrankenstein='$PresentationFrankenstein' WHERE mobileNo='$mob';";
 		
@@ -51,7 +52,8 @@ if (!$connect) {
 		if(mysqli_query($connect,$sql))
 	          {
 	          	echo "<script>alert('Your changes have been updated!. Thanks!');</script>";
-	         	echo "<script>window.location.href='../home.html'</script>";
+	         	// echo "<script>window.location.href='../home.html'</script>";
+	         	header('Location: ../home.html');
 			  }
 
 	    else
