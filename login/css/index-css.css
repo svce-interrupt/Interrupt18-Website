@@ -13,6 +13,11 @@ body{
 	border: 1px dashed white;
 }
 
+p {
+	text-align: center;
+	font-size: 150%;
+}
+
 #title{
 	width: 99%;
 	margin-left: .25%;
@@ -107,3 +112,4 @@ body{
 	margin-left: 35%;
 	margin-top: 1%;
 }
+

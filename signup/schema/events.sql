@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 24, 2018 at 08:30 AM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.2.8
+-- Generation Time: Aug 31, 2018 at 09:44 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `register`
+-- Database: `interrupt`
 --
 
 -- --------------------------------------------------------
@@ -30,25 +30,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `events` (
   `mobileNo` varchar(10) NOT NULL,
-  `GoodWillHunting` tinyint(1) DEFAULT NULL,
-  `TheGameOfCodes` tinyint(1) DEFAULT NULL,
-  `Predestination` tinyint(1) DEFAULT NULL,
-  `TheDigitalFortress` tinyint(1) DEFAULT NULL,
-  `TheSecretSociety` tinyint(1) DEFAULT NULL,
-  `UnicornOfSilicon` tinyint(1) DEFAULT NULL,
-  `FishBowlConversation` tinyint(1) DEFAULT NULL,
-  `Inquizitive` tinyint(1) DEFAULT NULL,
-  `MiniProject` tinyint(1) DEFAULT NULL,
-  `PresentationFrankenstein` tinyint(1) DEFAULT NULL
+  `GoodWillHunting` int(1) DEFAULT NULL,
+  `TheGameOfCodes` int(1) DEFAULT NULL,
+  `Predestination` int(1) DEFAULT NULL,
+  `TheDigitalFortress` int(1) DEFAULT NULL,
+  `TheSecretSociety` int(1) DEFAULT NULL,
+  `UnicornOfSilicon` int(1) DEFAULT NULL,
+  `FishBowlConversation` int(1) DEFAULT NULL,
+  `Inquizitive` int(1) DEFAULT NULL,
+  `MiniProject` int(1) DEFAULT NULL,
+  `PresentationFrankenstein` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `events`
+-- Dumping data for table `users`
 --
-
-INSERT INTO `events` (`mobileNo`, `GoodWillHunting`, `TheGameOfCodes`, `Predestination`, `TheDigitalFortress`, `TheSecretSociety`, `UnicornOfSilicon`, `FishBowlConversation`, `Inquizitive`, `MiniProject`, `PresentationFrankenstein`) VALUES
-('0987654321', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-('2147483647', 1, 1, 1, 0, 0, 0, 0, 0, 0, 0);
 
 --
 -- Indexes for dumped tables
