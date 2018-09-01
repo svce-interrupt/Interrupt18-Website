@@ -26,7 +26,7 @@ if (!$connect) {
 	$checkEmail=validEmail($_POST['emailInput']);
 	$checkMobile=validMobile($_POST['numberInput']);
 	$password=$_POST['passInput'];
-	//$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+	$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 	$GoodWillHunting=$_POST['event1'];
 	$TheGameOfCodes=$_POST['event2'];
@@ -47,7 +47,7 @@ if (!$connect) {
 
 		//sql cmd fr querying 
 
-		$sql="INSERT INTO users VALUES ('$mobile', '$password','$college','$name','$email'); INSERT INTO events VALUES ('$mobile','$GoodWillHunting','$TheGameOfCodes','$Predestination','$TheDigitalFortress','$TheSecretSociety','$UnicornOfSilicon','$FishBowlConversation','$Inquizitive','$MiniProject','$PresentationFrankenstein');";
+		$sql="INSERT INTO users VALUES ('$mobile', '$hashed_password','$college','$name','$email'); INSERT INTO events VALUES ('$mobile','$GoodWillHunting','$TheGameOfCodes','$Predestination','$TheDigitalFortress','$TheSecretSociety','$UnicornOfSilicon','$FishBowlConversation','$Inquizitive','$MiniProject','$PresentationFrankenstein');";
 
 
 	 	//sending those queries to db

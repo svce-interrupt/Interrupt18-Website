@@ -11,9 +11,9 @@
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			// db credentials
 			$dbservername="localhost";
-			$dbusername= "root";
-			$dbpassword="";
-			$dbname="interrupt";
+			$dbusername= "arjun1001";
+			$dbpassword="Superman123!";
+			$dbname="INTERRUPT";
 
 
 			$connect=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
@@ -44,7 +44,8 @@
 			if(mysqli_query($connect,$sql))
 			{
 				$_SESSION['message'] = "Your changes have been updated! Thanks!";
-				echo "<script>window.location.href='index.php'</script>";
+				echo "<script>alert('Your changes have been saved!');</script>";
+				echo "<script>window.location.href='http://www.arjunaravind.in/interrupt/cmd/'</script>";
 			} else {
 		    	echo "<script>alert('Sorry for the inconvenience! Please try again!');</script>";
 			} 
@@ -121,36 +122,6 @@
 
 
 	<script>
-		
-		var colorNum=1;
-		window.setInterval(colorChange, 1000); //This function calls the colorChange() function every 1 second.
-
-		function colorChange(){
-			if(colorNum==1){
-				document.getElementById("title").style.color="purple";
-				colorNum=2;
-			}
-			else if(colorNum==2){
-				document.getElementById("title").style.color="blue";
-				colorNum=3;
-			}
-			else if(colorNum==3){
-				document.getElementById("title").style.color="green";
-				colorNum=4;
-			}
-			else if(colorNum==4){
-				document.getElementById("title").style.color="yellow";
-				colorNum=5;
-			}
-			else if(colorNum==5){
-				document.getElementById("title").style.color="orange";
-				colorNum=6;
-			}
-			else if(colorNum==6){
-				document.getElementById("title").style.color="red";
-				colorNum=1;
-			}
-		} //This function is used to change the color of the interrupt title every time it is called.
 
 			// check{#} represents whether event{#} is selected while registering
 			var check1=<?php echo $_SESSION['ev'][0] ?>;
