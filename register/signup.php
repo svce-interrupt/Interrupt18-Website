@@ -14,8 +14,8 @@ if (!$connect) {
 
  // if(isset($_POST['submit']))
  // {
-	$name=$_POST['nameInput'];
-	$college=$_POST['collegeInput'];
+	$name=cleanString($_POST['nameInput']);
+	$college=cleanString($_POST['collegeInput']);
 	$email;
 	$mobile;
 	$subject="INTERRUPT'18 Registration Successful";
@@ -83,6 +83,12 @@ function validEmail($email){
 //events if there are ten digits in a phone no
 function validMobile($mobile){
     return preg_match('/^[0-9]{10}+$/', $mobile);
+}
+
+function cleanString($str){
+	$str=htmlspecialchars($str);
+	$str=strip_tags($str);
+	return $str;
 }
 
 mysqli_close($connect);
