@@ -56,7 +56,7 @@ if (!$connect) {
 		if(mysqli_multi_query($connect, $sql)){
 			echo "<script>alert('You signed up successfully! An email has been sent to your email regarding your login details.\n Thank you!');</script>";
 			mail($email,$subject,$message." $mobile\n Login Password: $password\n\nThank you,\nInterrupt 2018 Organising Team",$headers); //can only be checked in a proper server,can't be checked in local server :-(
-			echo "<script>window.location.href='http://www.arjunaravind.in/interrupt/signup/';</script>";
+			echo "<script>window.location.href='http://www.arjunaravind.in/interrupt/cmd/';</script>";
 		}
 
     }

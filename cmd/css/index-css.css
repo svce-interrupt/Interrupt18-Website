@@ -15,7 +15,7 @@ body{
 #terminal-output{
 	width: 95%;
 	margin: 5% 2.5%;
-	font-size: 130%;
+	font-size: 125%;
 	white-space: pre;
 }
 #terminal-input{
