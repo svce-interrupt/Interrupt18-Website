@@ -1,0 +1,7 @@
+[01-Sep-2018 14:54:12 UTC] PHP Notice:  Undefined variable: message in /home/arjun1001/public_html/interrupt/login/index.php on line 144
+[01-Sep-2018 14:54:12 UTC] PHP Notice:  Undefined variable: message in /home/arjun1001/public_html/interrupt/login/index.php on line 176
+[01-Sep-2018 14:54:26 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/arjun1001/public_html/interrupt/login/index.php on line 21
+[01-Sep-2018 14:54:32 UTC] PHP Notice:  Undefined variable: message in /home/arjun1001/public_html/interrupt/login/index.php on line 144
+[01-Sep-2018 14:54:32 UTC] PHP Notice:  Undefined variable: message in /home/arjun1001/public_html/interrupt/login/index.php on line 176
+[01-Sep-2018 15:08:47 UTC] PHP Notice:  Undefined variable: message in /home/arjun1001/public_html/interrupt/login/index.php on line 144
+[01-Sep-2018 15:08:48 UTC] PHP Notice:  Undefined variable: message in /home/arjun1001/public_html/interrupt/login/index.php on line 176
