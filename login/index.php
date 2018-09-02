@@ -5,6 +5,7 @@
 		<title>Interrupt '18 | Login</title>
 		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
 		<link href="css/index-css.css" rel="stylesheet">
+		<link rel="icon" href="../img/favicon.jpeg">
 		<style>
 			p {
 				text-align: center;
