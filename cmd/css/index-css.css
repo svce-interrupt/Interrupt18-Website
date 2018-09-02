@@ -30,12 +30,13 @@ body{
 	text-decoration: none;
 	color: #B3E5FC;
 	cursor: pointer;
+	margin-left: 2.5%;
 }
 .cmd-links:hover{
 	text-decoration: underline;
 }
 .underline{
-	text-decoration: underline;
+	text-decoration: none;
 	font-size: 120%;
 	color: yellow;
 }

@@ -29,7 +29,7 @@
 		var typeText="<span style='color: white'>Welcome to the Interrupt Command Prompt! <br>Last login: "+Date().substring(0,24)+" on console</span> <br><br>"+
 		"<span style='color: lightgreen'><span class='underline'>CLICK</span> on the commands to know more.</span><br><br>";
 
-		var cmdlinks1="<a href='../index.html' class='cmd-links'>home</a> <br>"+
+		var cmdlinks1="<a href='http://interrupt2k18.in/' class='cmd-links'>home</a> <br>"+
 		"<a href='../register/index.html' class='cmd-links'>register</a> <br>"+
 		"<a href='../login/index.php' class='cmd-links'>login</a> <br>"+
 		"<span class='cmd-links' onclick='setTerminalText(2)'>contact-us</span> <br><br>";
@@ -166,7 +166,7 @@
 				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
 				
 				var outputResult="";
-				outputResult+="<span style='color: lightgreen'><span class='underline'>CLICK</span> or TYPE these commands.</span> <br><br>";
+				outputResult+="<span style='color: lightgreen'><span class='underline'>CLICK</span> on the commands to know more.</span> <br><br>";
 				outputResult+=cmdlinks1+cmdlinks2;
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
