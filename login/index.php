@@ -15,7 +15,7 @@
 	<?php 
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$dbservername="localhost";
-			$dbusername= "arjun1001";
+			$dbusername= "root";
 			$dbpassword="Superman123!";
 			$dbname="INTERRUPT";
 			$connect= mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname); // connecting to db
@@ -94,8 +94,8 @@
 			<button type='submit' class='home-links submit-butt' id='login-butt'>Login &rarr;</button>
 		</form>
 						
-		<a href="../home.html" class="home-links top">Create Account &rarr;</a>
-		<a href="../home.html" class="home-links bottom">Go Back To Home &crarr;</a>
+		<a href="../register/index.html" class="home-links top">Create Account &rarr;</a>
+		<a href="http://interrupt2k18.in/" class="home-links bottom">Go Back To Home &crarr;</a>
 		
 	</body>
 

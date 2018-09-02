@@ -11,7 +11,7 @@
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			// db credentials
 			$dbservername="localhost";
-			$dbusername= "arjun1001";
+			$dbusername= "root";
 			$dbpassword="Superman123!";
 			$dbname="INTERRUPT";
 
@@ -45,7 +45,7 @@
 			{
 				$_SESSION['message'] = "Your changes have been updated! Thanks!";
 				echo "<script>alert('Your changes have been saved!');</script>";
-				echo "<script>window.location.href='http://www.arjunaravind.in/interrupt/cmd/'</script>";
+				echo "<script>window.location.href='../cmd/'</script>";
 			} else {
 		    	echo "<script>alert('Sorry for the inconvenience! Please try again!');</script>";
 			} 
@@ -113,7 +113,7 @@
 			
 		</form>
 									
-		<a href="../home.html" class="home-links below">Go Back To Home &crarr;</a>
+		<a href="http://interrupt2k18.in/" class="home-links below">Go Back To Home &crarr;</a>
 		<a href="../cmd/loading.html" class="home-links below">Go To Command Prompt &crarr;</a>
 								
 									

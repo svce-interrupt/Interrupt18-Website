@@ -1,1 +1,0 @@
-https://stackoverflow.com/questions/6857817/a-php-function-to-prevent-sql-injections-and-xss
