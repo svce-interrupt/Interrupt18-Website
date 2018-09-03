@@ -23,7 +23,6 @@ body{
 	margin-left: 1%;
 	display: block;
 	margin-top: 4%;
-	font-size: 120%;
 	text-align: center;
 	white-space: pre;
 	word-wrap: normal;
@@ -155,3 +154,29 @@ body{
 	margin-top: 6%;
 }
 
+input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="password"],
+	select:focus,
+	textarea {
+	  font-size: 120%;
+	}
+
+@media (min-width: 768px) {
+	#title {
+	font-size: 120%;		
+	}
+}
+
+@media (max-width: 768px) {
+	#title {
+		font-size:90%;
+	}
+}
+
+@media (max-width: 600px) {
+	#title {
+		font-size: 77%;
+	}
+}
