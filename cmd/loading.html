@@ -15,7 +15,7 @@
 	
 	<script>
 		var typeNum=0;
-		var typeChange=window.setInterval(typeChange, 200); //This function calls the typeChange() function every .5 seconds.
+		var typeChangeFunc=window.setInterval(typeChange, 200); //This function calls the typeChange() function every .5 seconds.
 		
 		//In other pages, we have used a typing effect to display words. This is done by appending individual characters of a string to a tag slowly. However, in this page, I wanted to make it fast for two reasons 1) we can't have the page load slow each time and 2) this is how it actually appears when a terminal is being booted in real life. So, instead of indi characters, we upload chunks of the string each time.
 		
@@ -82,15 +82,11 @@
 				document.getElementById("terminal-output").innerHTML+=typeText8;
 				typeNum=8;
 			}
-			else{
-				window.location.href="../cmd/", true;
+			else if(typeNum==8){
+				window.location.href="../cmd/";
+				clearInterval(typeChangeFunc);
 			}
 		} //This function appends each variable shown above every time it is called.
-
-		function redirect(str){ //This function redirects the page to the given url.
-			window.location.href=str, true;
-			return false;
-		}
 
 	</script>
 
