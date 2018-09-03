@@ -73,6 +73,7 @@
 			document.getElementById("terminal-output").innerHTML+="<span style='width:5%;' id='cursor-blink"+idNum+"'>|</span>";
 			
 			document.getElementById("terminal-input").addEventListener("keyup", addTerminalOutput);
+			document.getElementById("terminal-input").addEventListener("keydown", autoFillInput);
 			window.setInterval(blink,500);
 		}, 1250); //We intro the 'cursor' element here. It's actually a div whose background changes color every second.
 		
@@ -106,8 +107,6 @@
 		/*========================================*/
 		/*========================================*/
 		/*The function which analyse the input into the textfield and then mirror it into the <p> tag*/
-		
-		var noOfEnteredCommands=0; //This var keeps track of the no of cmds entered
 
 		function addTerminalOutput(e){
 			var input=document.getElementById("terminal-input").value;
@@ -293,6 +292,21 @@ dNum+=1;
 			analyseInput();
 		} //This function gets the number of the command clicked and then puts it into the input and called the prev func.		
 		
+		function autoFillInput(e){
+			if(e.keyCode==9){
+				var terminal_input=document.getElementById("terminal-input").value;
+
+				if(terminal_input[0]=='h'){
+					document.getElementById("terminal-input").value+="ome";
+					document.getElementById("terminal-form-input"+idNum).innerHTML+="ome";
+				}
+
+				window.setTimeout(function(){
+					document.getElementById("terminal-input").focus();
+				},0);
+			}
+		}
+
 		/*========================================*/
 		/*========================================*/
 		
