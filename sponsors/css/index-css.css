@@ -73,3 +73,52 @@ body{
 .green{
 	color: green;
 }
+
+@media only screen and (max-width: 1000px) {
+
+	body{
+		width: 100%;
+		margin: 2.5% 0%;
+		padding-bottom: 5%;
+		border: none;
+	}
+
+	#title{
+		font-size: 160%;
+		margin: 7% 0%;
+		font-weight: 700;
+	}
+
+	.intro-text{
+		width: 100%;
+		margin: 3% 0% 2% 0%;
+		font-size: 175%;
+		text-align: center;
+	}
+	.intro-body{
+		width: 95%;
+		margin:0 auto 3% auto;
+	}
+	.intro-details{
+		margin-bottom: 0.25%;
+	}
+	.home-links{
+		width: 70%;
+		font-weight: 700;
+		margin-top: 8%;
+		border: 3px dashed #29B6F6;
+		padding: 3% 0%;
+		font-size: 170%;
+	}
+	.home-links:hover{
+		border: 3px dashed yellow;
+	}
+	.red{
+		margin-top: 3%;
+		border: 3px dashed red;
+	}
+	.yellow{
+		margin-top: 3%;
+		border: 3px dashed yellow;
+	}
+}
