@@ -1,15 +1,15 @@
 <html>
-	<head>
-		<title>Interrupt '18 | Sign-up</title>
-		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
-		<link href="css/index-css.css" rel="stylesheet">
-		<link rel="icon" href="../img/favicon.jpeg">
-	</head>
 
-	
-	<body>
-				
-		<pre><span id="title">
+<head>
+  <title>Interrupt '18 | Sign-up</title>
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+  <link href="css/index-css.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
+  <link rel="icon" href="../img/favicon.jpeg">
+</head>
+
+<body>
+  <pre><span id="title">
   _____            _     _             _   _             
  |  __ \          (_)   | |           | | (_)            
  | |__) |___  __ _ _ ___| |_ _ __ __ _| |_ _  ___  _ __  
@@ -19,375 +19,371 @@
               __/ |                                      
              |___/                                       
 		</span></pre>
-		
-		<span id="changeHere">
+  <span id="changeHere">
 			
 			<form id='register-form' method="post" action="signup.php">
-				<input type='text' name='nameInput' class='home-links form-input' placeholder='Name'>
-				<input type='tel' name='numberInput' class='home-links form-input' id='account-number' placeholder='Number'>
-				<input type='text' name='collegeInput' class='home-links form-input long' placeholder='College Name'><br>
-				<input type='email' name='emailInput' class='home-links form-input end' id='account-email' placeholder='Email'>
-				<input type='password' name='passInput' class='home-links form-input end' placeholder='Password'><br><br>
+				<div class="container-fluid">
+					<div class="row">
+						<input type='text' name='nameInput' class='home-links col-md-6 form-input' placeholder='Name'>
+						<input type='tel' name='numberInput' class='home-links col-md-6 form-input' id='account-number' placeholder='Number'>
+					</div><!-- .row -->
+					<div class="row">
+						<input type='text' name='collegeInput' class='home-links col-md-12 form-input long' placeholder='College Name'><br>
+					</div><!-- .row -->
+					<div class="row">
+						<input type='email' name='emailInput' class='home-links col-md-6 form-input end' id='account-email' placeholder='Email'>
+						<input type='password' name='passInput' class='home-links col-md-6 form-input end' placeholder='Password'><br><br>
+					</div><!-- .row -->
+				</div><!-- .container -->
 
 				<p class='form-text'>Click on the names of the events that you would like to register for! <span style='width:5%;' id='cursor-blink'>|</span></p>
+  <div class="container-fluid">
+    <div class="row">
+      <input type="hidden" id="input1" name="event1" value="0">
+      <span class='home-links check blue col-md-4 mr-md-1' id='check1'>Good Will Hunting</span>
+      <input type="hidden" id="input2" name="event2" value="0">
+      <span class='home-links check orange col-md-4 ' id='check2'>The Game Of Codes</span>
+      <input type="hidden" id="input3" name="event3" value="0">
+      <span class='home-links check red1  col-md-4 ' id='check3'>Predestination</span>
+    </div>
+    <!-- .row -->
+    <div class="row">
+      <input type="hidden" id="input4" name="event4" value="0">
+      <span class='home-links check red1 col-md-4 ' id='check4'>The Digital Fortress</span>
+      <input type="hidden" id="input5" name="event5" value="0">
+      <span class='home-links check blue col-md-4 ' id='check5'>The Secret Society</span>
+      <input type="hidden" id="input6" name="event6" value="0">
+      <span class='home-links check orange col-md-4 right' id='check6'>Unicorn Of Silicon</span>
+    </div>
+    <!-- .row -->
+    <div class="row">
+      <input type="hidden" id="input7" name="event7" value="0">
+      <span class='home-links check orange col-md-4 ' id='check7'>Fish Bowl Conversation</span>
+      <input type="hidden" id="input8" name="event8" value="0">
+      <span class='home-links check red1 col-md-4 ' id='check8'>Inquizitive</span>
+      <input type="hidden" id="input9" name="event9" value="0">
+      <span class='home-links check blue col-md-4 right' id='check9'>Mini Project</span>
+    </div>
+    <!-- .row -->
+    <div class="row">
+      <input type="hidden" id="input10" name="event10" value="0">
+      <span class='home-links check red1 col-md-4 offset-md-4' id='check10'>Presentation Frankenstein</span>
+    </div>
+    <!-- .row -->
+   
 
-				<input type="hidden" id="input1" name="event1" value="0">
-				<span class='home-links check blue top' id='check1'>Good Will Hunting</span>
-				
-				<input type="hidden" id="input2" name="event2" value="0">
-				<span class='home-links check orange top' id='check2'>The Game Of Codes</span>
-				
-				<input type="hidden" id="input3" name="event3" value="0">
-				<span class='home-links check red1 top' id='check3'>Predestination</span>
-				
-				<input type="hidden" id="input4" name="event4" value="0">
-				<span class='home-links check red1' id='check4'>The Digital Fortress</span>
-				
-				<input type="hidden" id="input5" name="event5" value="0">
-				<span class='home-links check blue' id='check5'>The Secret Society</span>
-				
-				<input type="hidden" id="input6" name="event6" value="0">
-				<span class='home-links check orange' id='check6'>Unicorn Of Silicon</span>
-				
-				<input type="hidden" id="input7" name="event7" value="0">
-				<span class='home-links check orange' id='check7'>Fish Bowl Conversation</span>
-				
-				<input type="hidden" id="input8" name="event8" value="0">
-				<span class='home-links check red1' id='check8'>Inquizitive</span>
-				
-				<input type="hidden" id="input9" name="event9" value="0">
-				<span class='home-links check blue' id='check9'>Mini Project</span>
-				
-				<input type="hidden" id="input10" name="event10" value="0">
-				<span class='home-links check red1' id='check10'>Presentation Frankenstein</span>
+   <div class="row">
+   	 <button type='button' class='home-links submit-butt col-md-4 offset-md-4' id='create-account'>Create Account!</button>
+   	</div><!--  -->
+   	<div class="row">
+   	<a href="http://interrupt2k18.in/" class="home-links top-links col-md-4 offset-md-4">Go Back To Home &crarr;</a>
+   </div><!-- .row -->
+    <!-- The buttons on the home page. -->
+   </div>
+  <!-- .container-fluid -->
+  </form>
+  </span>
+</body>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script>
+/*===================================================================*/
+/* Functions for selecting and un-selecting the checkboxes for events */
+/*=================================================================== */
 
-				<button type='button' class='home-links submit-butt' id='create-account'>Create Account!</button>
-				<a href="http://interrupt2k18.in/" class="home-links top-links">Go Back To Home &crarr;</a> <!-- The buttons on the home page. -->
-			</form>
-			
-		</span>
-		
-	</body>
-	<script src="../js/jquery-3.3.1.min.js"></script>
-	<script>
+var check1 = 0;
+document.getElementById("check1").addEventListener("click", function() {
+  if (check1 == 0) {
+    document.getElementById("check1").style.border = "1px dashed yellow";
+    document.getElementById("check1").style.color = "yellow";
+    check1 = 1;
+  } else {
+    document.getElementById("check1").style.border = "1px dashed #29b6f6";
+    document.getElementById("check1").style.color = "#29b6f6";
+    check1 = 0;
+  }
+});
 
-		/*===================================================================*/
-		/* Functions for selecting and un-selecting the checkboxes for events */
-		/*=================================================================== */
+var check2 = 0;
+document.getElementById("check2").addEventListener("click", function() {
+  if (check2 == 0) {
+    document.getElementById("check2").style.border = "1px dashed yellow";
+    document.getElementById("check2").style.color = "yellow";
+    check2 = 1;
+  } else {
+    document.getElementById("check2").style.border = "1px dashed #FB8C00";
+    document.getElementById("check2").style.color = "#FB8C00";
+    check2 = 0;
+  }
+});
 
-		var check1=0;
-		document.getElementById("check1").addEventListener("click", function(){
-			if(check1==0){
-				document.getElementById("check1").style.border="1px dashed yellow";
-				document.getElementById("check1").style.color="yellow";
-				check1=1;
-			}
-			else{
-				document.getElementById("check1").style.border="1px dashed #29b6f6";
-				document.getElementById("check1").style.color="#29b6f6";
-				check1=0;
-			}
-		});
-	
-		var check2=0;
-		document.getElementById("check2").addEventListener("click", function(){
-			if(check2==0){
-				document.getElementById("check2").style.border="1px dashed yellow";
-				document.getElementById("check2").style.color="yellow";
-				check2=1;
-			}
-			else{
-				document.getElementById("check2").style.border="1px dashed #FB8C00";
-				document.getElementById("check2").style.color="#FB8C00";
-				check2=0;
-			}
-		});
-	
-		var check3=0;
-		document.getElementById("check3").addEventListener("click", function(){
-			if(check3==0){
-				document.getElementById("check3").style.border="1px dashed yellow";
-				document.getElementById("check3").style.color="yellow";
-				check3=1;
-			}
-			else{
-				document.getElementById("check3").style.border="1px dashed #EF9A9A";
-				document.getElementById("check3").style.color="#EF9A9A";
-				check3=0;
-			}
-		});
-	
-		var check4=0;
-		document.getElementById("check4").addEventListener("click", function(){
-			if(check4==0){
-				document.getElementById("check4").style.border="1px dashed yellow";
-				document.getElementById("check4").style.color="yellow";
-				check4=1;
-			}
-			else{
-				document.getElementById("check4").style.border="1px dashed #EF9A9A";
-				document.getElementById("check4").style.color="#EF9A9A";
-				check4=0;
-			}
-		});
-	
-		var check5=0;
-		document.getElementById("check5").addEventListener("click", function(){
-			if(check5==0){
-				document.getElementById("check5").style.border="1px dashed yellow";
-				document.getElementById("check5").style.color="yellow";
-				check5=1;
-			}
-			else{
-				document.getElementById("check5").style.border="1px dashed #29b6f6";
-				document.getElementById("check5").style.color="#29b6f6";
-				check5=0;
-			}
-		});
-	
-		var check6=0;
-		document.getElementById("check6").addEventListener("click", function(){
-			if(check6==0){
-				document.getElementById("check6").style.border="1px dashed yellow";
-				document.getElementById("check6").style.color="yellow";
-				check6=1;
-			}
-			else{
-				document.getElementById("check6").style.border="1px dashed #FB8C00";
-				document.getElementById("check6").style.color="#FB8C00";
-				check6=0;
-			}
-		});
-	
-		var check7=0;
-		document.getElementById("check7").addEventListener("click", function(){
-			if(check7==0){
-				document.getElementById("check7").style.border="1px dashed yellow";
-				document.getElementById("check7").style.color="yellow";
-				check7=1;
-			}
-			else{
-				document.getElementById("check7").style.border="1px dashed #FB8C00";
-				document.getElementById("check7").style.color="#FB8C00";
-				check7=0;
-			}
-		});
-	
-		var check8=0;
-		document.getElementById("check8").addEventListener("click", function(){
-			if(check8==0){
-				document.getElementById("check8").style.border="1px dashed yellow";
-				document.getElementById("check8").style.color="yellow";
-				check8=1;
-			}
-			else{
-				document.getElementById("check8").style.border="1px dashed #EF9A9A";
-				document.getElementById("check8").style.color="#EF9A9A";
-				check8=0;
-			}
-		});
-	
-		var check9=0;
-		document.getElementById("check9").addEventListener("click", function(){
-			if(check9==0){
-				document.getElementById("check9").style.border="1px dashed yellow";
-				document.getElementById("check9").style.color="yellow";
-				check9=1;
-			}
-			else{
-				document.getElementById("check9").style.border="1px dashed #29b6f6";
-				document.getElementById("check9").style.color="#29b6f6";
-				check9=0;
-			}
-		});
-	
-		var check10=0;
-		document.getElementById("check10").addEventListener("click", function(){
-			if(check10==0){
-				document.getElementById("check10").style.border="1px dashed yellow";
-				document.getElementById("check10").style.color="yellow";
-				check10=1;
-			}
-			else{
-				document.getElementById("check10").style.border="1px dashed #EF9A9A";
-				document.getElementById("check10").style.color="#EF9A9A";
-				check10=0;
-			}
-		});
-		
-		window.setInterval(blink,500);
-		
-		var blinkNum=0;
-		function blink(){
-			if(blinkNum==0){
-				document.getElementById("cursor-blink").style.backgroundColor="white";
-				document.getElementById("cursor-blink").style.color="white";
-				blinkNum=1;
-			}
-			else{
-				document.getElementById("cursor-blink").style.backgroundColor="black";
-				document.getElementById("cursor-blink").style.color="black";
-				blinkNum=0;
-			}
-		} //This function changed the background of the <span> character from black to white, making the 'cursor' blink.
+var check3 = 0;
+document.getElementById("check3").addEventListener("click", function() {
+  if (check3 == 0) {
+    document.getElementById("check3").style.border = "1px dashed yellow";
+    document.getElementById("check3").style.color = "yellow";
+    check3 = 1;
+  } else {
+    document.getElementById("check3").style.border = "1px dashed #EF9A9A";
+    document.getElementById("check3").style.color = "#EF9A9A";
+    check3 = 0;
+  }
+});
 
-		
-		/* The things that we need are a function to check email validity, mobile number validity, etc. We need to display the errors on the same page */
+var check4 = 0;
+document.getElementById("check4").addEventListener("click", function() {
+  if (check4 == 0) {
+    document.getElementById("check4").style.border = "1px dashed yellow";
+    document.getElementById("check4").style.color = "yellow";
+    check4 = 1;
+  } else {
+    document.getElementById("check4").style.border = "1px dashed #EF9A9A";
+    document.getElementById("check4").style.color = "#EF9A9A";
+    check4 = 0;
+  }
+});
 
-		/*=============================*/
-		/* Functions for form-checking */
-		/*=============================*/
+var check5 = 0;
+document.getElementById("check5").addEventListener("click", function() {
+  if (check5 == 0) {
+    document.getElementById("check5").style.border = "1px dashed yellow";
+    document.getElementById("check5").style.color = "yellow";
+    check5 = 1;
+  } else {
+    document.getElementById("check5").style.border = "1px dashed #29b6f6";
+    document.getElementById("check5").style.color = "#29b6f6";
+    check5 = 0;
+  }
+});
 
-		/* These are functions for checking if the email is valid or not. */
-		function checkEmail(email){
-			var len=email.length;
-			var i=0;
-			
-			if(len==0){
-				return false;
-			}
-			
-			while(i<len){
-				if(email[i]=='@'){ //If an @ is encountered, then we must check the string before it and the string after it
-					var username=email.substring(0,i);
-					var domain=email.substring(i+1,len);
+var check6 = 0;
+document.getElementById("check6").addEventListener("click", function() {
+  if (check6 == 0) {
+    document.getElementById("check6").style.border = "1px dashed yellow";
+    document.getElementById("check6").style.color = "yellow";
+    check6 = 1;
+  } else {
+    document.getElementById("check6").style.border = "1px dashed #FB8C00";
+    document.getElementById("check6").style.color = "#FB8C00";
+    check6 = 0;
+  }
+});
 
-					if(checkEmailUsername(username)==false || checkDomain(domain)==false){
-						return false;
-					}
-					return true;
-				}
-				i+=1;
-			}
-			
-			return false;
-		}
+var check7 = 0;
+document.getElementById("check7").addEventListener("click", function() {
+  if (check7 == 0) {
+    document.getElementById("check7").style.border = "1px dashed yellow";
+    document.getElementById("check7").style.color = "yellow";
+    check7 = 1;
+  } else {
+    document.getElementById("check7").style.border = "1px dashed #FB8C00";
+    document.getElementById("check7").style.color = "#FB8C00";
+    check7 = 0;
+  }
+});
 
-		function checkEmailUsername(str){
-            var len=str.length;
-            var i=0;
+var check8 = 0;
+document.getElementById("check8").addEventListener("click", function() {
+  if (check8 == 0) {
+    document.getElementById("check8").style.border = "1px dashed yellow";
+    document.getElementById("check8").style.color = "yellow";
+    check8 = 1;
+  } else {
+    document.getElementById("check8").style.border = "1px dashed #EF9A9A";
+    document.getElementById("check8").style.color = "#EF9A9A";
+    check8 = 0;
+  }
+});
 
-            while(i<len){ //The else-if statements are ordered in terms of frequency to make this block more efficient while comparing
-            	if(str[i]>='a' && str[i]<='z'){
-                	//We do nothing
-                }
-                else if(str[i]>='0' && str[i]<='9'){
-                	//We do nothing
-                }
-                else if(str[i]=='.' || str[i]=='_'){
-                       	//We do nothing
-                }
-                else if(str[i]>='A' && str[i]<='Z'){
-                       	//We do nothing
-                }
-                else{
-                  	return false;
-			                                
-				}
-				i+=1;
-			}
-			return true;
-		}
+var check9 = 0;
+document.getElementById("check9").addEventListener("click", function() {
+  if (check9 == 0) {
+    document.getElementById("check9").style.border = "1px dashed yellow";
+    document.getElementById("check9").style.color = "yellow";
+    check9 = 1;
+  } else {
+    document.getElementById("check9").style.border = "1px dashed #29b6f6";
+    document.getElementById("check9").style.color = "#29b6f6";
+    check9 = 0;
+  }
+});
 
-		function checkDomain(str){
-			var len=str.length;
-			var i=0;
-			var dotIsThere=0;
-			
-			while(i<len){
-				if(str[i]>='0' && str[i]<='9'){
-					return false;
-				}
-				else if(str[i]=='.'){
-					dotIsThere=1;
-				}
-				i+=1;
-			}
+var check10 = 0;
+document.getElementById("check10").addEventListener("click", function() {
+  if (check10 == 0) {
+    document.getElementById("check10").style.border = "1px dashed yellow";
+    document.getElementById("check10").style.color = "yellow";
+    check10 = 1;
+  } else {
+    document.getElementById("check10").style.border = "1px dashed #EF9A9A";
+    document.getElementById("check10").style.color = "#EF9A9A";
+    check10 = 0;
+  }
+});
 
-			if(dotIsThere==1){
-				return true;
-			}
-			
-			return false;
-		}
-		/* The functions end here. */
-		
-		
-		/* This functions are for other input forms */
-		function checkMobileNumber(number){ //This function checks if the number is a valid mobile number
-			var len=number.length;
-			var i=0;
-			
-			if(len==0){
-				return false;
-			}
+window.setInterval(blink, 500);
 
-			while(i<len){
-				if(number[i]>='0' && number[i]<='9'){
-					//We do nothing
-				}
-				else{
-					return false;
-				}
-				i+=1;
-			}
+var blinkNum = 0;
 
-			if(len==10){
-				return true;
-			}
+function blink() {
+  if (blinkNum == 0) {
+    document.getElementById("cursor-blink").style.backgroundColor = "white";
+    document.getElementById("cursor-blink").style.color = "white";
+    blinkNum = 1;
+  } else {
+    document.getElementById("cursor-blink").style.backgroundColor = "black";
+    document.getElementById("cursor-blink").style.color = "black";
+    blinkNum = 0;
+  }
+} //This function changed the background of the <span> character from black to white, making the 'cursor' blink.
 
-			return false;	
-		}
 
-		function checkIfNumberUnique(num1){ //This function checks if the number has already been used. Returns true if already there, false if not
-			var xmlhttp = new XMLHttpRequest();
-	       	xmlhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					var result=this.responseText;
-					if(result=="true"){
-						alert("There is an existing account with this mobile number. Please re-enter your number or login using that account.")
-					}
-					else{
-						document.getElementById("register-form").submit();
-					}
-				}
-			};
-	        xmlhttp.open("GET", "uniqueNumber.php?number="+num1, true);
-	        xmlhttp.send();
-		}
-		
-		
-		/* These functions are the eventListener functions for the create-account button */
-		document.getElementById("create-account").addEventListener("click", function(){ //When the button is clicked, we check if the email and mobile number are valid. we then check if the mobile number already exists in the db. We generate the required error messages.
-			var email_input=document.getElementById("account-email").value;
-			var mobile_input=document.getElementById("account-number").value;
-			
-			if(checkEmail(email_input)!=true){
-				alert("Oops! Your email seems to be invalid. Please enter a valid ID.");
-			}
-			else{
-				if(checkMobileNumber(mobile_input)!=true){
-					alert("Oops! Your mobile number seems to be invalid. Please enter a valid mobile number.");
-				}
-				else{
-					checkIfNumberUnique(mobile_input);
-				}
-			}
-			
-		});
-		
-	</script>
-	<script>
-		$('.check').click(function() {
-			var $input = $('#' + this.id).prev();
-			console.log($input);
-			if ($input.val() == 0) {
-				$input.val('1');
-			} else {
-				$input.val('0');
-			}
-			
-			console.log($("#" + this.id).prev().val());
-		});
-	</script>
+/* The things that we need are a function to check email validity, mobile number validity, etc. We need to display the errors on the same page */
+
+/*=============================*/
+/* Functions for form-checking */
+/*=============================*/
+
+/* These are functions for checking if the email is valid or not. */
+function checkEmail(email) {
+  var len = email.length;
+  var i = 0;
+
+  if (len == 0) {
+    return false;
+  }
+
+  while (i < len) {
+    if (email[i] == '@') { //If an @ is encountered, then we must check the string before it and the string after it
+      var username = email.substring(0, i);
+      var domain = email.substring(i + 1, len);
+
+      if (checkEmailUsername(username) == false || checkDomain(domain) == false) {
+        return false;
+      }
+      return true;
+    }
+    i += 1;
+  }
+
+  return false;
+}
+
+function checkEmailUsername(str) {
+  var len = str.length;
+  var i = 0;
+
+  while (i < len) { //The else-if statements are ordered in terms of frequency to make this block more efficient while comparing
+    if (str[i] >= 'a' && str[i] <= 'z') {
+      //We do nothing
+    } else if (str[i] >= '0' && str[i] <= '9') {
+      //We do nothing
+    } else if (str[i] == '.' || str[i] == '_') {
+      //We do nothing
+    } else if (str[i] >= 'A' && str[i] <= 'Z') {
+      //We do nothing
+    } else {
+      return false;
+
+    }
+    i += 1;
+  }
+  return true;
+}
+
+function checkDomain(str) {
+  var len = str.length;
+  var i = 0;
+  var dotIsThere = 0;
+
+  while (i < len) {
+    if (str[i] >= '0' && str[i] <= '9') {
+      return false;
+    } else if (str[i] == '.') {
+      dotIsThere = 1;
+    }
+    i += 1;
+  }
+
+  if (dotIsThere == 1) {
+    return true;
+  }
+
+  return false;
+}
+/* The functions end here. */
+
+
+/* This functions are for other input forms */
+function checkMobileNumber(number) { //This function checks if the number is a valid mobile number
+  var len = number.length;
+  var i = 0;
+
+  if (len == 0) {
+    return false;
+  }
+
+  while (i < len) {
+    if (number[i] >= '0' && number[i] <= '9') {
+      //We do nothing
+    } else {
+      return false;
+    }
+    i += 1;
+  }
+
+  if (len == 10) {
+    return true;
+  }
+
+  return false;
+}
+
+function checkIfNumberUnique(num1) { //This function checks if the number has already been used. Returns true if already there, false if not
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var result = this.responseText;
+      if (result == "true") {
+        alert("There is an existing account with this mobile number. Please re-enter your number or login using that account.")
+      } else {
+        document.getElementById("register-form").submit();
+      }
+    }
+  };
+  xmlhttp.open("GET", "uniqueNumber.php?number=" + num1, true);
+  xmlhttp.send();
+}
+
+
+/* These functions are the eventListener functions for the create-account button */
+document.getElementById("create-account").addEventListener("click", function() { //When the button is clicked, we check if the email and mobile number are valid. we then check if the mobile number already exists in the db. We generate the required error messages.
+  var email_input = document.getElementById("account-email").value;
+  var mobile_input = document.getElementById("account-number").value;
+
+  if (checkEmail(email_input) != true) {
+    alert("Oops! Your email seems to be invalid. Please enter a valid ID.");
+  } else {
+    if (checkMobileNumber(mobile_input) != true) {
+      alert("Oops! Your mobile number seems to be invalid. Please enter a valid mobile number.");
+    } else {
+      checkIfNumberUnique(mobile_input);
+    }
+  }
+
+});
+</script>
+<script>
+$('.check').click(function() {
+  var $input = $('#' + this.id).prev();
+  console.log($input);
+  if ($input.val() == 0) {
+    $input.val('1');
+  } else {
+    $input.val('0');
+  }
+
+  console.log($("#" + this.id).prev().val());
+});
+</script>
+
 </html>
