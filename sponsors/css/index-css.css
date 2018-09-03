@@ -74,7 +74,7 @@ body{
 	color: green;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
 
 	body{
 		width: 100%;
@@ -115,10 +115,10 @@ body{
 	}
 	.red{
 		margin-top: 3%;
-		border: 3px dashed red;
+		border: 1px dashed red;
 	}
 	.yellow{
 		margin-top: 3%;
-		border: 3px dashed yellow;
+		border: 1px dashed yellow;
 	}
 }
