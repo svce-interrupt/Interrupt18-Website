@@ -74,7 +74,7 @@ body{
 	color: green;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
 
 	body{
 		width: 100%;
