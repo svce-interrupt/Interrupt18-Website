@@ -115,10 +115,10 @@ body{
 	}
 	.red{
 		margin-top: 3%;
-		border: 1px dashed red;
+		border: 1px dashed white
 	}
 	.yellow{
 		margin-top: 3%;
-		border: 1px dashed yellow;
+		border: 1px dashed white;
 	}
 }
