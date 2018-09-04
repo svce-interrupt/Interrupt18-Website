@@ -30,7 +30,10 @@ body{
 	text-decoration: none;
 	color: #B3E5FC;
 	cursor: pointer;
+	width: 30%;
 	margin-left: 2.5%;
+	text-align: left;
+	display: inline-block;
 }
 .cmd-links:hover{
 	text-decoration: underline;
