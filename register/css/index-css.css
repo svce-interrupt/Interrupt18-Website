@@ -148,18 +148,18 @@ body{
 	margin-top: 6%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
 	.home-links{
 		display: block !important;
 		margin: 0 auto;
-		min-height: 50px !important;
+		min-height: 55px !important;
 		margin-top: 2%;
 		width: 85%;
 	}
 	.check {
 		height: 3%;
 	}
-	input[type="text"],
+	/*input[type="text"],
 	input[type="email"],
 	input[type="tel"],
 	input[type="password"],
@@ -167,7 +167,7 @@ body{
 	textarea {
 		padding: 10px;
 	  font-size: 120%;
-	}
+	}*/
 	
 	.submit-butt {
 		margin-top: 10%;
@@ -184,13 +184,22 @@ body{
 }
 
 @media (max-width: 768px) {
+	body {
+		border: none;
+	}
 	#title {
-		font-size:90%;
+		font-size:130%;
 	}
 }
 
 @media (max-width: 600px) {
 	#title {
-		font-size: 77%;
+		font-size: 90%;
+	}
+}
+
+@media (max-width: 500px) {
+	#title {
+		font-size: 67%;
 	}
 }
