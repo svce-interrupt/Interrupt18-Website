@@ -45,6 +45,7 @@ body{
 	border: 1px dashed yellow;
 }
 .top-links{
+	margin-top: 1%;
 	margin-left: 37%;
 	width: 25%;
 }
@@ -109,7 +110,7 @@ body{
 .check{
 	width: 25%;
 	cursor: pointer;
-	display: inline-block;
+	display: inline-block !important;
 	margin-top: 1%;
 	margin-right: 1%;
 }
@@ -145,4 +146,51 @@ body{
 	width: 25%;
 	margin-left: 37%;
 	margin-top: 6%;
+}
+
+@media (max-width: 992px) {
+	.home-links{
+		display: block !important;
+		margin: 0 auto;
+		min-height: 50px !important;
+		margin-top: 2%;
+		width: 85%;
+	}
+	.check {
+		height: 3%;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="password"],
+	select:focus,
+	textarea {
+		padding: 10px;
+	  font-size: 120%;
+	}
+	
+	.submit-butt {
+		margin-top: 10%;
+	}
+	br {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	#title {
+	font-size: 120%;		
+	}
+}
+
+@media (max-width: 768px) {
+	#title {
+		font-size:90%;
+	}
+}
+
+@media (max-width: 600px) {
+	#title {
+		font-size: 77%;
+	}
 }
