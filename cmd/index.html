@@ -38,7 +38,7 @@
 		
 		//The following strings will have span elems at the end. This is to provide an easy way for us to adjust the space between elements in a row. As of now, the commands (names of events) are arranged in columns of 3 and rows of 3.
 		var cmdlinks2="<span style='color: lightgreen'><span class='underline'>CLICK</span> on the event to know more!</span><br><br>"+
-		"<span class='cmd-links' onclick='setTerminalText(3)'>Logician's Code</span>"+
+		"<span class='cmd-links' onclick='setTerminalText(3)'>Logicians Code</span>"+
 		"<span class='cmd-links' onclick='setTerminalText(4)'>Pitch Perfect</span> <br>"+
 		"<span class='cmd-links' onclick='setTerminalText(5)'>Inquizitive</span>"+
 		"<span class='cmd-links' onclick='setTerminalText(6)'>Flexbox Froggy</span> <br>"+
@@ -183,7 +183,99 @@
 			else if(input=="RUN"){
 				window.location.href="";
 			}
+			else if(input=="LOGICIANS CODE"){
+				var drawing="<br><br>      _---~~(~~-_.<br>"+
+			         "    _{        )   )<br>"+
+			         "  ,   ) -~~- ( ,-' )<br>"+
+			         " (  `-,_..`., )-- '_,)<br>"+
+			         "( ` _)  (  -~( -_ `,  }<br>"+
+			         "(_-  _  ~_-~~~~`,  ,' )<br>"+
+			         "  `~ -^(    __;-,((()))<br>"+
+			         "        ~~~~ {_ -_(())<br>"+
+			         "               `\  }<br>"+
+				"                 { }<br><br>";
+		
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="PITCH PERFECT"){
+				var drawing="<br><br>    __<br>"+
+				"   /__\\<br>"+
+				"   \\__/<br>"+
+				"    ||<br>"+
+				"    ||<br>"+
+				"    ||<br>"+
+				"     \\__ <br>"+
+				"        \\<br><br>";
+				
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="INQUIZITIVE"){
+				var drawing="<br><br>  ..---..<br>"+
+				" /       \\<br>"+
+				"|         |<br>"+
+				":         ;<br>"+
+				" \\  \\~/  /<br>"+
+				"  `, Y ,'<br>"+
+				"   |_|_|<br>"+
+				"   |===|<br>"+
+				"   |===|<br>"+
+				"    \\_/<br><br>";
+				
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="FLEXBOX FROGGY"){
+				var drawing="<br><br>    _    _<br>"+
+				"   (o)--(o)<br>"+
+				"  /.______.\\<br>"+
+				"  \\________/<br>"+
+				" ./        \\.<br>"+
+				"( .        , )<br>"+
+				" \\ \\_\\\\//_/ /<br>"+
+				"  ~~  ~~  ~~<br><br>";
+				
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
 			else if(input=="FINISH THE CODE"){
+				var drawing="<br><br>  ______ <br>"+
+				" |  ____|<br>"+
+				" | |__   <br>"+
+				" |  __|  <br>"+
+				" | |     <br>"+
+				" |_|inish The Code<br><br>";
+				
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="TERMINAL OF SECRETS"){
 				var drawing="<br><br>   ___________<br>"+
 			         "  |.---------.|<br>"+
 			         "  ||         ||<br>"+
@@ -205,24 +297,121 @@
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input=="LOGICIANS CODE"){
-				var drawing="<br><br>      _---~~(~~-_.<br>"+
-			         "    _{        )   )<br>"+
-			         "  ,   ) -~~- ( ,-' )<br>"+
-			         " (  `-,_..`., )-- '_,)<br>"+
-			         "( ` _)  (  -~( -_ `,  }<br>"+
-			         "(_-  _  ~_-~~~~`,  ,' )<br>"+
-			         "  `~ -^(    __;-,((()))<br>"+
-			         "        ~~~~ {_ -_(())<br>"+
-			         "               `\  }<br>"+
-				"                 { }<br><br>";
+			else if(input=="PRESENTATION HUB"){
+				var drawing="<br><br>         _.-;;-._<br>"+
+				"  '-..-'|   ||   |<br>"+
+				"  '-..-'|_.-;;-._|<br>"+
+				"  '-..-'|   ||   |<br>"+
+				"  '-..-'|_.-''-._|<br><br><br>";
 		
 				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
 				"-rules: Maximum of 2 members per team.<br>"+
 				"-rules: Teams will have to register online before they participate.<br>"+
 				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
 				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+		
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="TECHCRUNCH"){
+				var drawing="<br><br> __________________________________<br>"+
+				"|#######====================#######|<br>"+
+				"|#    UNITED STATES OF AMERICA    #|<br>"+
+				"|#            /===\\               #|<br>"+
+				"|#           | (\") |              #|<br>"+
+				"|#           | /v\\ |              #|<br>"+
+				"|#            \\===/               #|<br>"+
+				"|##=========ONE DOLLAR===========##|<br>"+
+				" \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"<br><br>";
 				
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+		
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="TECHNOFAIR"){
+				var drawing="<br><br>             o_.-._<br>"+
+				"             |_.-._|<br>"+
+				"             |<br>"+
+				"        ^^^^^^^<br>"+
+				"^^^ ^^^ | : : | ^^^ ^^^<br>"+
+				"| |_| |_|     |_| |_| |<br>"+
+				"|                     |<br>"+
+				"|  :   :  .-.  :   :  |<br>"+
+				"|         | |         |<br>"+
+				"\"'\"''\"\"'\"\"\"''''\"'\"''\"\"'<br><br>";
+				
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+		
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="INTERRUPT THE CHALLENGE"){
+				var drawing="<br><br>  _______<br>"+
+				" /  12   \\<br>"+
+				"|    |    |<br>"+
+				"|9   |   3|<br>"+
+				"|     \\   |<br>"+
+				"|         |<br>"+
+				" \\___6___/<br><br>";
+				
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+		
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="PIPE THE PIPER"){
+				var drawing="<br><br>___________/|<br>"+
+				" (__|||__) \\| <br><br><br>";
+				
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+		
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="DATA SCIENCE"){
+				var drawing="<br><br>    _      _      _      _      _      _<br>"+
+				"  _( )__ _( )__ _( )__ _( )__ _( )__ _( )__ <br>"+
+				" _|     _|     _|     _|     _|     _|     _|<br>"+
+				"(_   _ (_   _ (_   _ (_   _ (_   _ (_   _ (<br>"+
+				" |__( )_|__( )_|__( )_|__( )_|__( )_|__( )_|<br>"+
+				" |_     |_     |_     |_     |_     |_     |<br>"+
+				"  _) _   _) _   _) _   _) _   _) _   _) _   _)<br>"+
+				" |__( )_|__( )_|__( )_|__( )_|__( )_|__( )_|<br><br><br>";
+				
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+		
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="WORKSHOP AWS"){
+				var drawing="<br><br>      ______ ______<br>"+
+				"    _/      Y      \\_<br>"+
+				"   // ~~ ~~ | ~~ ~  \\\\<br>"+
+				"  // ~ ~ ~~ | ~~~ ~~ \\\\<br>"+
+				" //________.|.________\\\\<br>"+
+				"`----------`-'----------'<br><br>";
+				
+				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
+				"-rules: Maximum of 2 members per team.<br>"+
+				"-rules: Teams will have to register online before they participate.<br>"+
+				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
+				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
 			else if (input=="STARTX") {
@@ -265,49 +454,47 @@
 			
 			var str="";
 			
-
-			if(num==1){
-dNum+=1;
-                        var userTerminal1="<span style='color: blue;'>("+getDateTime()+") </span><span style='color:orange'>root<span style='color:yellow;''>@</span><span style='color:orange'>interrupt18</span>:~$</span> ";
-                        document.getElementById("terminal-output").innerHTML+=("<br>"+userTerminal1+" <span class='ter-inp' id='terminal-form-input"+idNum+"'></span>");
-                        document.getElementById("terminal-output").innerHTML+=("<span style='width:5%;' id='cursor-blink"+idNum+"'>|</span>");
-                        document.getElementById("terminal-input").value=""; //We set the value of the invisible textfield to null.				str="registration";
-			}
-			else if(num==2){
+			if(num==2){
 				str="contact-us";
 			}
 			else if(num==3){
-				str="Good Will Hunting";
+				str="Logicians Code";
 			}
 			else if(num==4){
-				str="The Game Of Codes";
+				str="Pitch Perfect";
 			}
 			else if(num==5){
-				str="The Predestination";
+				str="Inquizitive";
 			}
 			else if(num==6){
-				str="The Digital Fortress";
+				str="Flexbox Froggy";
 			}
 			else if(num==7){
-				str="The Terminal Of Secrets";
+				str="Finish The Code";
 			}
 			else if(num==8){
-				str="Unicorn of Silicon";
+				str="Terminal Of Secrets";
 			}
 			else if(num==9){
-				str="Fish Bowl Conversations";
+				str="Presentation Hub";
 			}
 			else if(num==10){
-				str="Quizzerati";
+				str="TechCrunch";
 			}
 			else if(num==11){
-				str="Mini Project";
+				str="TechnoFair";
 			}
 			else if(num==12){
-				str="Presentation Frankenstein";
+				str="Interrupt The Challenge";
 			}
 			else if(num==13){
-				str="clear"; //This is there because we need to clear the screen automatically when entering 'ls'.
+				str="Pipe The Piper";
+			}
+			else if(num==14){
+				str="Data Science";
+			}
+			else if(num==15){
+				str="Workshop AWS";
 			}
 			
 			document.getElementById("terminal-form-input"+idNum).innerHTML=str;
@@ -330,15 +517,15 @@ dNum+=1;
 				else if(terminal_input[0]=='l'){
                                         document.getElementById("terminal-input").value="login";
                                         document.getElementById("terminal-form-input"+idNum).innerHTML="login";
-                                }
+                }
 				else if(terminal_input[0]=='c'){
                                         document.getElementById("terminal-input").value="contact-us";
                                         document.getElementById("terminal-form-input"+idNum).innerHTML="contact-us";
-                                }
+                }
 
 				window.setTimeout(function(){
 					document.getElementById("terminal-input").focus();
-				},0);
+				},10);
 			}
 		}
 
