@@ -10,6 +10,7 @@ body{
 	width: 95%;
 	margin: 2.5% 2.4%;
 	border: 1px dashed white;
+	display: block;
 }
 
 #terminal-output{
@@ -17,6 +18,8 @@ body{
 	margin: 5% 2.5%;
 	font-size: 125%;
 	white-space: pre;
+	word-wrap: initial;
+	word-break: break-all;
 }
 #terminal-input{
 	width: 0;
