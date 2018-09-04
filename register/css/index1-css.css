@@ -115,7 +115,7 @@ body{
 .check{
 	width: 25%;
 	cursor: pointer;
-	display: inline-block;
+	/*display: inline-block;*/
 	margin-top: 1%;
 	/*margin-right: 1%;*/
 	margin-bottom: 10px;
