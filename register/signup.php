@@ -10,17 +10,13 @@ if (!$connect) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-//initialisation
 
- // if(isset($_POST['submit']))
- // {
 	$name=cleanString($_POST['nameInput']);
 	$college=cleanString($_POST['collegeInput']);
 	$email;
 	$mobile;
 	$subject="INTERRUPT'18 Registration Successful";
 	$message="Hey there! \nYou have now signed up successfully for Interrupt '18! Your event preferences have been saved and can be edited by logging into the site again.\n These are your login details incase you forget:- \n\n Login Username: ";
-	$message="hello";
 	$headers="From: interrupt@gmail.com" . "\r\n";
 
 	$checkEmail=validEmail($_POST['emailInput']);
@@ -54,7 +50,8 @@ if (!$connect) {
 
 
 		if(mysqli_multi_query($connect, $sql)){
-			mail($email,$subject,$message." $mobile\n Login Password: $password\n\nThank you,\nInterrupt 2018 Organising Team",$headers); //can only be checked in a proper server,can't be checked in local server :-(
+			$message.=" $mobile\nLogin Password: $password\n\nThank you,\nInterrupt 2018 Organising Team.", $headers);
+			mail($email,$subject,$message,$headers);
 			echo "<script>alert('Thank you for signing up! An email has beent sent to your registered email.');</script>";
 			echo "<script>window.location.href='../cmd/';</script>";
 		}
