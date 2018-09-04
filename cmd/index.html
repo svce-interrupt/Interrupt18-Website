@@ -245,7 +245,9 @@
 				var outputResult=drawing+"-bash: "+input+": This is not a recognised command.<br>";
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			
+			else if (input=="DEVELOPER"){
+				window.location.href = "interrupt2k18.in/developer"
+			}
 			//Every command entered requires a new cursor element and a new terminal-form element.
 			//Below, we make sure the previous cursor becomes black so that it is not seen.
 			document.getElementById("cursor-blink"+idNum).style.backgroundColor="black"; 
