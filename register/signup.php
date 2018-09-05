@@ -10,30 +10,51 @@ if (!$connect) {
 //initialisation
  // if(isset($_POST['submit']))
  // {
-	$name=cleanString($_POST['nameInput']);
-	$college=cleanString($_POST['collegeInput']);
-	$email;
-	$mobile;
-	$subject="INTERRUPT'18 Registration Successful";
-	$message="Hey there! \nYou have now signed up successfully for Interrupt '18! Your event preferences have been saved and can be edited by logging into the site again.\n These are your login details incase you forget:- \n\n Login Username: ";
-	$message="hello";
-	$headers="From: interrupt@gmail.com" . "\r\n";
-
 	$checkEmail=validEmail($_POST['emailInput']);
 	$checkMobile=validMobile($_POST['numberInput']);
 
 	$password=$_POST['passInput'];
 	$hashed_password = password_hash($password, PASSWORD_DEFAULT);
-	$GoodWillHunting=$_POST['event1'];
-	$TheGameOfCodes=$_POST['event2'];
-	$Predestination=$_POST['event3'];
-	$TheDigitalFortress=$_POST['event4'];
-	$TheSecretSociety=$_POST['event5'];
-	$UnicornOfSilicon=$_POST['event6'];
-	$FishBowlConversation=$_POST['event7'];
-	$Inquizitive=$_POST['event8'];
-	$MiniProject=$_POST['event9'];
-	$PresentationFrankenstein=$_POST['event10'];
+	$event1=$_POST['event1'];
+	$event2=$_POST['event2'];
+	$event3=$_POST['event3'];
+	$event4=$_POST['event4'];
+	$event5=$_POST['event5'];
+	$event6=$_POST['event6'];
+	$event7=$_POST['event7'];
+	$event8=$_POST['event8'];
+	$event9=$_POST['event9'];
+	$event10=$_POST['event10'];
+	$event11=$_POST['event12'];
+	$event12=$_POST['event12'];
+
+//hardcoded this function which prints the name of the events user have registered for in the confirmation email...
+	function printEvent()
+	{
+	if($event1=$_POST['event1']==1){echo "Logician's Code 2.0\n";}
+	if($event2=$_POST['event2']==1){echo "Pitch Perfect\n";}
+	if($event3=$_POST['event3']==1){echo "Inquizitive\n";}
+	if($event4=$_POST['event4']==1){echo "Art Attack\n";}
+	if($event5=$_POST['event5']==1){echo "Clash Of Codes\n";}
+	if($event6=$_POST['event6']==1){echo "Terminal Of Secrets\n";}
+	if($event7=$_POST['event7']==1){echo "Presentation Hub\n";}
+	if($event8=$_POST['event8']==1){echo "TechnoFair\n";}
+	if($event9=$_POST['event9']==1){echo "Interrupt Challenge\n";}
+	if($event10=$_POST['event10']==1){echo "Pipe The Piper\n";}
+	if($event11=$_POST['event12']==1){echo "Dataification\n";}
+	if($event12=$_POST['event12']==1){echo "Workshop AWS\n";}
+	}
+
+
+
+//to send verification email
+	$name=cleanString($_POST['nameInput']);
+	$college=cleanString($_POST['collegeInput']);
+	$email;
+	$mobile;
+	$subject="INTERRUPT'18 Registration Successful";
+	$message="Hello $name! \nThanks for registering for Interrupt 2018! We're glad to have you.You can use your phone number ($mobile) to login along with the password you chose. If you have any issues feel free to contact us.\nJust to confirm these are the events that you registered for:\nprintEvent();\nRegards,\nThe Interrupt 2018 Organizing Team";
+	$headers="From: interrupt@gmail.com" . "\r\n";
 
 //to validate email and phone no
 	if($checkEmail && $checkMobile){
@@ -42,12 +63,12 @@ if (!$connect) {
 		$mobile=$_POST['numberInput'];
 
 		//sql cmd fr querying 
-		$sql="INSERT INTO users VALUES ('$mobile', '$hashed_password','$college','$name','$email'); INSERT INTO events VALUES ('$mobile','$GoodWillHunting','$TheGameOfCodes','$Predestination','$TheDigitalFortress','$TheSecretSociety','$UnicornOfSilicon','$FishBowlConversation','$Inquizitive','$MiniProject','$PresentationFrankenstein');";
+		-- $sql="INSERT INTO users VALUES ('$mobile', '$hashed_password','$college','$name','$email'); INSERT INTO events VALUES ('$mobile','$event1','$event2','$event3','$event4','$event5','$event6','$event7','$event8','$event9','$event10','$event11','$event12');";
 
 	 	//sending those queries to db
 		if(mysqli_multi_query($connect, $sql)){
 
-			mail($email,$subject,$message." $mobile\n Login Password: $password\n\nThank you,\nInterrupt 2018 Organising Team",$headers); //can only be checked in a proper server,can't be checked in local server :-(
+			mail($email,$subject,$message,$headers); //can only be checked in a proper server,can't be checked in local server :-(
 			echo "<script>alert('Thank you for signing up! An email has beent sent to your registered email.');</script>";
 			echo "<script>window.location.href='../cmd/';</script>";
 
