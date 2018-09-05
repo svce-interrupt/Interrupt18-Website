@@ -1,0 +1,145 @@
+body, html{
+	background-color: black;
+	font-family: 'Share Tech Mono', monospace;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	width: 95%;
+	margin: 2.5% 2.4%;
+	padding-bottom: 5%;
+	border: 1px dashed white;
+}
+
+#title{
+	width: 100%;
+	display: block;
+	margin-top: 3%;
+	font-size: 125%;
+	text-align: center;
+	white-space: pre;
+	word-wrap: normal;
+	color: red;
+}
+
+#bus{
+	width: 100%;
+	display: block;
+	margin-top: 3%;
+	font-size: 125%;
+	text-align: center;
+	white-space: pre;
+	word-wrap: normal;
+	color: yellow;
+	margin-left: -6%;
+}
+
+.intro-text1{
+	width: 100%;
+	margin: 0% 0% 2% 0%;
+	font-size: 110%;
+	text-align: left;
+	margin-left: 35%;
+	margin-top: -1%;
+}
+.intro-text2{
+	width: 100%;
+	margin: 0% 0% 2% 0%;
+	font-size: 110%;
+	text-align: left;
+	margin-left: 37%;
+	margin-top: -1%;
+}
+.intro-body{
+	width: 80%;
+	margin:0 auto 3% auto;
+}
+.intro-details{
+	margin-bottom: 0.25%;
+}
+.home-links{
+	text-decoration: none;
+	color: #29B6F6;
+	width: 30%;
+	margin: 0 auto;
+	margin-top: 3%;
+	display: block;
+	text-align: center;
+	border: 1px dashed #29B6F6;
+	padding: 1% 0%;
+	font-size: 120%;
+}
+.home-links:hover{
+	color: yellow;
+	border: 1px dashed yellow;
+}
+.blue{
+	margin-top: 1%;
+	color: #29B6F6;
+	border: 1px dashed #29B6F6;
+}
+
+
+/* This is for the mobile responsive */
+
+@media only screen and (max-width: 1000px) {
+
+	body{
+		width: 100%;
+		margin: 2.5% 0%;
+		padding-bottom: 5%;
+		border: none;
+	}
+
+	#title{
+		font-size: 80%;
+		margin: 7% 0%;
+		font-weight: 700;
+	}
+
+	#bus{
+		width: 80%;
+		display: block;
+		margin-top: 3%;
+		font-size: 125%;
+		text-align: center;
+		white-space: pre;
+		word-wrap: normal;
+		color: yellow;
+		margin-left: -5%;
+	}
+	.intro-text{
+		width: 100%;
+		margin: 3% 0% 2% 0%;
+		font-size: 175%;
+		text-align: center;
+	}
+	.intro-body{
+		width: 95%;
+		margin:0 auto 3% auto;
+	}
+	.intro-details{
+		margin-bottom: 0.25%;
+	}
+	.home-links{
+		width: 70%;
+		font-weight: 700;
+		margin-top: 8%;
+		border: 3px dashed #29B6F6;
+		padding: 3% 0%;
+		font-size: 170%;
+	}
+	.home-links:hover{
+		border: 3px dashed yellow;
+	}
+	.red{
+		margin-top: 3%;
+		border: 1px dashed red;
+	}
+	.yellow{
+		margin-top: 3%;
+		border: 1px dashed yellow;
+	}
+}
