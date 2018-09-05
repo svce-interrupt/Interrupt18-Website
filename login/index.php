@@ -99,7 +99,7 @@
 		</form>
 						
 		<a href="../register/index.html" class="home-links top">Create Account &rarr;</a>
-		<a href="http://interrupt2k18.in/" class="home-links bottom">Go Back To Home &crarr;</a>
+		<a href="http://interrupt2k18.in/cmd" class="home-links bottom">Go Back To Command Prompt &crarr;</a>
 		
 	</body>
 
