@@ -43,7 +43,7 @@
 		"<span class='cmd-links' onclick='setTerminalText(4)'>Pitch Perfect</span> <br>"+
 		"<span class='cmd-links' onclick='setTerminalText(5)'>Inquizitive</span>"+
 		"<span class='cmd-links' onclick='setTerminalText(6)'>Art Attack</span> <br>"+
-		"<span class='cmd-links' onclick='setTerminalText(7)'>Clash of Codes</span>"+
+		"<span class='cmd-links' onclick='setTerminalText(7)'>Clash of Code</span>"+
 		"<span class='cmd-links' onclick='setTerminalText(8)'>Terminal Of Secrets</span> <br>"+
 		"<span class='cmd-links' onclick='setTerminalText(9)'>Presentation Hub</span>"+
 		"<span class='cmd-links' onclick='setTerminalText(10)'>TechnoFair</span><br>"+
@@ -146,21 +146,6 @@
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input=="QUIZ"){ //For quiz, we output a picture of mickey mouse. Why not?
-				var outputResult="<br>         .-\"\"\"-.<br>"+
-				"        /       \\<br>"+
-				"        \\       /<br>"+
-				" .-\"\"\"-.-`.-.-.<  _<br>"+
-				"/      _,-\\ ()()_/:)<br>"+
-				"\\     / ,  `     `|<br>"+
-				" '-..-| \\-.,___,  /<br>"+
-				"      \\ `-.__/  /<br>"+
-				"       `-.__.-'`<br><br>"+
-				"-rules: Maximum of 2 members per team.<br>"+
-				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
-				
-				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
-			}
 			else if(input=="LS" || input=="CLEAR" || input=="HELP"){ //While displaying ls, the page will display a list of available commands. The 'ls' command, when called, clears the screen and then displays available commands. For now, the ls command and the clear commands will do the same thing. They will clear the screen and show the available commands. The help command does the same thing.
 				
 				var outputResult="";
@@ -174,16 +159,10 @@
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			/*else if(input=="CLEAR"){ //For the clear cmd, we clear the screen but add a cursor-blink elem so that the JS doesnt throw an error in line 224. This is because if a JS stmt refers a HTML element which isnt there, then the whole JS execution stops.
-				var outputResult="";
-				
-				document.getElementById("terminal-output").innerHTML="";
-				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
-			}*/
 			else if(input=="RUN"){
 				window.location.href="";
 			}
-			else if(input=="LOGICIANS CODE"){
+			else if(input=="LOGICIANS CODE 2.0"){
 				var drawing="<br><br>      _---~~(~~-_.<br>"+
 			         "    _{        )   )<br>"+
 			         "  ,   ) -~~- ( ,-' )<br>"+
@@ -244,37 +223,45 @@
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input=="FLEXBOX FROGGY"){
-				var drawing="<br><br>    _    _<br>"+
-				"   (o)--(o)<br>"+
-				"  /.______.\\<br>"+
-				"  \\________/<br>"+
-				" ./        \\.<br>"+
-				"( .        , )<br>"+
-				" \\ \\_\\\\//_/ /<br>"+
-				"  ~~  ~~  ~~<br><br>";
+			else if(input=="ART ATTACK"){
+				var drawing="<br><br>          ____<br>"+
+				"       o8%8888,<br>"+
+				"      o88%8888888.<br>"+  
+				"     8'-    -:8888b<br>"+   
+				"    8'         8888<br>"+
+				"   d8.-=. ,==-.:888b<br>"+
+				"   >8 `~` :`~' d8888<br>"+  
+				"   88         ,88888<br>"+  
+				"   88b. `-~  ':88888<br>"+ 
+				"   888b ~==~ .:88888<br>"+ 
+				"   88888o--:':::8888<br>"+      
+				"   `88888| :::' 8888b<br>"+  
+				"   8888^^'       8888b<br>"+  
+				"  d888           ,%888b.<br>"+   
+				" d88%            %%%8--'-.<br>"+  
+				"/88:.__ ,       _%-' ---  -<br>"+  
+				"    '''::===..-'   =  --.<br><br><br>";
 				
-				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
-				"-rules: Maximum of 2 members per team.<br>"+
-				"-rules: Teams will have to register online before they participate.<br>"+
-				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
-				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				var outputResult=drawing+"This event is all about copying!<br>"+
+				"Be the best copycat there is!<br>"+
+				"Recreate the given design using CSS and take home the prize!<br>"+
+				"May the CSS be with you!<br><br>"+
+				"* This is an individual event.<br>"+
+				"* There will be a preliminary round followed by a finals.<br>";
+				
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input=="FINISH THE CODE"){
-				var drawing="<br><br>  ______ <br>"+
-				" |  ____|<br>"+
-				" | |__   <br>"+
-				" |  __|  <br>"+
-				" | |     <br>"+
-				" |_|inish The Code<br><br>";
+			else if(input=="CLASH OF CODE"){
+				var drawing="<br><br>         />_________________________________<br>"+
+				"[########[]_________________________________><br>"+
+								"         \\><br><br>";
 				
-				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
-				"-rules: Maximum of 2 members per team.<br>"+
-				"-rules: Teams will have to register online before they participate.<br>"+
-				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
-				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				var outputResult=drawing+"Time's running out! Can you be the best?<br>"+
+				"With the clock ticking, there awaits a set of questions to be solved.<br>"+
+				"The questions get harder as you go. Code your way to the finish line!<br><br>"+
+				"* Participants have a time limit of 60 minutes.<br>"+
+				"* The judges have the final say.<br>";
 				
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
@@ -318,26 +305,8 @@
 				"* Submissions must be in the IEEE format and must not exclude 6 pages.<br>"+
 				"* Selected participants should bring 2 hard copies of their paper and a soft copy<br>"+
 				"as a .ppt file.<br>"+
-				"* Participants get 6 minutes for presentation and 2 minutes for queries.<br><br>"
-		
-				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
-			}
-			else if(input=="TECHCRUNCH"){
-				var drawing="<br><br> __________________________________<br>"+
-				"|#######====================#######|<br>"+
-				"|#    UNITED STATES OF AMERICA    #|<br>"+
-				"|#            /===\\               #|<br>"+
-				"|#           | (\") |              #|<br>"+
-				"|#           | /v\\ |              #|<br>"+
-				"|#            \\===/               #|<br>"+
-				"|##=========ONE DOLLAR===========##|<br>"+
-				" \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"<br><br>";
-				
-				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
-				"-rules: Maximum of 2 members per team.<br>"+
-				"-rules: Teams will have to register online before they participate.<br>"+
-				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
-				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				"* Participants get 6 minutes for presentation and 2 minutes for queries.<br>"+
+				"* The paper in .pdf or .doc format should be mailed to paper.interrupt@gmail.com.<br>";
 		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
@@ -363,20 +332,25 @@
 		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input=="INTERRUPT THE CHALLENGE"){
+			else if(input=="INTERRUPT CHALLENGE"){
 				var drawing="<br><br>  _______<br>"+
 				" /  12   \\<br>"+
 				"|    |    |<br>"+
 				"|9   |   3|<br>"+
 				"|     \\   |<br>"+
 				"|         |<br>"+
-				" \\___6___/<br><br>";
+				" \\___6___/<br><br><br>";
 				
-				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
-				"-rules: Maximum of 2 members per team.<br>"+
-				"-rules: Teams will have to register online before they participate.<br>"+
-				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
-				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				var outputResult=drawing+"Our signature event this year!<br>"+
+				"Work your way through levels by solving our interesting brain-teasers.<br><br>"+
+				"Do you like riddles? If you do, we've got it covered.<br>"+
+				"Do you like challenges? Well, we've still got you covered.<br>"+
+				"Don't think, go online and start coding!<br><br>"+
+				"* This is an online event which will happen over a span of 2 weeks starting from the <br>"+
+				"  17th of September to the 27th of September.<br>"+
+				"* There are a total of 15 levels, each containing hints.<br>"+
+				"* The first participant to finish the most number of levels will be the winner.<br>"+
+				"* The judges' decision is final.<br>";
 		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
@@ -384,15 +358,17 @@
 				var drawing="<br><br>___________/|<br>"+
 				" (__|||__) \\| <br><br><br>";
 				
-				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
-				"-rules: Maximum of 2 members per team.<br>"+
-				"-rules: Teams will have to register online before they participate.<br>"+
-				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
-				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				var outputResult=drawing+"A single event can be solved not by one, but multiple solutions.<br>"+
+				"Tackle the given problem along with fellow coders within the given time. But that's not all!<br><br>"+
+				"Coders will be scored based on how fast the challenge is completed.<br>"+
+				"You never know who could come up with a better solution first, so brace yourselves!<br><br>"+
+				"* It is an individual online event.<br>"+
+				"* The event will be open for a total of 6 hours. Participants can choose a 2-hour window in this time.<br>"+
+				"* The participant with the highest score will be declared the winner.<br>";
 		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if(input=="DATA SCIENCE"){
+			else if(input=="DATAIFICATION"){
 				var drawing="<br><br>    _      _      _      _      _      _<br>"+
 				"  _( )__ _( )__ _( )__ _( )__ _( )__ _( )__ <br>"+
 				" _|     _|     _|     _|     _|     _|     _|<br>"+
@@ -402,11 +378,13 @@
 				"  _) _   _) _   _) _   _) _   _) _   _) _   _)<br>"+
 				" |__( )_|__( )_|__( )_|__( )_|__( )_|__( )_|<br><br><br>";
 				
-				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
-				"-rules: Maximum of 2 members per team.<br>"+
-				"-rules: Teams will have to register online before they participate.<br>"+
-				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
-				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				var outputResult=drawing+"Can you make sense from nonsense?<br>"+
+				"Extract the data.<br>"+
+				"Analyse and predict.<br>"+
+				"Channel your inner data scientist!<br><br>"+
+				"* This is an online individual event. Participants can submit the solution only once.<br>"+
+				"* The participant with the highest accuracy will be declared the winner.<br>"+
+				"* Judges decision is final.<br>";
 		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
@@ -418,11 +396,9 @@
 				" //________.|.________\\\\<br>"+
 				"`----------`-'----------'<br><br>";
 				
-				var outputResult=drawing+"-event-description: It is a reverse-coding event. It is also a code relay. <br>"+
-				"-rules: Maximum of 2 members per team.<br>"+
-				"-rules: Teams will have to register online before they participate.<br>"+
-				"-timings: Prelims at 10AM. Finals at 2PM.<br>"+
-				"-contact: Arjun Aravind (8939227284) or Sathvik (8939227284)<br>";
+				var outputResult=drawing+"An exciting workshop on AWS Compute, Database and Server Management<br>"+
+				"with the modules AWS EC2, AWS DynamoDB, AWS S3 and AWS CodeBuild.<br>"+
+				"Thou shalt learn and thou shalt understand.<br>";
 		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
@@ -473,7 +449,7 @@
 				str="contact-us";
 			}
 			else if(num==3){
-				str="Logicians Code";
+				str="Logicians Code 2.0";
 			}
 			else if(num==4){
 				str="Pitch Perfect";
@@ -482,10 +458,10 @@
 				str="Inquizitive";
 			}
 			else if(num==6){
-				str="Flexbox Froggy";
+				str="Art Attack";
 			}
 			else if(num==7){
-				str="Finish The Code";
+				str="Clash Of Code";
 			}
 			else if(num==8){
 				str="Terminal Of Secrets";
@@ -494,21 +470,18 @@
 				str="Presentation Hub";
 			}
 			else if(num==10){
-				str="TechCrunch";
-			}
-			else if(num==11){
 				str="TechnoFair";
 			}
-			else if(num==12){
-				str="Interrupt The Challenge";
+			else if(num==11){
+				str="Interrupt Challenge";
 			}
-			else if(num==13){
+			else if(num==12){
 				str="Pipe The Piper";
 			}
-			else if(num==14){
-				str="Data Science";
+			else if(num==13){
+				str="Dataification";
 			}
-			else if(num==15){
+			else if(num==14){
 				str="Workshop AWS";
 			}
 			
