@@ -110,7 +110,7 @@ body{
 .check{
 	width: 25%;
 	cursor: pointer;
-	display: inline-block !important;
+	display: inline-block;
 	margin-top: 1%;
 	margin-right: 1%;
 }
@@ -150,24 +150,18 @@ body{
 
 @media (max-width: 1024px) {
 	.home-links{
-		display: block !important;
+		/*display: block;*/
+		display: table;
 		margin: 0 auto;
-		min-height: 55px !important;
+		min-height: 55px;
+		max-height: 65px;
 		margin-top: 2%;
 		width: 85%;
 	}
-	.check {
-		height: 3%;
+	.valign-helper {
+		display: table-cell;
+		vertical-align: middle;
 	}
-	/*input[type="text"],
-	input[type="email"],
-	input[type="tel"],
-	input[type="password"],
-	select:focus,
-	textarea {
-		padding: 10px;
-	  font-size: 120%;
-	}*/
 	
 	.submit-butt {
 		margin-top: 10%;

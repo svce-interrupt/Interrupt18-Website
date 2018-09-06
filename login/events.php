@@ -2,9 +2,10 @@
 <html>
 	
 	<head>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<title>Interrupt '18 | Registered Events</title>
 		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
-		<link rel="stylesheet" href="css/events-css.css">
+		<link rel="stylesheet" href="css/index-css.css">
 		<link rel="icon" href="../img/favicon.jpeg">
 	</head>
 	
@@ -83,48 +84,48 @@
 			<p class='form-text'>The highlighted ones are events you've already registered for! If you'd like to register for more events click on them, and click on the highlighted events again to register from the respected event! <span style='width:5%;' </span></p>
 
 			<input type="hidden" id="input1" name='event1' value="0">
-			<span class='home-links check blue top' id='check1'>Logician's Code</span>
+			<span class='home-links check blue top' id='check1'><span class="valign-helper">Logician's Code</span></span>
 			
 			<input type="hidden" id="input2" name='event2' value="0">
-			<span class='home-links check orange top' id='check2'>Pitch Perfect</span>
+			<span class='home-links check orange top' id='check2'><span class="valign-helper">Pitch Perfect</span></span>
 			
 			<input type="hidden" id="input3" name="event3" value="0">
-			<span class='home-links check red1 top' id='check3'>Inquizitive</span>
+			<span class='home-links check red1 top' id='check3'><span class="valign-helper">Inquizitive</span></span>
 			
 			<input type="hidden" id="input4" name="event4" value="0">
-			<span class='home-links check red1' id='check4'>Art Attack</span>
+			<span class='home-links check red1' id='check4'><span class="valign-helper">Art Attack</span></span>
 			
 			<input type="hidden" id="input5" name="event5" value="0">
-			<span class='home-links check blue' id='check5'>Clash Of Codes</span>
+			<span class='home-links check blue' id='check5'><span class="valign-helper">Clash Of Codes</span></span>
 			
 			<input type="hidden" id="input6" name="event6" value="0">
-			<span class='home-links check orange' id='check6'>Terminal Of Secrets</span>
+			<span class='home-links check orange' id='check6'><span class="valign-helper">Terminal Of Secrets</span></span>
 			
 			<input type="hidden" id="input7" name="event7" value="0">
-			<span class='home-links check orange' id='check7'>Presentation Hub</span>
+			<span class='home-links check orange' id='check7'><span class="valign-helper">Presentation Hub</span></span>
 			
 			<input type="hidden" id="input8" name="event8" value="0">
-			<span class='home-links check red1' id='check8'>TechCrunch</span>
+			<span class='home-links check red1' id='check8'><span class="valign-helper">TechCrunch</span></span>
 			
 			<input type="hidden" id="input9" name="event9" value="0">
-			<span class='home-links check blue' id='check9'>Interrupt Challenge</span>
+			<span class='home-links check blue' id='check9'><span class="valign-helper">Interrupt Challenge</span></span>
 			
 			<input type="hidden" id="input10" name="event10" value="0">
-			<span class='home-links check red1' id='check10'>Pipe The Piper</span>
+			<span class='home-links check red1' id='check10'><span class="valign-helper">Pipe The Piper</span></span>
 			
 			<input type="hidden" id="input11" name="event11" value="0">
-			<span class="home-links check blue" id="check11">Dataification</span>
+			<span class="home-links check blue" id="check11"><span class="valign-helper">Dataification</span></span>
 
 			<input type="hidden" id="input12" name="event12" value="0">
-			<span class="home-links check orange" id="check12">Workshop AWS</span>			
+			<span class="home-links check orange" id="check12"><span class="valign-helper">Workshop AWS</span></span>			
 
-			<input type='submit' name='submit' value="Save" class='home-links save'>
+			<input type='submit' name='submit' value="Save" class='home-links submit-butt'>
 
 			
 		</form>
 									
-		<a href="http://interrupt2k18.in/" class="home-links below">Go Back To Home &crarr;</a>
-		<a href="../cmd/loading.html" class="home-links below">Go To Command Prompt &crarr;</a>
+		<a href="http://interrupt2k18.in/" class="home-links below"><span class="valign-helper">Go Back To Home &crarr;</span></a>
+		<a href="../cmd/loading.html" class="home-links below"><span class="valign-helper">Go To Command Prompt &crarr;</span></a>
 								
 									
 		
