@@ -28,21 +28,20 @@
 			$LogiciansCode=$_POST['event1'];
 			$PitchPerfect=$_POST['event2'];
 			$Inquizitive=$_POST['event3'];
-			$FlexboxFroggy=$_POST['event4'];
-			$FinishTheCode=$_POST['event5'];
+			$ArtAttack=$_POST['event4'];
+			$ClashOfCodes=$_POST['event5'];
 			$TerminalOfSuccess=$_POST['event6'];
 			$PresentationHub=$_POST['event7'];
-			$TechCrunch=$_POST['event8'];
-			$TechnoFair=$_POST['event9'];
-			$InterruptTheChallenge=$_POST['event10'];
-			$PipeThePiper=$_POST['event11'];
-			$DataScience=$_POST['event12'];
-			$WorkshopAWS=$_POST['event13'];
+			$TechnoFair=$_POST['event8'];
+			$InterruptChallenge=$_POST['event9'];
+			$PipeThePiper=$_POST['event10'];
+			$Dataification=$_POST['event11'];
+			$WorkshopAWS=$_POST['event12'];
 
 			//sql cmd fr updating change of events
 	    	//updates only the row with correct mobileNo
 
-			$sql="UPDATE events set LogiciansCode='$LogiciansCode',PitchPerfect='$PitchPerfect',Inquizitive='$Inquizitive',FlexboxFroggy='$FlexboxFroggy',FinishTheCode='$FinishTheCode',TerminalOfSuccess='$TerminalOfSuccess',PresentationHub='$PresentationHub',TechCrunch='$TechCrunch',TechnoFair='$TechnoFair',InterruptTheChallenge='$InterruptTheChallenge',PipeThePiper='$PipeThePiper',DataScience='$DataScience',WorkshopAWS='$WorkshopAWS' WHERE mobileNo='$mobile';";
+			$sql="UPDATE events set LogiciansCode='$LogiciansCode',PitchPerfect='$PitchPerfect',Inquizitive='$Inquizitive',ArtAttack='$ArtAttack',ClashOfCodes='$ClashOfCodes',TerminalOfSuccess='$TerminalOfSuccess',PresentationHub='$PresentationHub',TechnoFair='$TechnoFair',InterruptChallenge='$InterruptChallenge',PipeThePiper='$PipeThePiper',Dataification='$Dataification',WorkshopAWS='$WorkshopAWS' WHERE mobileNo='$mobile';";
 
 			
 			//sending those queries to db and if query successful, redirect to login/index.php
@@ -93,10 +92,10 @@
 			<span class='home-links check red1 top' id='check3'>Inquizitive</span>
 			
 			<input type="hidden" id="input4" name="event4" value="0">
-			<span class='home-links check red1' id='check4'>Flexbox Froggy</span>
+			<span class='home-links check red1' id='check4'>Art Attack</span>
 			
 			<input type="hidden" id="input5" name="event5" value="0">
-			<span class='home-links check blue' id='check5'>Finish The Code</span>
+			<span class='home-links check blue' id='check5'>Clash Of Codes</span>
 			
 			<input type="hidden" id="input6" name="event6" value="0">
 			<span class='home-links check orange' id='check6'>Terminal Of Secrets</span>
@@ -108,19 +107,16 @@
 			<span class='home-links check red1' id='check8'>TechCrunch</span>
 			
 			<input type="hidden" id="input9" name="event9" value="0">
-			<span class='home-links check blue' id='check9'>TechnoFair</span>
+			<span class='home-links check blue' id='check9'>Interrupt Challenge</span>
 			
 			<input type="hidden" id="input10" name="event10" value="0">
-			<span class='home-links check red1' id='check10'>Interrupt The Challenge</span>
+			<span class='home-links check red1' id='check10'>Pipe The Piper</span>
 			
 			<input type="hidden" id="input11" name="event11" value="0">
-			<span class="home-links check blue" id="check11">Pipe The Piper</span>
+			<span class="home-links check blue" id="check11">Dataification</span>
 
 			<input type="hidden" id="input12" name="event12" value="0">
-			<span class="home-links check orange" id="check12">Data Science</span>			
-
-			<input type="hidden" id="input13" name="event13" value="0">
-			<span class="home-links check red1" id="check13">Workshop AWS</span>
+			<span class="home-links check orange" id="check12">Workshop AWS</span>			
 
 			<input type='submit' name='submit' value="Save" class='home-links save'>
 
@@ -150,7 +146,6 @@
 			var check10=<?php echo $_SESSION['ev'][9] ?>;
 			var check11=<?php echo $_SESSION['ev'][10] ?>;
 			var check12=<?php echo $_SESSION['ev'][11] ?>;
-			var check13=<?php echo $_SESSION['ev'][12] ?>;
 
 			// if event is already selected in db, highlight event
 			if (check1 == 1) {
@@ -223,11 +218,11 @@
 				document.getElementById("check12").style.color="yellow";
 				document.getElementById("input12").value = '1';
 			}
-			if (check13 == 1) {
-				document.getElementById("check13").style.border="1px dashed yellow";
-				document.getElementById("check13").style.color="yellow";
-				document.getElementById("input13").value = '1';
-			}
+			// if (check13 == 1) {
+			// 	document.getElementById("check13").style.border="1px dashed yellow";
+			// 	document.getElementById("check13").style.color="yellow";
+			// 	document.getElementById("input13").value = '1';
+			// }
 
 			document.getElementById("check1").addEventListener("click", function(){
 				if(check1==0){
@@ -409,20 +404,20 @@
 					check12=0;
 				}
 			});
-			document.getElementById("check13").addEventListener("click", function(){
-				if(check13==0){
-					document.getElementById("check13").style.border="1px dashed yellow";
-					document.getElementById("check13").style.color="yellow";
-					document.getElementById("input13").value = '1';
-					check13=1;
-				}
-				else{
-					document.getElementById("check13").style.border="1px dashed #EF9A9A";
-					document.getElementById("check13").style.color="#EF9A9A";
-					document.getElementById("input13").value = '0';
-					check13=0;
-				}
-			});
+			// document.getElementById("check13").addEventListener("click", function(){
+			// 	if(check13==0){
+			// 		document.getElementById("check13").style.border="1px dashed yellow";
+			// 		document.getElementById("check13").style.color="yellow";
+			// 		document.getElementById("input13").value = '1';
+			// 		check13=1;
+			// 	}
+			// 	else{
+			// 		document.getElementById("check13").style.border="1px dashed #EF9A9A";
+			// 		document.getElementById("check13").style.color="#EF9A9A";
+			// 		document.getElementById("input13").value = '0';
+			// 		check13=0;
+			// 	}
+			// });
 	</script>
 
 </html>
