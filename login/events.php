@@ -5,7 +5,7 @@
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<title>Interrupt '18 | Registered Events</title>
 		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
-		<link rel="stylesheet" href="css/index-css.css">
+		<link rel="stylesheet" href="css/events-css.css">
 		<link rel="icon" href="../img/favicon.jpeg">
 	</head>
 	
@@ -57,12 +57,12 @@
 		} 
 
 		// if user is logged in stay here, else go to login/index.php
-		if(isset($_SESSION['mobile'])) {
-			header('Location: ');
-		} else {
-			$_SESSION['message'] = "Error: Please login";
-			echo "<script>window.location.href='index.php'</script>";
-		}
+		// if(isset($_SESSION['mobile'])) {
+		// 	header('Location: ');
+		// } else {
+		// 	$_SESSION['message'] = "Error: Please login";
+		// 	echo "<script>window.location.href='../login/'</script>";
+		// }
 	?>
 	
 	<body>
