@@ -1,0 +1,98 @@
+body, html{
+	background-color: black;
+	font-family: 'Share Tech Mono', monospace;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	width: 95%;
+	margin: 2.5% 2.4%;
+	padding-bottom: 5%;
+	border: 1px dashed white;
+}
+
+#title{
+	width: 100%;
+	display: block;
+	margin-top: 3%;
+	font-size: 125%;
+	text-align: center;
+	white-space: pre;
+	word-wrap: normal;
+	color: red;
+}
+
+.intro-text{
+	width: 100%;
+	margin: 0% 0% 2% 0%;
+	font-size: 125%;
+	color: yellow;
+	text-align: center;
+}
+.intro-details{
+	margin-bottom: 0.25%;
+}
+.home-links{
+	text-decoration: none;
+	color: #29B6F6;
+	width: 30%;
+	margin: 0 auto;
+	margin-top: 3%;
+	display: block;
+	text-align: center;
+	border: 1px dashed #29B6F6;
+	padding: 1% 0%;
+	font-size: 120%;
+}
+.home-links:hover{
+	color: yellow;
+	border: 1px dashed yellow;
+}
+.blue1{
+	margin-top: 4%;
+	color: #29B6F6;
+	border: 1px dashed #29B6F6;
+}
+.blue2{
+	margin-top: 1%;
+	color: #29B6F6;
+	border: 1px dashed #29B6F6;
+}
+
+.image-div{
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+.image-div a{
+	text-decoration: none;
+}
+
+.developer-img{
+	width: 22%;
+	cursor: pointer;
+}
+.developer-txt{
+	width: 22%;
+	font-size: 125%;
+	display: inline-block;
+	text-align: center;
+}
+.bottom-text{
+	margin-top: 6%;
+	width: 30%;
+	margin-left: 35%;
+}
+.git{
+	margin-top: 0%;
+	color: white;
+	border: 1px dashed white;
+}
+
+/* This is for the mobile responsive */
+
+@media only screen and (max-width: 1000px) {
+
+}
