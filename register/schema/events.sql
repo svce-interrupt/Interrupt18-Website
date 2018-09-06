@@ -28,18 +28,24 @@ SET time_zone = "+00:00";
 -- Table structure for table `events`
 --
 
+Table structure for table `events`
+--
+
 CREATE TABLE `events` (
   `mobileNo` varchar(10) NOT NULL,
-  `GoodWillHunting` int(1) DEFAULT NULL,
-  `TheGameOfCodes` int(1) DEFAULT NULL,
-  `Predestination` int(1) DEFAULT NULL,
-  `TheDigitalFortress` int(1) DEFAULT NULL,
-  `TheSecretSociety` int(1) DEFAULT NULL,
-  `UnicornOfSilicon` int(1) DEFAULT NULL,
-  `FishBowlConversation` int(1) DEFAULT NULL,
+  `LogiciansCode` int(1) DEFAULT NULL,
+  `PitchPerfect` int(1) DEFAULT NULL,
   `Inquizitive` int(1) DEFAULT NULL,
-  `MiniProject` int(1) DEFAULT NULL,
-  `PresentationFrankenstein` int(1) DEFAULT NULL
+  `ArtAttack` int(1) DEFAULT NULL,
+  `ClashOfCodes` int(1) DEFAULT NULL,
+  `TerminalOfSecrets` int(1) DEFAULT NULL,
+  `PresentationHub` int(1) DEFAULT NULL,
+  `TechnoFair` int(1) DEFAULT NULL,
+  `InterruptChallenge` int(1) DEFAULT NULL,
+  `PipeThePiper` int(1) DEFAULT NULL,
+  `Dataification` int(1) DEFAULT NULL,
+  `WorkshopAWS` int(1) DEFAULT NULL,
+  `totalpoints` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
