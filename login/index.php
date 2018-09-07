@@ -57,7 +57,7 @@
 					$_SESSION['ev'][4] = $row2['ClashOfCodes'];
 					$_SESSION['ev'][5] = $row2['TerminalOfSecrets'];
 					$_SESSION['ev'][6] = $row2['PresentationHub'];
-					$_SESSION['ev'][7] = $row2['Technofair'];
+					$_SESSION['ev'][7] = $row2['TechnoFair'];
 					$_SESSION['ev'][8] = $row2['InterruptChallenge'];
 					$_SESSION['ev'][9] = $row2['PipeThePiper'];
 					$_SESSION['ev'][10] = $row2['Dataification'];
