@@ -521,28 +521,29 @@
 		
 		function autoFillInput(e){
 			if(e.keyCode==9){
+				e.preventDefault()
 				var terminal_input=document.getElementById("terminal-input").value;
 
 				if(terminal_input[0]=='h'){
 					document.getElementById("terminal-input").value="home";
-                                        document.getElementById("terminal-form-input"+idNum).innerHTML="home";
+                    document.getElementById("terminal-form-input"+idNum).innerHTML="home";
 				}
 				else if(terminal_input[0]=='r'){
 					document.getElementById("terminal-input").value="register";
 					document.getElementById("terminal-form-input"+idNum).innerHTML="register";
 				}
 				else if(terminal_input[0]=='l'){
-                                        document.getElementById("terminal-input").value="login";
-                                        document.getElementById("terminal-form-input"+idNum).innerHTML="login";
+					document.getElementById("terminal-input").value="login";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="login";
                 }
 				else if(terminal_input[0]=='c'){
-                                        document.getElementById("terminal-input").value="contact-us";
-                                        document.getElementById("terminal-form-input"+idNum).innerHTML="contact-us";
+					document.getElementById("terminal-input").value="contact-us";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="contact-us";
                 }
 
 				window.setTimeout(function(){
 					document.getElementById("terminal-input").focus();
-				},100);
+				},10);
 			}
 		}
 
