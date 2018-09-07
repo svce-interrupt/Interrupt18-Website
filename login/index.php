@@ -2,6 +2,7 @@
 
 <html>
 	<head>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<title>Interrupt '18 | Login</title>
 		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
 		<link href="css/index-css.css" rel="stylesheet">
@@ -98,8 +99,8 @@
 			<button type='submit' class='home-links submit-butt' id='login-butt'>Login &rarr;</button>
 		</form>
 						
-		<a href="../register/index.html" class="home-links top">Create Account &rarr;</a>
-		<a href="http://interrupt2k18.in/cmd" class="home-links bottom">Go Back To Command Prompt &crarr;</a>
+		<a href="../register/index.html" class="home-links"><span class="valign-helper">Create Account &rarr;</span></a>
+		<a href="http://interrupt2k18.in/cmd" class="home-links bottom"><span class="valign-helper">Go Back To Command Prompt &crarr;</span></a>
 		
 	</body>
 
