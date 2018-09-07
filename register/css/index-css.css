@@ -130,52 +130,11 @@ body{
 	margin-top: 6%;
 }
 
-@media (max-width: 1024px) {
-	.home-links{
-		/*display: block;*/
-		display: table;
-		margin: 0 auto;
-		min-height: 55px;
-		max-height: 65px;
-		margin-top: 3%;
-		width: 85%;
-	}
-	.valign-helper {
-		display: table-cell;
-		vertical-align: middle;
-	}
+@media only screen and (max-width: 1000px) {
 	
-	.submit-butt {
-		margin-top: 10%;
-	}
-	br {
-		display: none;
-	}
-}
-
-@media (min-width: 768px) {
-	#title {
-	font-size: 120%;		
-	}
-}
-
-@media (max-width: 768px) {
-	body {
-		border: none;
-	}
-	#title {
-		font-size:130%;
-	}
-}
-
-@media (max-width: 600px) {
-	#title {
-		font-size: 90%;
-	}
-}
-
-@media (max-width: 500px) {
-	#title {
-		font-size: 67%;
+	body{
+		width: 95%;
+		border: 2px dashed white;
+		margin-left: 2.3%;
 	}
 }

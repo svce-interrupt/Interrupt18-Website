@@ -74,10 +74,11 @@ body{
 @media only screen and (max-width: 1000px) {
 
 	body{
-		width: 100%;
+		width: 95%;
+		border: 2px dashed white;
+		margin-left: 2.3%
 		margin: 2.5% 0%;
-		padding-bottom: 5%;
-		border: none;
+		padding-bottom: 8%;
 	}
 
 	#title{
@@ -94,28 +95,32 @@ body{
 	}
 	.intro-body{
 		width: 95%;
-		margin:0 auto 3% auto;
+		margin: 5% auto 3% auto;
 	}
 	.intro-details{
 		margin-bottom: 0.25%;
 	}
 	.home-links{
-		width: 70%;
-		font-weight: 700;
+		width: 85%;
 		margin-top: 8%;
-		border: 3px dashed #29B6F6;
-		padding: 3% 0%;
-		font-size: 170%;
+		border: 2px dashed #29B6F6;
+		padding: 4% 0%;
+		font-size: 230%;
 	}
 	.home-links:hover{
-		border: 3px dashed yellow;
+		border: 2px dashed yellow;
 	}
 	.red{
 		margin-top: 3%;
-		border: 3px dashed red;
+		border: 2px dashed red;
 	}
 	.yellow{
 		margin-top: 3%;
-		border: 3px dashed yellow;
+		border: 2px dashed yellow;
+	}
+	.green{
+		margin-top: 3%;
+		color: #04b400;
+		border: 2px dashed #04b400;
 	}
 }
