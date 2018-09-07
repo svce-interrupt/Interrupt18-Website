@@ -46,7 +46,7 @@ if (!$connect) {
 	if($event12=$_POST['event12']==1){echo "Workshop AWS\n";}
 	}
 
-
+	$printEvent=printEvent();
 
 //to send verification email
 	$name=cleanString($_POST['nameInput']);
@@ -54,7 +54,7 @@ if (!$connect) {
 	$email;
 	$mobile;
 	$subject="INTERRUPT'18 Registration Successful";
-	$message="Hello $name! \nThanks for registering for Interrupt 2018! We're glad to have you.You can use your phone number ($mobile) to login along with the password you chose. If you have any issues feel free to contact us.\nJust to confirm these are the events that you registered for:\nprintEvent();\nRegards,\nThe Interrupt 2018 Organizing Team";
+	$message="Hello $name! \nThanks for registering for Interrupt 2018! We're glad to have you.You can use your phone number ($mobile) to login along with the password you chose. If you have any issues feel free to contact us.\nJust to confirm these are the events that you registered for:\n$printEvent\nRegards,\nThe Interrupt 2018 Organizing Team";
 	$headers="From: interrupt@gmail.com" . "\r\n";
 
 //to validate email and phone no
