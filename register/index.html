@@ -25,11 +25,11 @@
 			
 			<form id='register-form' method="post" action="signup.php">
 				<input type='text' name='nameInput' class='home-links form-input' placeholder='Name'>
-				<input type='tel' name='numberInput' class='home-links form-input' id='account-number' placeholder='Number'>
+				<input type='tel' name='numberInput' required='required' class='home-links form-input' id='account-number' placeholder='Number'>
 				<input type='text' name='collegeInput' class='home-links form-input long' placeholder='College Name'><br>
-				<input type='email' name='emailInput' class='home-links form-input' id='account-email' placeholder='Email'>
-				<input type='password' name='passInput' class='home-links form-input' placeholder='Password'><br>
-				<input type="password" name="confirmPassInput" class="home-links form-input end" placeholder="Confirm Password"><br><br>
+				<input type='email' name='emailInput' required='required' class='home-links form-input' id='account-email' placeholder='Email'>
+				<input type='password' name='passInput' required='required' class='home-links form-input' id='account-password' placeholder='Password'><br>
+				<input type="password" name="confirmPassInput" required='required' class="home-links form-input end" id='confirmPassword' placeholder="Confirm Password"><br><br>
 
 				<p class='form-text'>Click on the names of the events that you would like to register for! <span style='width:5%;' id='cursor-blink'>|</span></p>
 
@@ -353,23 +353,37 @@
 	        xmlhttp.open("GET", "uniqueNumber.php?number="+num1, true);
 	        xmlhttp.send();
 		}
+
+		function checkIfPasswordsMatch(password,confirmPassword) { //This function checks if the password and confirm passwords match or not
+        if (password != confirmPassword){
+            return 0;
+        }
+        else{
+        	return 1;
+        }
+    }
 		
 		
 		/* These functions are the eventListener functions for the create-account button */
 		document.getElementById("create-account").addEventListener("click", function(){ //When the button is clicked, we check if the email and mobile number are valid. we then check if the mobile number already exists in the db. We generate the required error messages.
 			var email_input=document.getElementById("account-email").value;
 			var mobile_input=document.getElementById("account-number").value;
-			
+			var password = document.getElementById("account-password").value;
+        	var confirmPassword = document.getElementById("confirmPassword").value;
+
 			if(checkEmail(email_input)!=true){
 				alert("Oops! Your email seems to be invalid. Please enter a valid ID.");
 			}
-			else{
+			else if(1){
 				if(checkMobileNumber(mobile_input)!=true){
 					alert("Oops! Your mobile number seems to be invalid. Please enter a valid mobile number.");
 				}
 				else{
 					checkIfNumberUnique(mobile_input);
 				}
+			}
+			else(checkIfPasswordsMatch(password,confirmPassword)!=1){
+					alert("Oops! The password you entered don't match.");
 			}
 			
 		});
