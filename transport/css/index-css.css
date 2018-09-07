@@ -80,17 +80,17 @@ body{
 		width: 100%;
 		margin: 2.5% 0%;
 		padding-bottom: 5%;
-		border: none;
+		border: 1px dashed white;
 	}
 
 	#title{
-		font-size: 80%;
+		font-size: 160%;
 		margin: 7% 0%;
 		font-weight: 700;
 	}
 
 	#bus{
-		width: 80%;
+		width: 140%;
 		display: block;
 		margin-top: 3%;
 		font-size: 125%;
@@ -98,7 +98,7 @@ body{
 		white-space: pre;
 		word-wrap: normal;
 		color: yellow;
-		margin-left: -5%;
+		margin-left: -30%;
 	}
 	.intro-text{
 		width: 100%;
@@ -117,16 +117,12 @@ body{
 		width: 70%;
 		font-weight: 700;
 		margin-top: 8%;
-		border: 3px dashed #29B6F6;
+		border: 1px dashed #29B6F6;
 		padding: 3% 0%;
 		font-size: 170%;
 	}
 	.home-links:hover{
-		border: 3px dashed yellow;
-	}
-	.red{
-		margin-top: 3%;
-		border: 1px dashed red;
+		border: 1px dashed yellow;
 	}
 	.yellow{
 		margin-top: 3%;
