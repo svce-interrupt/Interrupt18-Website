@@ -1,7 +1,7 @@
 body, html{
 	background-color: black;
 	font-family: "Share Tech Mono", monospace;
-	color: yellow;
+	color: #04bf00;
 	padding: 0;
 	margin: 0;
 }
@@ -41,8 +41,8 @@ body{
 	cursor: pointer;
 }
 .home-links:hover{
-	color: yellow;
-	border: 1px dashed yellow;
+	color: #ffd881;
+	border: 1px dashed #ffd881;
 }
 .top-links{
 	margin-top: 1%;
@@ -75,14 +75,6 @@ body{
     border: 1px dashed #7189bf;
 }
 
-.dark-red{
-	color: #E91E63;
-	border: 1px dashed #E91E63;
-}
-.purple{
-	color: #9C27B0;
-	border: 1px dashed #9C27B0;
-}
 .below{
 	margin-top: 1%;
 }
@@ -107,20 +99,6 @@ body{
 }
 .long{
 	width: 62.5%;
-	border: 1px dashed orange;
-	color: orange;
-}
-.long:hover{
-	border: 1px dashed orange;
-	color: orange;
-}
-.end{
-	border: 1px dashed red;
-	color: red;
-}
-.end:hover{
-	border: 1px dashed red;
-	color: red;
 }
 
 .form-text{
@@ -140,26 +118,6 @@ body{
 }
 .top{
 	margin-top: 5%;
-}
-.blue:hover{
-	border: 1px dashed #29b6f6;
-	color: #29b6f6;
-}
-.orange{
-	border: 1px dashed #FB8C00;
-	color: #FB8C00;
-}
-.orange:hover{
-	border: 1px dashed #FB8C00;
-	color: #FB8C00;
-}
-.red1{
-	border: 1px dashed #EF9A9A;
-	color: #EF9A9A;
-}
-.red1:hover{
-	border: 1px dashed #EF9A9A;
-	color: #EF9A9A;
 }
 
 .submit-butt{

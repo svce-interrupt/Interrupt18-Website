@@ -27,19 +27,20 @@
 				<input type='text' name='nameInput' class='home-links form-input' placeholder='Name'>
 				<input type='tel' name='numberInput' class='home-links form-input' id='account-number' placeholder='Number'>
 				<input type='text' name='collegeInput' class='home-links form-input long' placeholder='College Name'><br>
-				<input type='email' name='emailInput' class='home-links form-input end' id='account-email' placeholder='Email'>
-				<input type='password' name='passInput' class='home-links form-input end' placeholder='Password'><br><br>
+				<input type='email' name='emailInput' class='home-links form-input' id='account-email' placeholder='Email'>
+				<input type='password' name='passInput' class='home-links form-input' placeholder='Password'><br>
+				<input type="password" name="confirmPassInput" class="home-links form-input end" placeholder="Confirm Password"><br><br>
 
 				<p class='form-text'>Click on the names of the events that you would like to register for! <span style='width:5%;' id='cursor-blink'>|</span></p>
 
 				<input type="hidden" id="input1" name='event1' value="0">
-				<span class='home-links check orange top' id='check1'><span class="valign-helper">Logician's Code</span></span>
+				<span class='home-links check orange' id='check1'><span class="valign-helper">Logician's Code</span></span>
 				
 				<input type="hidden" id="input2" name='event2' value="0">
-				<span class='home-links check orange top' id='check2'><span class="valign-helper">Pitch Perfect</span></span>
+				<span class='home-links check orange' id='check2'><span class="valign-helper">Pitch Perfect</span></span>
 				
 				<input type="hidden" id="input3" name="event3" value="0">
-				<span class='home-links check orange top' id='check3'><span class="valign-helper">Inquizitive</span></span>
+				<span class='home-links check orange' id='check3'><span class="valign-helper">Inquizitive</span></span>
 				
 				<input type="hidden" id="input4" name="event4" value="0">
 				<span class='home-links check lilac' id='check4'><span class="valign-helper">Art Attack</span></span>
@@ -377,14 +378,12 @@
 	<script>
 		$('.check').click(function() {
 			var $input = $('#' + this.id).prev();
-			console.log($input);
 			if ($input.val() == 0) {
 				$input.val('1');
 			} else {
 				$input.val('0');
 			}
 			
-			console.log($("#" + this.id).prev().val());
 		});
 	</script>
 </html>

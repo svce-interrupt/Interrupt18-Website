@@ -10,6 +10,7 @@ if (!$connect) {
 //initialisation
  // if(isset($_POST['submit']))
  // {
+	// TO-DO: IMPLEMENT CONFIRM PASSWORD
 	$checkEmail=validEmail($_POST['emailInput']);
 	$checkMobile=validMobile($_POST['numberInput']);
 
