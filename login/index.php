@@ -15,6 +15,7 @@
 		</style>
 	</head>
 	<?php 
+		$message="";
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$dbservername="localhost";
 			$dbusername= "root";
@@ -24,8 +25,6 @@
 			if (!$connect) {
 			    die("Connection failed: " . mysqli_connect_error());
 			}
-
-			global $mobile, $message;
 			$mobile=$_POST["numberInput"];
 			$password=$_POST['passInput'];
 
@@ -66,15 +65,10 @@
 					$_SESSION['ev'][12] = $row2['WorkshopAWS'];
 					echo "<script>window.location.href='events.php'</script>";
 				} elseif ($row['mobileNo']) {		//if mobile exists, but password is wrong
-					echo "<script>alert('The mobile number and password do not seem to match! Please try again.');</script>";
+					$message = "The mobile number and password do not seem to match! Please try again.";
 				} else {		//if mobile doesn't exist
-					echo "<script>alert('The mobile number does not exist. Please try again.');</script>";
+					$message = 'The mobile number does not exist. Please try again.';
 				}
-			}
-		} else {
-			// message from events.php file
-			if(isset($_SESSION['message'])) {
-				$message=$_SESSION['message'];
 			}
 		}
 	?>	
@@ -93,6 +87,11 @@
                                                    |___/                                             
 		</span></pre>
 		
+		<div>
+			<p id="error-message">
+				<?php echo $message ?>
+			</p><!-- #error-message -->
+		</div>
 		<form id='register-form' method="post" action="index.php">
 			<input type='tel' name='numberInput' class='home-links form-input' id='number-login' placeholder='Mobile Number'>
 			<input type='password' name='passInput' class='home-links form-input end' id='pass-login' placeholder='Password'>

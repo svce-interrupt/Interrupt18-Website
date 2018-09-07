@@ -57,12 +57,11 @@
 		} 
 
 		// if user is logged in stay here, else go to login/index.php
-		// if(isset($_SESSION['mobile'])) {
-		// 	header('Location: ');
-		// } else {
-		// 	$_SESSION['message'] = "Error: Please login";
-		// 	echo "<script>window.location.href='../login/'</script>";
-		// }
+		if(isset($_SESSION['mobile'])) {
+			header('Location: ');
+		} else {
+			header('Location: ../login');
+		}
 	?>
 	
 	<body>
