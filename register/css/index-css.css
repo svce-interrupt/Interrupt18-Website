@@ -134,7 +134,56 @@ body{
 	
 	body{
 		width: 95%;
-		border: 2px dashed white;
+		border: 1px dashed white;
 		margin-left: 2.3%;
+	}
+
+	#title{
+		width: 100%;
+		color: orange;
+		font-size: 70%;
+		display: block;
+	}
+		
+	.home-links{
+		width: 85%;
+		margin-left: 7.5%;
+		padding: 4% 0%;
+		font-size: 100%;
+	}
+
+	.form-input{
+		width: 90%;
+		border-radius: 0px;
+		padding: 4% 0 4% 4%;
+		margin-top: 3%;
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+	.form-text{
+		width: 85%;
+		margin-left: 7.5%;
+		margin-bottom: 9%;
+		font-size: 100%
+	}
+
+	.check{
+		padding-top: 4.5%;
+		padding-bottom: 4.5%;
+		width: 90%;
+		display: block;
+		margin: 3.5% 5%; 
+	}
+
+
+	.submit-butt{
+		width: 90%;
+		margin-left: 5%;
+		margin-top: 13%;
+	}
+	.top-links{
+		width: 90%;
+		margin-left: 5%;
+		margin-top: 3%;
 	}
 }
