@@ -53,16 +53,15 @@
 					$_SESSION['ev'][0] = $row2['LogiciansCode'];
 					$_SESSION['ev'][1] = $row2['PitchPerfect'];
 					$_SESSION['ev'][2] = $row2['Inquizitive'];
-					$_SESSION['ev'][3] = $row2['FlexboxFroggy'];
-					$_SESSION['ev'][4] = $row2['FinishTheCode'];
-					$_SESSION['ev'][5] = $row2['TerminalOfSuccess'];
+					$_SESSION['ev'][3] = $row2['ArtAttack'];
+					$_SESSION['ev'][4] = $row2['ClashOfCodes'];
+					$_SESSION['ev'][5] = $row2['TerminalOfSecrets'];
 					$_SESSION['ev'][6] = $row2['PresentationHub'];
-					$_SESSION['ev'][7] = $row2['TechCrunch'];
-					$_SESSION['ev'][8] = $row2['TechnoFair'];
-					$_SESSION['ev'][9] = $row2['InterruptTheChallenge'];
-					$_SESSION['ev'][10] = $row2['PipeThePiper'];
-					$_SESSION['ev'][11] = $row2['DataScience'];
-					$_SESSION['ev'][12] = $row2['WorkshopAWS'];
+					$_SESSION['ev'][7] = $row2['Technofair'];
+					$_SESSION['ev'][8] = $row2['InterruptChallenge'];
+					$_SESSION['ev'][9] = $row2['PipeThePiper'];
+					$_SESSION['ev'][10] = $row2['Dataification'];
+					$_SESSION['ev'][11] = $row2['WorkshopAWS'];
 					echo "<script>window.location.href='events.php'</script>";
 				} elseif ($row['mobileNo']) {		//if mobile exists, but password is wrong
 					$message = "The mobile number and password do not seem to match! Please try again.";
