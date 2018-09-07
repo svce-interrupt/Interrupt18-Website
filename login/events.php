@@ -31,7 +31,7 @@
 			$Inquizitive=$_POST['event3'];
 			$ArtAttack=$_POST['event4'];
 			$ClashOfCodes=$_POST['event5'];
-			$TerminalOfSuccess=$_POST['event6'];
+			$TerminalOfSecrets=$_POST['event6'];
 			$PresentationHub=$_POST['event7'];
 			$TechnoFair=$_POST['event8'];
 			$InterruptChallenge=$_POST['event9'];
@@ -42,7 +42,7 @@
 			//sql cmd fr updating change of events
 	    	//updates only the row with correct mobileNo
 
-			$sql="UPDATE events set LogiciansCode='$LogiciansCode',PitchPerfect='$PitchPerfect',Inquizitive='$Inquizitive',ArtAttack='$ArtAttack',ClashOfCodes='$ClashOfCodes',TerminalOfSuccess='$TerminalOfSuccess',PresentationHub='$PresentationHub',TechnoFair='$TechnoFair',InterruptChallenge='$InterruptChallenge',PipeThePiper='$PipeThePiper',Dataification='$Dataification',WorkshopAWS='$WorkshopAWS' WHERE mobileNo='$mobile';";
+			$sql="UPDATE events set LogiciansCode=$LogiciansCode,PitchPerfect=$PitchPerfect,Inquizitive=$Inquizitive,ArtAttack=$ArtAttack,ClashOfCodes=$ClashOfCodes,TerminalOfSecrets=$TerminalOfSecrets,PresentationHub=$PresentationHub,TechnoFair=$TechnoFair,InterruptChallenge=$InterruptChallenge,PipeThePiper=$PipeThePiper,Dataification=$Dataification,WorkshopAWS=$WorkshopAWS WHERE mobileNo='$mobile';";
 
 			
 			//sending those queries to db and if query successful, redirect to login/index.php
