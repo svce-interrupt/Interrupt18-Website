@@ -50,6 +50,30 @@ body{
 	width: 25%;
 }
 
+.orange {
+    color: #fa5c18;
+    border: 1px dashed #fa5c18;
+}
+
+.lilac {
+    color: #edd5cd
+    border: 1px dashed #edd5cd;
+}
+
+.yellow {
+	color: yellow !important;
+	border: 1px dashed yellow !important;
+}
+
+.light-red {
+    color: #d97b7a;
+    border: 1px dashed #d97b7a;
+}
+
+.cyan {
+    color: #7189bf;
+    border: 1px dashed #7189bf;
+}
 
 .dark-red{
 	color: #E91E63;
