@@ -25,11 +25,20 @@
 		</span></pre>
 		<p class="intro-text">Welcome to Interrupt 2018!</p>
 		
-		<p class="intro-text intro-body" id="intro-about"></p> <!-- The typing effect is done here -->
+		<!-- The typing effect is done here -->
+		<p class="intro-text intro-body" id="intro-about">
+			Interrupt is a National-Level Technical Symposium conducted by the students of the Computer Science department of SVCE. It is a place where engineers showcase their talent and ideas in a plethora of events ranging from technical to non-technical across various domains of the computer world. Now in its 27<sup>th</sup> year, Interrupt is back and it's bigger and better than ever! Check out the Command Prompt for information on events and registration!<br><br>
+			<span id="line-one"></span>
+			<br />
+			<span id="line-two"></span>
+			<br />
+			<span id="line-three"></span><span style='width:5%;' id='cursor-blink'>|</span>
+			<br />
+		</p> 
 
 		<a href="cmd/loading.html" class="home-links">Go To Interrupt Command Prompt &crarr;</a> <!-- The buttons on the home page. -->
 		<a href="http://interrupt2k18.in/transport/" class="home-links red">Transport Details &crarr;</a>
-		<a href="http://interrupt2k18.in/developers/" class="home-links yellow">Developer Team &crarr;</a> 
+		<a href="http://interrupt2k18.in/developers/" class="home-links green">Developer Team &crarr;</a> 
 
 	</body>
 
@@ -63,43 +72,54 @@
 				colorNum=1;
 			}
 		} //This function is used to change the color of the interrupt title every time it is called.
-		
-		
+				
 		//The following functions and variables are for the 'typing' effect that is found on the main page.
 		var typeNum=0;
 		var typeChange=window.setInterval(typewrite, 10);
 		
-		var bodyText="Interrupt is a National-Level Technical Symposium conducted by the students of the Computer Science department of SVCE. It is a place where engineers showcase their talent and ideas in a plethora of events ranging from technical to non-technical across various domains of the computer world. Now in its 27<sup>th</sup> year, Interrupt is back and it's bigger and better than ever! Check out the Command Prompt for information on events and registration!<br><br>";
-
 		var typeText="Venue: Sri Venkateswara College of Engineering ["+
 			"Date: 29# September, 2018 ["+
-			"Time: 8:30 AM - 3:30PM  ";
+			"Time: 8:30 AM - 3:30PM ";
 			
-					
 		var typeTextLen=typeText.length;
 		var superscriptNum=0;
-		document.getElementById("intro-about").innerHTML=bodyText;
+		var lineOneComplete = false, lineTwoComplete = false, lineThreeComplete = false;
 		
 		function typewrite(){
 			if(typeNum!=(typeTextLen-1)){
-                                if(typeText[typeNum]=='#'){
-                                        document.getElementById("intro-about").innerHTML+="<sup>th</sup>";
-                                        superscriptNum+=1;
-                                }
-				else if(typeText[typeNum]!='['){
-					document.getElementById("intro-about").innerHTML+=typeText[typeNum];
+				if(lineOneComplete == false){
+					if(typeText[typeNum]=='['){
+						lineOneComplete = true;
+					}
+					else 
+						document.getElementById("line-one").innerHTML+=typeText[typeNum];
 				}
-				else if(typeText[typeNum]=='['){
-					document.getElementById("intro-about").innerHTML+="<br>";
+				else if(lineTwoComplete == false){
+					if(typeText[typeNum]=='['){
+						lineTwoComplete = true;
+					}
+					else if(typeText[typeNum]=='#'){
+						document.getElementById("line-two").innerHTML+="<sup>th</sup>";
+						superscriptNum+=1;
+					}
+					else {
+						document.getElementById("line-two").innerHTML+=typeText[typeNum];
+					}
+				}
+				else if(lineThreeComplete == false){
+					if(typeText[typeNum]=='['){
+						lineThreeComplete = true;
+					}
+					else 
+						document.getElementById("line-three").innerHTML+=typeText[typeNum];
 				}
 				typeNum+=1;
 			}
 			else{
 				clearInterval(typeChange);
-				document.getElementById("intro-about").innerHTML+="<span style='width:5%;' id='cursor-blink'>|</span>";
-				window.setInterval(blink,500);
+				window.setInterval(blink,500);				
 			}
-		} //Everytime the function is called, it appends a character to the <p> tag until the end of the string has been reached.
+		} //Everytime the function is called, it appends a character to the respective line (<span> tag) in the <p> tag until the end of the string has been reached.
 		
 		var blinkNum=0;
 		function blink(){

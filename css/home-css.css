@@ -58,10 +58,15 @@ body{
 	color: red;
 	border: 1px dashed red;
 }
-.yellow{
+.green{
 	margin-top: 1%;
-	color: yellow;
-	border: 1px dashed yellow;
+	color: #04bf00;
+	border: 1px dashed #04bf00;
+}
+
+#cursor-blink {
+	background-color: black;
+	color: black;
 }
 
 /* This is for the mobile responsive */
