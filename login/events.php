@@ -83,48 +83,48 @@
 			<p class='form-text'>The highlighted ones are events you've already registered for! If you'd like to register for more events click on them, and click on the highlighted events again to register from the respected event! <span style='width:5%;' </span></p>
 
 			<input type="hidden" id="input1" name='event1' value="0">
-			<span class='home-links check orange top' id='check1'><span class="valign-helper">Logician's Code</span></span>
+			<span class='home-links check orange top' id='check1'>Logician's Code</span>
 			
 			<input type="hidden" id="input2" name='event2' value="0">
-			<span class='home-links check orange top' id='check2'><span class="valign-helper">Pitch Perfect</span></span>
+			<span class='home-links check orange top' id='check2'>Pitch Perfect</span>
 			
 			<input type="hidden" id="input3" name="event3" value="0">
-			<span class='home-links check orange top' id='check3'><span class="valign-helper">Inquizitive</span></span>
+			<span class='home-links check orange top' id='check3'>Inquizitive</span>
 			
 			<input type="hidden" id="input4" name="event4" value="0">
-			<span class='home-links check lilac' id='check4'><span class="valign-helper">Art Attack</span></span>
+			<span class='home-links check lilac' id='check4'>Art Attack</span>
 			
 			<input type="hidden" id="input5" name="event5" value="0">
-			<span class='home-links check lilac' id='check5'><span class="valign-helper">Clash Of Codes</span></span>
+			<span class='home-links check lilac' id='check5'>Clash Of Codes</span>
 			
 			<input type="hidden" id="input6" name="event6" value="0">
-			<span class='home-links check lilac' id='check6'><span class="valign-helper">Terminal Of Secrets</span></span>
+			<span class='home-links check lilac' id='check6'>Terminal Of Secrets</span>
 			
 			<input type="hidden" id="input7" name="event7" value="0">
-			<span class='home-links check light-red' id='check7'><span class="valign-helper">Presentation Hub</span></span>
+			<span class='home-links check light-red' id='check7'>Presentation Hub</span>
 			
 			<input type="hidden" id="input8" name="event8" value="0">
-			<span class='home-links check light-red' id='check8'><span class="valign-helper">TechnoFair</span></span>
+			<span class='home-links check light-red' id='check8'>TechnoFair</span>
 			
 			<input type="hidden" id="input9" name="event9" value="0">
-			<span class='home-links check light-red' id='check9'><span class="valign-helper">Interrupt Challenge</span></span>
+			<span class='home-links check light-red' id='check9'>Interrupt Challenge</span>
 			
 			<input type="hidden" id="input10" name="event10" value="0">
-			<span class='home-links check cyan' id='check10'><span class="valign-helper">Pipe The Piper</span></span>
+			<span class='home-links check cyan' id='check10'>Pipe The Piper</span>
 			
 			<input type="hidden" id="input11" name="event11" value="0">
-			<span class="home-links check cyan" id="check11"><span class="valign-helper">Dataification</span></span>
+			<span class="home-links check cyan" id="check11">Dataification</span>
 
 			<input type="hidden" id="input12" name="event12" value="0">
-			<span class="home-links check cyan" id="check12"><span class="valign-helper">Workshop AWS</span></span>			
+			<span class="home-links check cyan" id="check12">Workshop AWS</span>
 
 			<input type='submit' name='submit' value="Save" class='home-links submit-butt'>
 
 			
 		</form>
 									
-		<a href="http://interrupt2k18.in/" class="home-links below"><span class="valign-helper">Go Back To Home &crarr;</span></a>
-		<a href="../cmd/loading.html" class="home-links below"><span class="valign-helper">Go To Command Prompt &crarr;</span></a>
+		<a href="http://interrupt2k18.in/" class="home-links below">Go Back To Home &crarr;</a>
+		<a href="../cmd/loading.html" class="home-links below">Go To Command Prompt &crarr;</a>
 								
 									
 		

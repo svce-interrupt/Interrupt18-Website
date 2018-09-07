@@ -160,55 +160,66 @@ p {
 
 }
 
-@media (max-width: 1024px) {
-    .home-links{
-        display: table;
-        width: 85%;
-        min-height: 55px;
-        max-height: 65px;
-        margin: 0 auto;
-        margin-top: 3%;
-    }
-    .valign-helper {
-        display: table-cell;
-        vertical-align: middle;
-    }
-    #check1 {
-        margin-top: 10%;
-    }
+@media only screen and (max-width: 1000px) {
 
-    .submit-butt {
-        margin-top: 5%;
-    }
-    .top {
-        margin-top: 3%;
-    }
-    #register-form {
-        margin-bottom: 10%;
-    }
+        body{
+                width: 95%;
+                border: 1px dashed white;
+                margin-left: 2.3%;
+        }
+
+        #title{
+                width: 100%;
+                color: orange;
+                font-size: 70%;
+                display: block;
+        }
+
+        .home-links{
+                width: 85%;
+                margin-left: 7.5%;
+                padding: 4% 0%;
+                font-size: 100%;
+        }
+
+        .form-input{
+                width: 90%;
+                border-radius: 0px;
+                padding: 4% 0 4% 4%;
+                margin-top: 3%;
+                margin-right: 5%;
+                margin-left: 5%;
+        }
+        .form-text{
+                width: 85%;
+                margin-left: 7.5%;
+                margin-bottom: 9%;
+                font-size: 100%
+        }
+
+	.check{
+                padding-top: 4.5%;
+                padding-bottom: 4.5%;
+                width: 90%;
+                display: block;
+                margin: 3.5% 5%;
+        }
+
+
+        .submit-butt{
+		border: none;
+		border: 2px dashed yellow;
+		background-color: black;		
+		border-radius: 0px;
+                width: 90%;
+                margin-left: 5%;
+                margin-top: 13%;
+        }
+        .below{
+                width: 90%;
+                margin-left: 5%;
+		margin-bottom: 0%;
+                margin-top: 3%;
+        }
 }
 
-@media (max-width: 768px) {
-    body {
-        border: none;
-    }
-
-    #title {
-        font-size: 130%;
-    }
-}
-
-@media (max-width: 600px) {
-    #register-form {
-        margin-top: 15%;
-    }
-    #title {
-        font-size: 90%;
-    }
-}
-
-@media (max-width: 500px) {
-    #title {
-        font-size: 84%;
-    }
-}
