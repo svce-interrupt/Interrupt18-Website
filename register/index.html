@@ -24,12 +24,12 @@
 		<span id="changeHere">
 			
 			<form id='register-form' method="post" action="signup.php">
-				<input type='text' name='nameInput' class='home-links form-input' placeholder='Name'>
-				<input type='tel' name='numberInput' required='required' class='home-links form-input' id='account-number' placeholder='Number'>
-				<input type='text' name='collegeInput' class='home-links form-input long' placeholder='College Name'><br>
-				<input type='email' name='emailInput' required='required' class='home-links form-input' id='account-email' placeholder='Email'>
-				<input type='password' name='passInput' required='required' class='home-links form-input' id='account-password' placeholder='Password'><br>
-				<input type="password" name="confirmPassInput" required='required' class="home-links form-input end" id='confirmPassword' placeholder="Confirm Password"><br><br>
+				<input type='text' name='nameInput' id="account-name" required class='home-links form-input' placeholder='Name'>
+				<input type='tel' name='numberInput' required class='home-links form-input' id='account-number' placeholder='Number' maxlength="10" minlength="10">
+				<input type='text' name='collegeInput' class='home-links form-input long' id="account-college" placeholder='College Name'><br>
+				<input type='email' name='emailInput' required class='home-links form-input' id='account-email' placeholder='Email'>
+				<input type='password' name='passInput' required class='home-links form-input' id='account-password' placeholder='Password'><br>
+				<input type="password" name="confirmPassInput" required class="home-links form-input end" id='confirmPassword' placeholder="Confirm Password"><br><br>
 
 				<p class='form-text'>Click on the names of the events that you would like to register for! <span style='width:5%;' id='cursor-blink'>|</span></p>
 
@@ -366,25 +366,26 @@
 		
 		/* These functions are the eventListener functions for the create-account button */
 		document.getElementById("create-account").addEventListener("click", function(){ //When the button is clicked, we check if the email and mobile number are valid. we then check if the mobile number already exists in the db. We generate the required error messages.
+			var name = document.getElementById("account-name").value;
 			var email_input=document.getElementById("account-email").value;
+			var college = document.getElementById("account-college").value;
 			var mobile_input=document.getElementById("account-number").value;
 			var password = document.getElementById("account-password").value;
         	var confirmPassword = document.getElementById("confirmPassword").value;
-
-			if(checkEmail(email_input)!=true){
+        	console.log(password,confirmPassword);
+        	console.log(name.length, email_input.length, mobile_input, password, confirmPassword);
+        	if (name.length == 0 || email_input.length == 0 || college.length == 0 || mobile_input.length == 0 || password.length == 0 || confirmPassword.length == 0) {
+        		alert("Oops! Enter value in all fields.");
+        	} else if(checkEmail(email_input)!=true){
 				alert("Oops! Your email seems to be invalid. Please enter a valid ID.");
-			}
-			else if(1){
-				if(checkMobileNumber(mobile_input)!=true){
-					alert("Oops! Your mobile number seems to be invalid. Please enter a valid mobile number.");
-				}
-				else{
-					checkIfNumberUnique(mobile_input);
-				}
-			}
-			else(checkIfPasswordsMatch(password,confirmPassword)!=1){
+			} else if(checkMobileNumber(mobile_input)!=true){
+				alert("Oops! Your mobile number seems to be invalid. Please enter a valid mobile number.");
+			} else if(!checkIfPasswordsMatch(password,confirmPassword)) {
 					alert("Oops! The password you entered don't match.");
+			} else {
+				checkIfNumberUnique(mobile_input);
 			}
+
 			
 		});
 		
