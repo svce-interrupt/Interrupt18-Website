@@ -73,10 +73,13 @@ body{
 
 @media only screen and (max-width: 1000px) {
 
+	html{
+		padding-left: 2.4%;
+	}
+
 	body{	
 		width: 95%;
 		border: 1px dashed white;
-		margin-left: 2.3%;
 		margin: 2.5% 0%;
 		padding-bottom: 8%;
 	}
