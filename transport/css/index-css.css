@@ -77,33 +77,36 @@ body{
 @media only screen and (max-width: 1000px) {
 
 	body{
-		width: 100%;
+		width: 95%;
 		margin: 2.5% 0%;
+		margin-left: 2.4%;
 		padding-bottom: 5%;
 		border: 1px dashed white;
 	}
 
 	#title{
-		font-size: 160%;
+		font-size: 80%;
 		margin: 7% 0%;
-		font-weight: 700;
+		color: yellow
 	}
 
 	#bus{
-		width: 140%;
+		width: 20%;
+		padding-right: 0%;
+		margin-left: -18%;
+		border: none;
 		display: block;
 		margin-top: 3%;
-		font-size: 125%;
+		font-size: 90%;
 		text-align: center;
 		white-space: pre;
 		word-wrap: normal;
 		color: yellow;
-		margin-left: -30%;
 	}
 	.intro-text{
 		width: 100%;
 		margin: 3% 0% 2% 0%;
-		font-size: 175%;
+		font-size: 100%;
 		text-align: center;
 	}
 	.intro-body{
@@ -114,18 +117,17 @@ body{
 		margin-bottom: 0.25%;
 	}
 	.home-links{
-		width: 70%;
-		font-weight: 700;
+		width: 90%;
 		margin-top: 8%;
 		border: 1px dashed #29B6F6;
-		padding: 3% 0%;
-		font-size: 170%;
+		padding: 4% 0%;
+		font-size: 100%;
 	}
 	.home-links:hover{
 		border: 1px dashed yellow;
 	}
 	.yellow{
-		margin-top: 3%;
+		margin-top: 1%;
 		border: 1px dashed yellow;
 	}
 }
