@@ -16,7 +16,7 @@ body{
 #terminal-output{
 	width: 95%;
 	margin: 5% 2.5%;
-	font-size: 180%;
+	font-size: 80%;
 	white-space: pre;
 	word-wrap: initial;
 	word-break: break-all;

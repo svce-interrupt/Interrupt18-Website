@@ -22,12 +22,12 @@ body{
 		width: 95%;
 		margin: 2.5% 0%;
 		margin-left: 2.3%;
-		border: 2px dashed white;
+		border: 1px dashed white;
 	}
 
 	#terminal-output{
-		width: 97.5%;
-		margin: 7% 0%  5% 2%;
-		font-size: 145%;
+		width: 95%;
+		margin: 7% 0% 5% 2%;
+		font-size: 75%;
 	}
 }
