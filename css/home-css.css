@@ -73,15 +73,18 @@ body{
 
 @media only screen and (max-width: 1000px) {
 
-	body{
+	body{	
 		width: 95%;
 		border: 2px dashed white;
-		margin-left: 2.3%
+		margin-left: 2.3%;
 		margin: 2.5% 0%;
 		padding-bottom: 8%;
 	}
 
 	#title{
+		text-align: center;
+        	white-space: pre;
+        	word-wrap: normal;
 		font-size: 160%;
 		margin: 7% 0%;
 		font-weight: 700;

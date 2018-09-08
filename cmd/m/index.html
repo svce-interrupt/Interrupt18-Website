@@ -4,28 +4,16 @@
 		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
 		<link href="css/index-css.css" rel="stylesheet">
 		<link rel="icon" href="../img/favicon.jpeg">
-		<script type="text/javascript">
-			if (screen.width <= 1024) {
-				window.location = "http://interrupt2k18.in/cmd/m/";
-			}
-		</script>
 	</head>
 
 	
 	<body id="terminal">
 		
 		<p id="terminal-output"></p> <!-- This is where all the terminal output is displayed. Pure javascript. -->
-		<input type="text" name="terminal-in" id="terminal-input" autocomplete="off"> <!-- The invisible textfield -->
 
 	</body>
 	
 	<script>
-		document.getElementById("terminal-input").focus(); //We transfer focus to the terminal-textbox after page loads.
-		document.getElementById("terminal").addEventListener("click", function(){
-			document.getElementById("terminal-input").focus();
-		}); //Wherever the user clicks, the focus is on the textbox
-		
-		
 		/*========================================*/
 		/*========================================*/
 		/*========================================*/
@@ -35,11 +23,11 @@
 		var typeText="<span style='color: white'>Welcome to the Interrupt Command Prompt! <br>Last login: "+Date().substring(0,24)+" on console</span> <br><br>"+
 		"<span style='color: lightgreen'><span class='underline'>CLICK</span> on the commands to know more.</span><br><br>";
 
-		var cmdlinks1="<a href='http://interrupt2k18.in/' class='cmd-links'>home</a> <br>"+
-		"<a href='http://interrupt2k18.in/register/' class='cmd-links'>register</a> <br>"+
-		"<a href='http://interrupt2k18.in/login/' class='cmd-links'>login</a> <br>"+
-		"<span class='cmd-links' onclick='setTerminalText(2)'>contact-us</span> <br>"+
-		"<a href='../guidelines/index.html' class='cmd-links'>guidelines</a> <br><br>";
+		var cmdlinks1="<a href='http://interrupt2k18.in/' class='cmd-links'>Home</a> <br>"+
+		"<a href='http://interrupt2k18.in/register/' class='cmd-links'>Register</a> <br>"+
+		"<a href='http://interrupt2k18.in/login/' class='cmd-links'>Login</a> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(2)'>Contact-us</span> <br>"+
+		"<a href='../guidelines/index.html' class='cmd-links'>Guidelines</a> <br><br>";
 		
 		
 		//The following strings will have span elems at the end. This is to provide an easy way for us to adjust the space between elements in a row. As of now, the commands (names of events) are arranged in columns of 3 and rows of 3.
@@ -80,8 +68,6 @@
 			document.getElementById("terminal-output").innerHTML+="<span class='ter-inp' id='terminal-form-input"+idNum+"'></span>";
 			document.getElementById("terminal-output").innerHTML+="<span style='width:5%;' id='cursor-blink"+idNum+"'>|</span>";
 			
-			document.getElementById("terminal-input").addEventListener("keyup", addTerminalOutput);
-			document.getElementById("terminal-input").addEventListener("keydown", autoFillInput);
 			window.setInterval(blink,500);
 		}, 1250); //We intro the 'cursor' element here. It's actually a div whose background changes color every second.
 		
@@ -114,18 +100,9 @@
 		/*========================================*/
 		/*========================================*/
 		/*========================================*/
-		/*The function which analyse the input into the textfield and then mirror it into the <p> tag*/
-
-		function addTerminalOutput(e){
-			var input=document.getElementById("terminal-input").value;
-			document.getElementById("terminal-form-input"+idNum).innerHTML=input;
-			if(e.keyCode==13){ //The keyCode for the 'enter' key is 13
-				analyseInput();
-			}
-		} //This function reads the text which is in the textbox and then mirrors the text in the <span> element in the p tag.
 		
 		function analyseInput(){ //This function analyses the command given and outputs a response. It also creates new 'blink' and 'terminal-form' elem
-			var input=document.getElementById("terminal-input").value; //We get the value in the 'invisible' textfield.
+			var input=document.getElementById("terminal-form-input"+idNum).innerHTML; //We get the value in the 'invisible' textfield.
 			input=input.toUpperCase(); //We make it uppercase and then cmp it with uppercase inputs to make it 'case-insensitive'.
 
 			document.getElementsByTagName("html")[0].style.overflowY="scroll"; //We change the overflow-y property to scroll because it was 'hidden' in the css. This was done because we needed to fix the bug of the scroll bar appearing erratically on the side. So, only when a command is entered do we show scroll.
@@ -180,8 +157,8 @@
 				"                 { }<br><br><br>";
 		
 				var outputResult=drawing+"Do you work well under pressure?<br>"+
-				"Can you connect the dots well, even when you're stressed?<br><br>"+
-				"Logician's Code tests your problem-solving ability by locking you up in a room with clues.<br>Your job is to find clues and use these clues to break your way out of the room!<br>All this with the clock ticking!<br><br>"+
+				"Can you connect the dots well, even when<br> you're stressed?<br><br>"+
+				"Logician's Code tests your problem-<br>solving ability by locking you up in a room<br>with clues.<br>Your job is to find clues and use these clues to break your way out of the room!<br>All this with the clock ticking!<br><br>"+
 				"* Teams can consist of a maximum of 2 members.<br>"+
 				"* All teams which clear the written quiz will qualify to the next round.<br>"+
 				"* The team which utilises the least time to escape will be announced as the winner.<br>"+
@@ -520,37 +497,8 @@
 			}
 			
 			document.getElementById("terminal-form-input"+idNum).innerHTML=str;
-			document.getElementById("terminal-input").value=str;
 			analyseInput();
-		} //This function gets the number of the command clicked and then puts it into the input and called the prev func.		
-		
-		function autoFillInput(e){
-			if(e.keyCode==9){
-				e.preventDefault()
-				var terminal_input=document.getElementById("terminal-input").value;
-
-				if(terminal_input[0]=='h'){
-					document.getElementById("terminal-input").value="home";
-                    document.getElementById("terminal-form-input"+idNum).innerHTML="home";
-				}
-				else if(terminal_input[0]=='r'){
-					document.getElementById("terminal-input").value="register";
-					document.getElementById("terminal-form-input"+idNum).innerHTML="register";
-				}
-				else if(terminal_input[0]=='l'){
-					document.getElementById("terminal-input").value="login";
-					document.getElementById("terminal-form-input"+idNum).innerHTML="login";
-                }
-				else if(terminal_input[0]=='c'){
-					document.getElementById("terminal-input").value="contact-us";
-					document.getElementById("terminal-form-input"+idNum).innerHTML="contact-us";
-                }
-
-				window.setTimeout(function(){
-					document.getElementById("terminal-input").focus();
-				},10);
-			}
-		}
+		} //This function gets the number of the command clicked and then puts it into the input and called the prev func.
 
 		/*========================================*/
 		/*========================================*/
