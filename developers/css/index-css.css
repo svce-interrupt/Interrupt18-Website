@@ -70,12 +70,16 @@ body{
 	text-decoration: none;
 }
 
-.developer-img{
+.developer-div{
 	width: 22%;
+	display: inline-block;
+}
+.developer-img{
+	width: 100%;
 	cursor: pointer;
 }
 .developer-txt{
-	width: 22%;
+	width: 100%;
 	font-size: 125%;
 	display: inline-block;
 	text-align: center;
@@ -94,5 +98,47 @@ body{
 /* This is for the mobile responsive */
 
 @media only screen and (max-width: 1000px) {
+	
+	#title{
+		color: orange;
+	}
+	.intro-text{
+		width: 80%;
+		margin-left: 10%;
+		font-size: 195%;
+	}
+	.developer-div{
+		width: 70%;
+		display: block;
+		margin-top: 4%;
+		margin-left: 15%;
+	}
+	.developer-txt{
+		font-size: 195%;
+	}
+
+	.home-links{
+		width: 90%;
+		margin-left: 5%;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		font-size: 195%;
+	}
+
+	.blue1{ 
+        	margin-top: 14%;
+        	color: #29B6F6;
+        	border: 2px dashed #29B6F6;
+	}
+	.blue2{ 
+        	margin-top: 5%;
+        	color: #29B6F6;
+        	border: 2px dashed #29B6F6;
+	}
+	.git{
+		margin-top: 5%;
+		border: 2px dashed white;
+		color: white;
+	}
 
 }
