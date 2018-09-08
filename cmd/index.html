@@ -39,7 +39,7 @@
 		"<a href='http://interrupt2k18.in/register/' class='cmd-links'>register</a> <br>"+
 		"<a href='http://interrupt2k18.in/login/' class='cmd-links'>login</a> <br>"+
 		"<span class='cmd-links' onclick='setTerminalText(2)'>contact-us</span> <br>"+
-		"<a href='../guidelines/index.html' class='cmd-links'>guidelines</a> <br><br>";
+		"<span class='cmd-links' onclick='setTerminalText(15)'>guidelines</span> <br><br>";
 		
 		
 		//The following strings will have span elems at the end. This is to provide an easy way for us to adjust the space between elements in a row. As of now, the commands (names of events) are arranged in columns of 3 and rows of 3.
@@ -442,6 +442,19 @@
 			else if (input=="DEVELOPER"){
 				window.location.href = "../developers/"
 			}
+			else if(input=="GUIDELINES"){
+				var drawing="<br><br>";
+				
+				var outputResult=drawing+"1. The symposium is on Spetember 29th, 2018.<br>"+
+				"2. There is no registration fee.<br>"+
+				"3. Only college students are allowed and ID card is a must.<br>"+
+				"4. Dress Code: Boys - No T-shirts or shorts are allowed.<br>"+
+				"               Girls - Salwar with Duputta.<br>"+
+				"5. Events start at 8:30AM and end at 3:30PM.<br>"+
+				"6. SVCE buses can be used and the bus numbers/routes can be checked on the Transports page.<br><br>";
+		
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
 			else{ //We've put this whole ascii art for the 'command not found' error.
 				var drawing="<br><br> _    _     ___     _    _        _       _<br>"+
 			       "|:|  |:|   /:::\\   |:|  |:|      |  |\\/| | \\ <br>"+
@@ -517,6 +530,9 @@
 			}
 			else if(num==14){
 				str="Workshop AWS";
+			}
+			else if(num==15){
+				str="guidelines";
 			}
 			
 			document.getElementById("terminal-form-input"+idNum).innerHTML=str;
