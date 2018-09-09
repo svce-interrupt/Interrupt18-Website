@@ -25,8 +25,8 @@ body{
 }
 
 .intro-text{
-	width: 100%;
-	margin: 0% 0% 2% 0%;
+	width: 80%;
+	margin: 0% 0% 2% 10%;
 	font-size: 125%;
 	color: yellow;
 	text-align: center;
@@ -80,7 +80,7 @@ body{
 }
 .developer-txt{
 	width: 100%;
-	font-size: 125%;
+	font-size: 118%;
 	display: inline-block;
 	text-align: center;
 }
@@ -88,6 +88,10 @@ body{
 	margin-top: 6%;
 	width: 30%;
 	margin-left: 35%;
+}
+.middle-text{
+	margin-top: 2.5%;
+	margin-bottom: 3.5%;
 }
 .git{
 	margin-top: 0%;
