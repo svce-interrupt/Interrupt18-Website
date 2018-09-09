@@ -93,8 +93,8 @@
 			<button type='submit' class='home-links submit-butt' id='login-butt'>Login &rarr;</button>
 		</form>
 						
-		<a href="../register/index.html" class="home-links">Create Account &rarr;</a>
-		<a href="http://interrupt2k18.in/cmd" class="home-links bottom">Go Back To Command Prompt &crarr;</a>
+		<a href="http://www.interrupt2k18.in/register/" class="home-links">Create Account &rarr;</a>
+		<a href="http://www.interrupt2k18.in/cmd/" class="home-links bottom">Go Back To Command Prompt &crarr;</a>
 		
 	</body>
 

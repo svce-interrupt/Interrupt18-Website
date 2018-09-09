@@ -125,7 +125,7 @@
 			
 		</form>
 									
-		<a href="http://interrupt2k18.in/" class="home-links below">Go Back To Home &crarr;</a>
+		<a href="http://www.interrupt2k18.in/" class="home-links below">Go Back To Home &crarr;</a>
 		<a href="../cmd/loading.html" class="home-links below">Go To Command Prompt &crarr;</a>
 								
 									
