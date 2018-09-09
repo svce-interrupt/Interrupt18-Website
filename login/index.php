@@ -88,7 +88,7 @@
 			</p><!-- #error-message -->
 		</div>
 		<form id='register-form' method="post" action="index.php">
-			<input type='tel' name='numberInput' class='home-links form-input' id='number-login' placeholder='Mobile Number'>
+			<input type='tel' name='numberInput' class='home-links form-input' id='number-login' placeholder='Mobile Number' minlength="10" maxlength="10">
 			<input type='password' name='passInput' class='home-links form-input end' id='pass-login' placeholder='Password'>
 			<button type='submit' class='home-links submit-butt' id='login-butt'>Login &rarr;</button>
 		</form>
