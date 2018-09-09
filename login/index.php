@@ -27,7 +27,7 @@
 			
 			//check if mobile has 10 digits and only contains numbers
 			if (!is_numeric($mobile) OR strlen($mobile) != 10) {
-				echo "<script>alert('You seem to have entered a wrong mobile number! Please try again!');</script>";
+				$message = 'You seem to have entered a wrong mobile number! Please try again!';
 			} else {
 				$row2;
 				$result2;
