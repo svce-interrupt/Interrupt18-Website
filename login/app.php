@@ -3,7 +3,7 @@
 			// db credentials
 			$dbservername="localhost";
 			$dbusername= "root";
-			$dbpassword="";
+			$dbpassword=file_get_contents("../../passwd.txt");
 			$dbname="INTERRUPT";
 			$connect=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
 			if (!$connect) {
