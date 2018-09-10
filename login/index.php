@@ -15,7 +15,7 @@
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$dbservername="localhost";
 			$dbusername= "root";
-			$dbpassword="Superman123!";
+			$dbpassword="";
 			$dbname="INTERRUPT";
 			$connect= mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname); // connecting to db
 			if (!$connect) {
