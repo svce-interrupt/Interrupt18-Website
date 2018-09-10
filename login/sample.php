@@ -15,7 +15,7 @@
 			//------check IP--------//
 			$dbservername="http://159.65.154.83/";
 			$dbusername= "root";
-			$dbpassword=file_get_contents("../../passwd.txt");
+			$dbpassword="";
 			$dbname="INTERRUPT";
 			$connect=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
 			if (!$connect) {

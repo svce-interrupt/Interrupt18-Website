@@ -4,7 +4,7 @@ include '../../pass.php';
 
 $dbservername="localhost";
 $dbusername= "root";
-$dbpassword=returnPass();
+$dbpassword="";
 $dbname="INTERRUPT";
 
 $connect=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);

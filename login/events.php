@@ -16,7 +16,7 @@
 			// db credentials
 			$dbservername="localhost";
 			$dbusername= "root";
-			$dbpassword=file_get_contents("../../passwd.txt");
+			$dbpassword="";
 			$dbname="INTERRUPT";
 
 
