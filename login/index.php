@@ -94,7 +94,7 @@
 		</form>
 						
 		<a href="http://www.interrupt2k18.in/register/" class="home-links">Create Account &rarr;</a>
-		<a href="http://www.interrupt2k18.in/cmd/" class="home-links bottom">Go Back To Command Prompt &crarr;</a>
+		<a href="http://www.interrupt2k18.in/home/" class="home-links bottom">Go To Home &crarr;</a>
 		
 	</body>
 
