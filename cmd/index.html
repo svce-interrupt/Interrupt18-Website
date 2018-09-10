@@ -146,10 +146,10 @@
 				"/__(^===^)__\\;,<br>"+
 				"  /  :::  \\   ,;<br>"+
 				" |   :::   | ,;'<br>"+
-				" '._______.'`<br><br>"+
-				"-bash: Contact any one of the following in-charges for queries.<br>"+
-				"-bash: Sathvik (+91 77080 26256) or Chran (+91 95001 32964)<br>"+
-				"-bash: Shravan (+91 98404 76486) or Ajay  (+91 95001 85799)<br>";
+				" '._______.'`<br><br><br>"+
+				"Contact any one of the following in-charges for queries.<br>"+
+				"Sathvik (+91 77080 26256) or Chran (+91 95001 32964)<br>"+
+				"Shravan (+91 98404 76486) or Ajay  (+91 95001 85799)<br>";
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
 			else if(input=="LS" || input=="CLEAR" || input=="HELP"){ //While displaying ls, the page will display a list of available commands. The 'ls' command, when called, clears the screen and then displays available commands. For now, the ls command and the clear commands will do the same thing. They will clear the screen and show the available commands. The help command does the same thing.
@@ -458,10 +458,9 @@
 				"3. Only college students are allowed and ID card is a must.<br>"+
 				"4. Dress Code: Boys - No T-shirts or shorts are allowed.<br>"+
 				"               Girls - Salwar with Duputta. Jeans with kurtis & stole is advisable.<br>"+
-				"		Torn, faded jeans, body fit clothing, transparent or revealing<br>"+
-				"		are not allowed.<br>"+
-				"5. Events start at 8:30AM and end at 3:30PM.<br>"+
-				"6. SVCE buses can be used and the bus numbers/routes can be checked on the Transports page.<br><br>";
+				"5. Torn, faded jeans, body fit clothing, transparent or revealing clothing not allowed.<br>"+
+				"6. Events start at 8:30AM and end at 3:30PM.<br>"+
+				"7. SVCE buses can be used and the bus numbers/routes can be checked on the Transports page.<br><br>";
 		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
@@ -554,23 +553,77 @@
 			if(e.keyCode==9){
 				e.preventDefault()
 				var terminal_input=document.getElementById("terminal-input").value;
+				terminal_input=terminal_input.toUpperCase();
 
-				if(terminal_input[0]=='h'){
+				if(terminal_input[0]=='H'){
 					document.getElementById("terminal-input").value="home";
                     document.getElementById("terminal-form-input"+idNum).innerHTML="home";
 				}
-				else if(terminal_input[0]=='r'){
+				else if(terminal_input[0]=='R'){
 					document.getElementById("terminal-input").value="register";
 					document.getElementById("terminal-form-input"+idNum).innerHTML="register";
 				}
-				else if(terminal_input[0]=='l'){
-					document.getElementById("terminal-input").value="login";
-					document.getElementById("terminal-form-input"+idNum).innerHTML="login";
+				else if(terminal_input.substring(0,5)=='LOGIC'){
+					document.getElementById("terminal-input").value="Logicians Code 2.0";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Logicians Code 2.0";
                 }
-				else if(terminal_input[0]=='c'){
+				else if(terminal_input.substring(0,2)=='CO'){
 					document.getElementById("terminal-input").value="contact-us";
 					document.getElementById("terminal-form-input"+idNum).innerHTML="contact-us";
                 }
+				
+				else if(terminal_input[0]=="D"){
+					document.getElementById("terminal-input").value="Datafication";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Datafication";
+				}
+				else if(terminal_input[0]=="A"){
+					document.getElementById("terminal-input").value="Art Attack";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Art Attack";
+				}
+				else if(terminal_input[0]=="W"){
+					document.getElementById("terminal-input").value="Workshop AWS";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Workshop AWS";
+				}
+				else if(terminal_input[0]=="G"){
+					document.getElementById("terminal-input").value="guidelines";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="guidelines";
+				}
+				else if(terminal_input.substring(0,3)=="INQ"){
+					document.getElementById("terminal-input").value="Inquizitive";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Inquizitive";
+				}
+				else if(terminal_input.substring(0,3)=="INT"){
+					document.getElementById("terminal-input").value="Interrupt Challenge";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Interrupt Challenge";
+				}
+				else if(terminal_input.substring(0,2)=="CL"){
+					document.getElementById("terminal-input").value="Clash Of Codes";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Clash Of Codes";
+				}
+				else if(terminal_input.substring(0,2)=="PR"){
+					document.getElementById("terminal-input").value="Presentation Hub";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Presentation Hub";
+				}
+				else if(terminal_input.substring(0,3)=="PIT"){
+					document.getElementById("terminal-input").value="Pitch Perfect";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Pitch Perfect";
+				}
+				else if(terminal_input.substring(0,3)=="PIP"){
+					document.getElementById("terminal-input").value="Pipe The Piper";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Pipe The Piper";
+				}
+				else if(terminal_input.substring(0,3)=="TEC"){
+					document.getElementById("terminal-input").value="TechnoFair";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="TechnoFair";
+				}
+				else if(terminal_input.substring(0,3)=="TER"){
+					document.getElementById("terminal-input").value="Terminal Of Secrets";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Terminal Of Secrets";
+				}
+				else if(terminal_input.substring(0,3)=="TR"){
+					document.getElementById("terminal-input").value="Transport";
+					document.getElementById("terminal-form-input"+idNum).innerHTML="Transport";
+				}
 
 				window.setTimeout(function(){
 					document.getElementById("terminal-input").focus();
