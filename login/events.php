@@ -82,7 +82,7 @@
 			
 		<form id='register-form' action="events.php" method='post'>	
 			
-			<p class='form-text'>The highlighted ones are events you've already registered for! If you'd like to register for more events click on them, and click on the highlighted events again to register from the respected event! <span style='width:5%;' </span></p>
+			<p class='form-text'>Those events highlighted in yellow are the events you've already registered for! If you'd like to register for more events click on them, or click on the highlighted events again to deregister from that particular event! <span style='width:5%;' </span></p>
 
 			<input type="hidden" id="input1" name='event1' value="0">
 			<span class='home-links check orange top' id='check1'>Logician's Code</span>
