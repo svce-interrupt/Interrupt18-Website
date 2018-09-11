@@ -18,7 +18,7 @@
 	<?php 
 		$message="";
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
-			include ("db.php");
+			include ("../db.php");
 			$mobile=$_POST["numberInput"];
 			$password=$_POST['passInput'];
 

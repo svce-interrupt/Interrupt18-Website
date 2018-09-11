@@ -18,7 +18,7 @@
 	<?php 
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			// db credentials	
-			include ("db.php");
+			include ("../db.php");
 			
 			$mobile = $_SESSION['mobile'];
 
