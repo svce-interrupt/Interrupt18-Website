@@ -13,18 +13,9 @@
 	
 	<?php 
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
-			// db credentials
-			$dbservername="localhost";
-			$dbusername= "root";
-			$dbpassword="";
-			$dbname="INTERRUPT";
-
-
-			$connect=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
-			if (!$connect) {
-			    die("Connection failed: " . mysqli_connect_error());
-			}
-				
+			// db credentials	
+			include ("db.php");
+			
 			$mobile = $_SESSION['mobile'];
 
 			// user selection of events during change of events
