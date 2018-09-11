@@ -159,11 +159,10 @@
 				document.getElementById("terminal-output").innerHTML="";
 				document.getElementById("terminal-output").innerHTML+="<span id='cursor-blink"+idNum+"'></span>";
 				
-				var outputResult="";
 				outputResult+="<span style='color: lightgreen'><span class='underline'>CLICK</span> on the commands to know more.</span> <br><br>";
 				outputResult+=cmdlinks1+cmdlinks2;
 				
-				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+				document.getElementById("terminal-output").innerHTML+=(outputResult);
 			}
 			else if(input=="RUN"){
 				window.location.href="";
@@ -444,9 +443,6 @@
 		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if (input=="STARTX") {
-				window.location.href = "startx.html";
-			}
 			else if (input=="TEAM"){
 				window.location.href = "../team/"
 			}
@@ -463,6 +459,21 @@
 				"7. SVCE buses can be used and the bus numbers/routes can be checked on the Transports page.<br><br>";
 		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="ARJUN"){
+				var drawing="<br><br>    _____    _____<br>   //###\\\\  //###\\\\<br>  //#####\\\\//#####\\\\<br> ||################||<br>  \\\\### Divvzz ###//<br>    \\\\##########//<br>      \\\\######//<br>        \\\\##//<br>          \\/<br><br><br>";
+				
+				var outputResult=drawing;
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="DIVYA"){
+				var drawing="<br><br>    _____    _____<br>   //###\\\\  //###\\\\<br>  //#####\\\\//#####\\\\<br> ||################||<br>  \\\\### Paneer ###//<br>    \\\\##########//<br>      \\\\######//<br>        \\\\##//<br>          \\/<br><br><br>";
+				
+				var outputResult=drawing;
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
+			else if(input=="ARAVIND"){
+				window.location.href="http://www.aravindbalakrishnan.com";
 			}
 			else{ //We've put this whole ascii art for the 'command not found' error.
 				var drawing="<br><br> _    _     ___     _    _        _       _<br>"+

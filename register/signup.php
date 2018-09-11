@@ -75,7 +75,7 @@ if (!$connect) {
 	 	//sending those queries to db
 		if(mysqli_multi_query($connect, $sql)){
 
-			echo "<script>alert('Thank you for signing up! An email has beent sent to your registered email.');</script>";
+			echo "<script>alert('Thank you for signing up! An email will be sent to your registered email shortly.');</script>";
 			mail($email,$subject,$message,$headers); //can only be checked in a proper server,can't be checked in local server :-(
 			echo "<script>window.location.href='../cmd/';</script>";
 
