@@ -1,6 +1,10 @@
 <?php
 	//This PHP file checks if a given number exists in the table or not	
-    include '../db.php';
+    	$dbservername="localhost";
+		$dbusername= "root";
+		$dbpassword="";
+		$dbname="INTERRUPT";
+		
 
 	$number= $_REQUEST['number'];
 	$sql_stmt="SELECT mobileNo FROM users WHERE mobileNo='$number';";
