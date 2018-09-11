@@ -13,14 +13,7 @@
 	<?php 
 		$message="";
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
-			$dbservername="localhost";
-			$dbusername= "root";
-			$dbpassword="";
-			$dbname="INTERRUPT";
-			$connect= mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname); // connecting to db
-			if (!$connect) {
-			    die("Connection failed: " . mysqli_connect_error());
-			}
+			include ("db.php");
 			$mobile=$_POST["numberInput"];
 			$password=$_POST['passInput'];
 
