@@ -1,3 +1,4 @@
+Enter password: 
 -- MySQL dump 10.13  Distrib 5.7.23, for Linux (x86_64)
 --
 -- Host: localhost    Database: INTERRUPT
@@ -23,7 +24,7 @@ DROP TABLE IF EXISTS `events`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `events` (
-  `mobileNo` int(10) NOT NULL,
+  `mobileNo` varchar(11) NOT NULL,
   `LogiciansCode` int(1) NOT NULL,
   `PitchPerfect` int(1) NOT NULL,
   `Inquizitive` int(1) NOT NULL,
@@ -46,6 +47,7 @@ CREATE TABLE `events` (
 
 LOCK TABLES `events` WRITE;
 /*!40000 ALTER TABLE `events` DISABLE KEYS */;
+INSERT INTO `events` VALUES ('7358434644',0,0,0,0,0,0,0,0,0,0,0,0),('7397057902',0,0,0,0,0,0,0,0,0,0,0,0),('7397252600',0,0,0,0,0,0,0,0,0,0,0,0),('7530061028',0,0,0,0,0,0,0,0,0,0,0,0),('8220001110',0,0,0,0,0,0,0,0,0,0,0,0),('8428487032',0,0,0,0,0,0,0,0,0,0,0,0),('8939130309',0,0,0,0,0,0,0,0,0,0,0,0),('9445913019',0,0,0,0,0,0,0,0,0,0,0,0),('9551609661',0,0,0,0,0,0,0,0,0,0,0,0);
 /*!40000 ALTER TABLE `events` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -57,7 +59,7 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `mobileNo` varchar(10) NOT NULL,
+  `mobileNo` varchar(11) NOT NULL,
   `password` varchar(60) NOT NULL,
   `college` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -73,7 +75,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('7358434644','somthing','SVCE','Dhejeshwar S','dhejeshwar30@gmail.com',1),('7397057902','somthing','REC','R. Swathi','swathiradhakrishnan1166@gmail.com',1),('7397252600','somthing','REC','Senthurapandi','senthurapandi.sv.2016.cse@rajalakshmi.edu.in',1),('7530061028','somthing','AMACE','Keerthana m','keerhty250899@gmail.com',1),('8220001110','$2y$10$/kRC5HztndlAWbPIAS3E/.vdulHO1CpIei0ztUYRPFIvZcSWMxsBO','Sri Sairam Engineering College','Vasanth Kumar','vasanthkumar14.99@gmail.com',0),('8428487032','somthing','REC','tamilmani','tamilmani.p.2016.cse@rajalakshmi.edu.in',1),('8939130309','somthing','SVCE','Sudarrshan Krishna','sudarrshankrishna1@gmail.com',1),('8939227284','$2y$10$ToRKawHuphzZzp6b7wr2ZuoHtKFjM4Bm/bn3V8pc09rdHY/fmg3Ta','SVCE','Arjun Aravind','arjun.aravind1998@gmail.com',0),('9445913019','somthing','SVCE','Madhan','madhanbalaji2000@gmail.com',1),('9551609661','somthing','Mepco Schlenk Engineering College','Swaran','swaran18999@gmail.com',1);
+INSERT INTO `users` VALUES ('7358434644','somthing','SVCE','Dhejeshwar S','dhejeshwar30@gmail.com',1),('7397057902','somthing','REC','R. Swathi','swathiradhakrishnan1166@gmail.com',1),('7397252600','somthing','REC','Senthurapandi','senthurapandi.sv.2016.cse@rajalakshmi.edu.in',1),('7530061028','somthing','AMACE','Keerthana m','keerhty250899@gmail.com',1),('8220001110','$2y$10$/kRC5HztndlAWbPIAS3E/.vdulHO1CpIei0ztUYRPFIvZcSWMxsBO','Sri Sairam Engineering College','Vasanth Kumar','vasanthkumar14.99@gmail.com',0),('8428487032','somthing','REC','tamilmani','tamilmani.p.2016.cse@rajalakshmi.edu.in',1),('8939130309','somthing','SVCE','Sudarrshan Krishna','sudarrshankrishna1@gmail.com',1),('9445913019','somthing','SVCE','Madhan','madhanbalaji2000@gmail.com',1),('9551609661','somthing','Mepco Schlenk Engineering College','Swaran','swaran18999@gmail.com',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -86,4 +88,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-12 19:06:09
+-- Dump completed on 2018-09-12 20:23:18

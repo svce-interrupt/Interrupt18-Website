@@ -49,7 +49,7 @@
 				// echo $row['mobileNo'];
 				// using session variables to access it in other files
 				$_SESSION['mobile']=0;
-				if(password_verify($password, $hashed_password) || $rootAccess==0)
+				if(password_verify($password, $hashed_password) || $rootAccess=="1")
 				{
 					$sql2= "SELECT * from events where mobileNo='".$mobile."';";
 					$result2= mysqli_query($connect,$sql2);
