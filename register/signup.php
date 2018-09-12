@@ -56,20 +56,17 @@ if (!$connect) {
 //to send verification email
 	$name=cleanString($_POST['nameInput']);
 	$college=cleanString($_POST['collegeInput']);
-	$email;
-	$mobile;
 	$subject="INTERRUPT'18 Registration Successful";
 	$message="Hello $name! \nThanks for registering for Interrupt 2018! We're glad to have you.You can use your phone number ($mobile) to login along with the password you chose. If you have any issues feel free to contact us.\n\nRegards,\nThe Interrupt 2018 Organizing Team";
 	$headers="From: interrupt2k18@gmail.com" . "\r\n";
 
 //to validate email and phone no
-	if($checkMobile){
 
 		$email=$_POST['emailInput'];
 		$mobile=$_POST['numberInput'];
 
 		//sql cmd fr querying 
-		$sql="INSERT INTO users VALUES ('$mobile', '$hashed_password','$college','$name','$email'); INSERT INTO events VALUES ('$mobile',$event1,$event2,$event3,$event4,$event5,$event6,$event7,$event8,$event9,$event10,$event11,$event12);";
+		$sql="INSERT INTO users VALUES ('$mobile', '$hashed_password','$college','$name','$email', 0); INSERT INTO events VALUES ('$mobile',$event1,$event2,$event3,$event4,$event5,$event6,$event7,$event8,$event9,$event10,$event11,$event12);";
 
 	 	//sending those queries to db
 		if(mysqli_multi_query($connect, $sql)){
@@ -79,12 +76,7 @@ if (!$connect) {
 			echo "<script>window.location.href='../cmd/';</script>";
 
 		}
-   	 }
-    
-	else{
-    		echo "<script>alert('Your email seems to not be a proper email! Try again!');</script>";
-		echo "<script>window.location.href='../register/';</script>";
-    	}
+
 //a function to validate email address
 function validEmail($email){
 	// events if the formatting is correct
