@@ -68,9 +68,9 @@
 					$_SESSION['ev'][11] = $row2['WorkshopAWS'];
 					echo "<script>window.location.href='events.php'</script>";
 				} elseif ($row['mobileNo']) {		//if mobile exists, but password is wrong
-					$message = "The mobile number and password do not seem to match! Please try again.";
+					$message = "Our server is handling too many users at the moment! Please try after a few hours. Sorry!";
 				} else {		//if mobile doesn't exist
-					$message = 'The mobile number does not exist. Please try again.';
+					$message = 'Our server is handling too many users at the moment! Please try after a few hours. Sorry!';
 				}
 			}
 		}

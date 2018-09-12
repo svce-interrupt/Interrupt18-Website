@@ -1,7 +1,7 @@
 <?php
 	//This PHP file checks if a given number exists in the table or not	
     	$dbservername="localhost";
-		$dbusername= "root";
+		$dbusername= "arjun1001";
 		$dbpassword="";
 		$dbname="INTERRUPT";
 		

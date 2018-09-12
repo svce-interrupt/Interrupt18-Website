@@ -1,9 +1,8 @@
 <?php
 
-include '../../pass.php';
 // db credentials	
 $dbservername="localhost";
-$dbusername= "root";
+$dbusername= "arjun1001";
 $dbpassword="";
 $dbname="INTERRUPT";
 $connect=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
@@ -64,7 +63,7 @@ if (!$connect) {
 	$headers="From: interrupt2k18@gmail.com" . "\r\n";
 
 //to validate email and phone no
-	if($checkEmail && $checkMobile){
+	if($checkMobile){
 
 		$email=$_POST['emailInput'];
 		$mobile=$_POST['numberInput'];
@@ -76,7 +75,7 @@ if (!$connect) {
 		if(mysqli_multi_query($connect, $sql)){
 
 			echo "<script>alert('Thank you for signing up! An email will be sent to your registered email shortly.');</script>";
-			mail($email,$subject,$message,$headers); //can only be checked in a proper server,can't be checked in local server :-(
+			//mail($email,$subject,$message,$headers); //can only be checked in a proper server,can't be checked in local server :-(
 			echo "<script>window.location.href='../cmd/';</script>";
 
 		}
