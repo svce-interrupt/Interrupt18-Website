@@ -40,7 +40,7 @@ $sql2="INSERT INTO events VALUES ('$mobile',$event1,$event2,$event3,$event4,$eve
 if(mysqli_multi_query($connect, $sql)){
 	if(mysqli_multi_query($connect, $sql2)){
 		echo "<script>alert('Thank you for signing up! An email will be sent to your registered email shortly.');</script>";
-		echo "<script>window.location.href='../cmd/';</script>";
+		echo "<script>window.location.href='../';</script>";
 	}
 }
 

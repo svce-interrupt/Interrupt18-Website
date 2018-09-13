@@ -42,13 +42,13 @@
 			$TechnoFair=$_POST['event8'];
 			$InterruptChallenge=$_POST['event9'];
 			$PipeThePiper=$_POST['event10'];
-			$Dataification=$_POST['event11'];
+			$Datafication=$_POST['event11'];
 			$WorkshopAWS=$_POST['event12'];
 
 			//sql cmd fr updating change of events
 	    	//updates only the row with correct mobileNo
 
-			$sql="UPDATE events set LogiciansCode=$LogiciansCode,PitchPerfect=$PitchPerfect,Inquizitive=$Inquizitive,ArtAttack=$ArtAttack,ClashOfCodes=$ClashOfCodes,TerminalOfSecrets=$TerminalOfSecrets,PresentationHub=$PresentationHub,TechnoFair=$TechnoFair,InterruptChallenge=$InterruptChallenge,PipeThePiper=$PipeThePiper,Dataification=$Dataification,WorkshopAWS=$WorkshopAWS WHERE mobileNo='$mobile';";
+			$sql="UPDATE events set LogiciansCode=$LogiciansCode,PitchPerfect=$PitchPerfect,Inquizitive=$Inquizitive,ArtAttack=$ArtAttack,ClashOfCodes=$ClashOfCodes,TerminalOfSecrets=$TerminalOfSecrets,PresentationHub=$PresentationHub,TechnoFair=$TechnoFair,InterruptChallenge=$InterruptChallenge,PipeThePiper=$PipeThePiper,Datafication=$Datafication,WorkshopAWS=$WorkshopAWS WHERE mobileNo='$mobile';";
 
 			
 			//sending those queries to db and if query successful, redirect to login/index.php
@@ -56,7 +56,7 @@
 			{
 				$_SESSION['message'] = "Your changes have been updated! Thanks!";
 				echo "<script>alert('Your changes have been saved!');</script>";
-				echo "<script>window.location.href='../cmd/'</script>";
+				echo "<script>window.location.href='../'</script>";
 			} else {
 		    	echo "<script>alert('Sorry for the inconvenience! Please try again!');</script>";
 			} 

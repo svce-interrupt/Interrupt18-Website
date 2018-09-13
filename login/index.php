@@ -65,7 +65,7 @@
 					$_SESSION['ev'][7] = $row2['TechnoFair'];
 					$_SESSION['ev'][8] = $row2['InterruptChallenge'];
 					$_SESSION['ev'][9] = $row2['PipeThePiper'];
-					$_SESSION['ev'][10] = $row2['Dataification'];
+					$_SESSION['ev'][10] = $row2['Datafication'];
 					$_SESSION['ev'][11] = $row2['WorkshopAWS'];
 					echo "<script>window.location.href='events.php'</script>";
 				} elseif ($row['mobileNo']) {		//if mobile exists, but password is wrong
