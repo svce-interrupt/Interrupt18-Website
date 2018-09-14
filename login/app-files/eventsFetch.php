@@ -1,4 +1,5 @@
 <?php
+header('Content-type: application/json');
 class Events{
 	var $LogiciansCode = "0";
 	var $PitchPerfect = "0";
@@ -37,7 +38,8 @@ if(mysqli_num_rows($resultFromDB) > 0){
 	}
 	
 	$myJSON = json_encode($obj);
-	return $myJSON;
+	echo $myJSON;
+	
 }
 else{
 	return "no results";
