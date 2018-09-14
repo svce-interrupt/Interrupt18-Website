@@ -11,6 +11,7 @@ body{
 	margin: 2.5% 2.4%;
 	padding-bottom: 5%;
 	border: 1px dashed white;
+	text-align: center;
 }
 
 #title{
@@ -44,9 +45,8 @@ body{
 	text-decoration: none;
 	color: #29B6F6;
 	width: 30%;
-	margin: 0 auto;
-	margin-top: 3%;
-	display: block;
+	margin: 3% .25% 0% .25%;
+	display: inline-block;
 	text-align: center;
 	border: 1px dashed #29B6F6;
 	padding: 1% 0%;
@@ -58,13 +58,18 @@ body{
 }
 .red{
 	margin-top: 1%;
-	color: red;
-	border: 1px dashed red;
+	color: white;
+	border: 1px dashed white;
 }
 .green{
 	margin-top: 1%;
 	color: #04bf00;
 	border: 1px dashed #04bf00;
+}
+.orange{
+	margin-top: 1%;
+	color: #FFFF00;
+	border: 1px dashed #FFFF00;
 }
 
 #cursor-blink {
@@ -106,6 +111,7 @@ body{
 		margin-bottom: 0.25%;
 	}
 	.home-links{
+		display: block;
 		width: 85%;
 		margin-top: 8%;
 		border: 1px dashed #29B6F6;
