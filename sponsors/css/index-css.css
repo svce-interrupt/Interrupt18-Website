@@ -55,10 +55,12 @@ body{
 @media only screen and (max-width: 1000px) {
 
 	body{
-		width: 100%;
+		width: 95%;
+		margin-left: 2.4%;
 		margin: 2.5% 0%;
 		padding-bottom: 5%;
 		border: none;
+		border: 1px solid white;
 	}
 
 	#title{
@@ -70,7 +72,7 @@ body{
 	.intro-text{
 		width: 100%;
 		margin: 3% 0% 2% 0%;
-		font-size: 175%;
+		font-size: 100%;
 		text-align: center;
 	}
 	.intro-body{
@@ -81,12 +83,11 @@ body{
 		margin-bottom: 0.25%;
 	}
 	.home-links{
-		width: 70%;
-		font-weight: 700;
+		width: 90%;
 		margin-top: 8%;
 		border: 3px dashed #29B6F6;
-		padding: 3% 0%;
-		font-size: 170%;
+		padding: 4% 0%;
+		font-size: 100%;
 	}
 	.home-links:hover{
 		border: 3px dashed yellow;
