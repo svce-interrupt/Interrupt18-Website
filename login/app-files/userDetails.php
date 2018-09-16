@@ -1,4 +1,8 @@
 <?php
+
+header("Content-Type: application/json");
+
+
 class  User{
 	var $college = "";
 	var $email = "";
@@ -23,7 +27,9 @@ if(mysqli_num_rows($resultFromDB) > 0){
 	$obj->email = $row['email'];
 	$obj->name = $row['name'];//------------------------------check db column here
 	$myJSON = json_encode($obj);
-	return $myJSON;
+
+	echo ($myJSON);
+
 }
 else{
 	return "no results";
