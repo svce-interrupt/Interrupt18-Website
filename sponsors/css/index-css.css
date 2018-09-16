@@ -11,17 +11,23 @@ body{
 	margin: 2.5% 2.4%;
 	border: 1px dashed white;
 	padding-bottom: 2.5%;
+	text-align: center;
 }
 
 #sponsor-text{
 	text-align: center;
-	margin: 7% 0% 5% 0%;
-	font-size: 150%;
+	width: 75%;
+	display: block;
+	margin: 5% auto 5% auto;
+	font-size: 135%;
 	color: yellow;
 }
+.sponsor-link{
+	text-decoration: none;
+}
 .sponsor-logo{
-	width: 20%;
-	margin: 0% 6%;
+	width: 15%;
+	margin: 2% 3%;
 	display: inline-block;
 }
 .sponsor-names{
@@ -44,34 +50,6 @@ body{
 .home-links:hover{
 	color: yellow;
 	border: 1px dashed yellow;
-}
-
-.left{
-	margin-left: 12%;
-	margin-right: 0%;
-}
-.right{
-	margin-left: 0%;
-	margin-right: 12%;
-}
-
-.yellow{
-	color: yellow;
-}
-.red{
-	color: red;
-}
-.purple{
-	color: purple;
-}
-.blue{
-	color: #29B6F6;
-}
-.orange{
-	color: orange;
-}
-.green{
-	color: green;
 }
 
 @media only screen and (max-width: 1000px) {
