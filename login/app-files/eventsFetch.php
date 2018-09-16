@@ -1,5 +1,4 @@
 <?php
-header('Content-type: application/json');
 class Events{
 	var $LogiciansCode = "0";
 	var $PitchPerfect = "0";
@@ -15,7 +14,7 @@ class Events{
 	var $WorkshopAWS = "0";
 }
 $servername = "localhost";
-$username = "root";
+$username = "arjun1001";
 $password = "";
 $db_name = "INTERRUPT";
 $conn = mysqli_connect($servername, $username, $password, $db_name);
@@ -38,8 +37,7 @@ if(mysqli_num_rows($resultFromDB) > 0){
 	}
 	
 	$myJSON = json_encode($obj);
-	echo $myJSON;
-	
+	return $myJSON;
 }
 else{
 	return "no results";

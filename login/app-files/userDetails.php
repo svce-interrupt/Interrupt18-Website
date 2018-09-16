@@ -1,12 +1,11 @@
 <?php
-header('Content-type: application/json');
 class  User{
 	var $college = "";
 	var $email = "";
 	var $name = "";
 }
 $servername = "localhost";
-$username = "root";
+$username = "arjun1001";
 $password = "";
 $db_name = "INTERRUPT";
 $conn = mysqli_connect($servername, $username, $password, $db_name);
@@ -24,7 +23,7 @@ if(mysqli_num_rows($resultFromDB) > 0){
 	$obj->email = $row['email'];
 	$obj->name = $row['name'];//------------------------------check db column here
 	$myJSON = json_encode($obj);
-	echo $myJSON;
+	return $myJSON;
 }
 else{
 	return "no results";

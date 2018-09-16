@@ -2,7 +2,7 @@
 		// if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			// db credentials
 			$dbservername="localhost";
-			$dbusername= "root";
+			$dbusername= "arjun1001";
 			$dbpassword="";
 			$dbname="INTERRUPT";
 			$connect=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
