@@ -45,8 +45,8 @@ body{
 	text-decoration: none;
 	color: #29B6F6;
 	width: 30%;
-	margin: 3% .25% 0% .25%;
-	display: inline-block;
+	margin: 3% 35% 0% 35%;
+	display: block;
 	text-align: center;
 	border: 1px dashed #29B6F6;
 	padding: 1% 0%;
@@ -58,8 +58,8 @@ body{
 }
 .red{
 	margin-top: 1%;
-	color: white;
-	border: 1px dashed white;
+	color: red;
+	border: 1px dashed red;
 }
 .green{
 	margin-top: 1%;
