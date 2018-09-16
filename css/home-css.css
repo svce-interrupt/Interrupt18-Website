@@ -45,7 +45,7 @@ body{
 	text-decoration: none;
 	color: #29B6F6;
 	width: 30%;
-	margin: 3% 35% 0% 35%;
+	margin: 3% auto 0% auto;
 	display: block;
 	text-align: center;
 	border: 1px dashed #29B6F6;
