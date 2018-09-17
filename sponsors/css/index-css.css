@@ -31,15 +31,20 @@ body{
 	margin: 2% 3%;
 	display: inline-block;
 }
+
 .careerlauncher{
 	width: 13.5%;
 }
+.alumni{
+	width: 13.5%;
+}
+
 .home-links{
 	text-decoration: none;
 	color: #29B6F6;
 	width: 30%;
 	margin: 0 auto;
-	margin-top: 3%;
+	margin-top: 1%;
 	display: block;
 	text-align: center;
 	border: 1px dashed #29B6F6;
@@ -49,6 +54,15 @@ body{
 .home-links:hover{
 	color: yellow;
 	border: 1px dashed yellow;
+}
+
+.white{
+	color: white;
+	border: 1px dashed white;
+}
+.red{
+	color: red;
+	border: 1px dashed red;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -68,6 +82,8 @@ body{
 	}
 
 	#sponsor-text{
+		width: 80%;
+		margin-left: 10%;
 		margin-top: 12%;
 		margin-bottom: 12%;
 		display: block;
@@ -83,9 +99,14 @@ body{
 	.sponsor-logo{
 		width: 50%;
 	}
+
 	.careerlauncher{
 		width: 43%;
 	}
+	.alumni{
+		width: 43%;
+	}
+
 	.intro-body{
 		width: 95%;
 		margin:0 auto 3% auto;
@@ -102,5 +123,18 @@ body{
 	}
 	.home-links:hover{
 		border: 1px dashed yellow;
+	}
+	.second-link{
+		margin-top: 3%;
+	}
+
+	.white{
+		color: white;
+		border: 1px dashed white;
+	}
+	.red{
+		margin-top: 3%;
+		color: red;
+		border: 1px dashed red;
 	}
 }
