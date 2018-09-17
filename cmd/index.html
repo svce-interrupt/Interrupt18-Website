@@ -12,7 +12,7 @@
                 <meta name="author" content="SVCE Interrupt Web Team 2018">
 
 		<script type="text/javascript">
-			if (screen.width <= 1024) {
+			if (screen.width <= 1000) {
 				window.location = "m/";
 			}
 		</script>
@@ -44,7 +44,8 @@
 
 		var cmdlinks1="<a href='http://interrupt2k18.in/' class='cmd-links'>home</a> <br>"+
 		"<a href='http://interrupt2k18.in/login/' class='cmd-links'>login</a> <br>"+
-		"<a href='http://www.interrupt2k18.in/transport/' class='cmd-links'>transport</a> <br>"+
+		"<a href='http://interrupt2k18.in/transport/' class='cmd-links'>transport</a> <br>"+
+		"<a href='http://interrupt2k18.in/team/' class='cmd-links'>organising team</a> <br>"+
 		"<span class='cmd-links' onclick='setTerminalText(2)'>contact-us</span> <br>"+
 		"<span class='cmd-links' onclick='setTerminalText(15)'>guidelines</span> <br><br>";
 		
@@ -449,7 +450,7 @@
 		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
-			else if (input=="TEAM"){
+			else if (input=="ORGANISING TEAM"){
 				window.location.href = "../team/"
 			}
 			else if(input=="GUIDELINES"){
