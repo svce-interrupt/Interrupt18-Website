@@ -5,7 +5,7 @@ header("Content-Type: application/json");
 class Events{
 	var $LogiciansCode = "0";
 	var $PitchPerfect = "0";
-	var $Inquiztize = "0";
+	var $Inquizitive = "0";
 	var $ArtAttack = "0";
 	var $ClashOfCodes = "0";
 	var $TerminalOfSecrets = "0";
@@ -32,7 +32,7 @@ if(mysqli_num_rows($resultFromDB) > 0){
 	while($row = mysqli_fetch_assoc($resultFromDB)){
 		$obj->LogiciansCode = $row['LogiciansCode'];
 		$obj->PitchPerfect = $row['PitchPerfect'];
-		$obj->Inquiztize = $row['Inquiztize'];$obj->ArtAttack = $row['ArtAttack'];
+		$obj->Inquizitive = $row['Inquizitive'];$obj->ArtAttack = $row['ArtAttack'];
 		$obj->ClashOfCodes = $row['ClashOfCodes'];$obj->TerminalOfSecrets = $row['TerminalOfSecrets'];
 		$obj->PresentationHub = $row['PresentationHub'];$obj->TechnoFair = $row['TechnoFair'];
 		$obj->InterruptChallenge = $row['InterruptChallenge'];$obj->PipeThePiper = $row['PipeThePiper'];
