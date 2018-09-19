@@ -32,13 +32,6 @@ body{
 	display: inline-block;
 }
 
-.careerlauncher{
-	width: 13.5%;
-}
-.alumni{
-	width: 13.5%;
-}
-
 .home-links{
 	text-decoration: none;
 	color: #29B6F6;
@@ -98,13 +91,6 @@ body{
 	}
 	.sponsor-logo{
 		width: 50%;
-	}
-
-	.careerlauncher{
-		width: 43%;
-	}
-	.alumni{
-		width: 43%;
 	}
 
 	.intro-body{
