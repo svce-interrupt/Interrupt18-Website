@@ -34,7 +34,7 @@ $email=$_POST['emailInput'];
 $mobile=$_POST['numberInput'];
 
 
-$sql="INSERT INTO users VALUES ('$mobile', '$hashed_password','$college','$name','$email', 0);";
+$sql="INSERT INTO users VALUES ('$mobile', '$hashed_password','$college','$name','$email', 0, 0);";
 $sql2="INSERT INTO events VALUES ('$mobile',$event1,$event2,$event3,$event4,$event5,$event6,$event7,$event8,$event9,$event10,$event11,$event12);";
 
 if(mysqli_multi_query($connect, $sql)){

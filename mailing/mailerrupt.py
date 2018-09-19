@@ -9,14 +9,13 @@ database = 'INTERRUPT'
 
 mobileArray=[]
 nameArray=[]
-collegeArray=[]
 emailArray=[]
 
 # Simple routine to run a query on a database and print the results:
 def doQuery( conn ) :
     cur = conn.cursor()
 
-    cur.execute( "SELECT mobile, name, email from testing;" )
+    cur.execute( "SELECT mobileNo, name, email from users where sentMail=0;" )
 
     for mobile, name, email in cur.fetchall() :
         mobileArray.append(mobile)
@@ -36,7 +35,7 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-email_user = 'interrupt0101@gmail.com'
+email_user = 'interrupt2k18@gmail.com'
 email_password = ''
 
 iterationLength=len(emailArray)
