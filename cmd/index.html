@@ -43,11 +43,11 @@
 		"<span style='color: lightgreen'><span class='underline'>CLICK</span> on the commands to know more.</span><br><br>";
 
 		var cmdlinks1="<a href='http://interrupt2k18.in/' class='cmd-links'>home</a> <br>"+
-		"<a href='http://interrupt2k18.in/login/' class='cmd-links'>login</a> <br>"+
 		"<a href='http://interrupt2k18.in/transport/' class='cmd-links'>transport</a> <br>"+
-		"<a href='http://interrupt2k18.in/team/' class='cmd-links'>organising team</a> <br>"+
-		"<span class='cmd-links' onclick='setTerminalText(2)'>contact-us</span> <br>"+
-		"<span class='cmd-links' onclick='setTerminalText(15)'>guidelines</span> <br><br>";
+		"<span class='cmd-links' onclick='setTerminalText(2)'>contact-us</span> <br><br>"+
+		"<span class='cmd-links' onclick='setTerminalText(15)'>guidelines</span> <br>"+
+                "<a href='http://interrupt2k18.in/team/' class='cmd-links'>interrupt team 2018</a> <br>"+
+		"<span class='cmd-links' onclick='setTerminalText(16)'>easter eggs</span> <br><br>";
 		
 		
 		//The following strings will have span elems at the end. This is to provide an easy way for us to adjust the space between elements in a row. As of now, the commands (names of events) are arranged in columns of 3 and rows of 3.
@@ -173,6 +173,21 @@
 			}
 			else if(input=="RUN"){
 				window.location.href="";
+			}
+			else if(input=="WHOAMI"){
+				document.getElementById("terminal-output").innerHTML+="<br><br>root<br>";
+			}
+			else if(input=="COMPGEN"){
+				var drawing="<br><br>";
+				
+				var outputResult=drawing+"ls - lists all commands<br>"+
+				"help - lists all commands<br>"+
+				"compgen - lists all hidden commands<br>"+
+				"clear - clears output on screen<br>"+
+				"whoami - displays current user"+
+				"<br>";
+
+				document.getElementById("terminal-output").innerHTML+=(outputResult);
 			}
 			else if(input=="LOGICIANS CODE 2.0"){
 				var drawing="<br><br>      _---~~(~~-_.<br>"+
@@ -466,6 +481,14 @@
 		
 				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
 			}
+			else if(input=="EASTER EGGS"){
+				var drawing="<br><br>";
+				var outputResult=drawing+"*  <span style='color: yellow;'>You can try out normal shell commands like clear, ls, help and they might just work!</span><br>"+
+				"*  <span style='color: yellow;'>For a full list of commands, enter 'compgen'.</span><br>"+
+				"*  <span style='color: yellow;'>Also, try using the tab key when typing in a command, it will autocomplete it!</span><br><br>";
+				
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
 			else if(input=="ARJUN"){
 				var drawing="<br><br>    _____    _____<br>   //###\\\\  //###\\\\<br>  //#####\\\\//#####\\\\<br> ||################||<br>  \\\\### Divvzz ###//<br>    \\\\##########//<br>      \\\\######//<br>        \\\\##//<br>          \\/<br><br><br>";
 				
@@ -559,6 +582,9 @@
 			}
 			else if(num==15){
 				str="guidelines";
+			}
+			else if(num==16){
+				str="easter eggs";
 			}
 			
 			document.getElementById("terminal-form-input"+idNum).innerHTML=str;

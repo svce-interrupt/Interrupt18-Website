@@ -29,12 +29,12 @@
 		var typeText="<span style='color: white'>Welcome to the Interrupt Command Prompt! <br>Last login: "+Date().substring(0,24)+" on console</span> <br><br>"+
 		"<span style='color: lightgreen'><span class='underline'>CLICK</span> on the commands to know more.</span><br><br>";
 
-		var cmdlinks1="<a href='http://interrupt2k18.in/' class='cmd-links'>Home</a> <br>"+
-		"<a href='http://interrupt2k18.in/login/' class='cmd-links'>Login</a> <br>"+
-                "<a href='http://interrupt2k18.in/transport/' class='cmd-links'>Transport</a> <br>"+
-		"<a href='http://interrupt2k18.in/team/' class='cmd-links'>Organising Team</a> <br>"+
-		"<span class='cmd-links' onclick='setTerminalText(2)'>Contact-us</span> <br>"+
-		"<span class='cmd-links' onclick='setTerminalText(15)'>Guidelines</span> <br><br>";
+		var cmdlinks1="<a href='http://interrupt2k18.in/' class='cmd-links'>home</a> <br>"+
+                "<a href='http://interrupt2k18.in/transport/' class='cmd-links'>transport</a> <br>"+
+                "<span class='cmd-links' onclick='setTerminalText(2)'>contact-us</span> <br><br>"+
+                "<span class='cmd-links' onclick='setTerminalText(15)'>guidelines</span> <br>"+
+                "<a href='http://interrupt2k18.in/team/' class='cmd-links'>interrupt team 2018</a> <br>"+
+                "<span class='cmd-links' onclick='setTerminalText(16)'>easter eggs</span> <br><br><br>";
 		
 		
 		//The following strings will have span elems at the end. This is to provide an easy way for us to adjust the space between elements in a row. As of now, the commands (names of events) are arranged in columns of 3 and rows of 3.
@@ -448,6 +448,13 @@
                 
                                 document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
                         }
+			else if(input=="EASTER EGGS"){
+				var drawing="<br><br>";
+			
+				var outputResult=drawing+"We decided to add a lot of hidden <br>features to the site, but unfortunately,<br>they won't work on the mobile site!<br>Check out this site on desktop!<br><br>";
+
+				document.getElementById("terminal-output").innerHTML+=("<br>"+outputResult);
+			}
 			else{ //We've put this whole ascii art for the 'command not found' error.
 				var drawing="<br><br> _    _     ___     _    _        _       _<br>"+
 			       "|:|  |:|   /:::\\   |:|  |:|      |  |\\/| | \\ <br>"+
@@ -527,6 +534,9 @@
 			}
 			else if(num==15){
 				str="guidelines";
+			}
+			else if(num==16){
+				str="easter eggs";
 			}
 			
 			document.getElementById("terminal-form-input"+idNum).innerHTML=str;
