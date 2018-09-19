@@ -17,8 +17,8 @@ def doQuery( conn ) :
 
     cur.execute( "SELECT mobileNo, name, email from users where sentMail=0;" )
 
-    for mobile, name, email in cur.fetchall() :
-        mobileArray.append(mobile)
+    for mobileNo, name, email in cur.fetchall() :
+        mobileArray.append(mobileNo)
         nameArray.append(name)
         emailArray.append(email)
 
