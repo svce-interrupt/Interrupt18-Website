@@ -2,7 +2,7 @@
 
 hostname = 'localhost'
 username = 'arjun1001'
-password = 'Robinismyname12345678!!!'
+password = ''
 database = 'INTERRUPT'
 
 # Simple routine to run a query on a database and print the results:
