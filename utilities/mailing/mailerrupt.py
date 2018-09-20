@@ -2,7 +2,7 @@
 
 hostname = 'localhost'
 username = 'arjun1001'
-password = ''
+password = 'Robinismyname12345678!!!'
 database = 'INTERRUPT'
 
 # List variables for storing all the values retrieved from the database
@@ -36,7 +36,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 email_user = 'interrupt2k18@gmail.com'
-email_password = ''
+email_password = 'interrupt2k18@svce'
 
 iterationLength=len(emailArray)
 
