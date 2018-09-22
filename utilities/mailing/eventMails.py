@@ -34,7 +34,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 email_user = 'interrupt2k18@gmail.com'
-email_password = 'interrupt2k18@svce'
+email_password = ''
 
 iterationLength=len(emailArray)
 
