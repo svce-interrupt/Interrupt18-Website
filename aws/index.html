@@ -1,13 +1,6 @@
-<?php
-	session_start();
-	if(!isset($_SESSION['mobile'])) {
-		header('Location: ../login/');
-	}
-?>
 <html>
 	<head>
-		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-		<title>Interrupt '18 | AWS</title>
+		<title>Interrupt '18 | AWS Workshop Registration</title>
 		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
 		<link href="css/index-css.css" rel="stylesheet">
 		<link rel="icon" href="../img/favicon.jpeg">
@@ -24,31 +17,24 @@
 	<body>
 				
 		<pre><span id="title">
-  _____            _     _             _   _             
- |  __ \          (_)   | |           | | (_)            
- | |__) |___  __ _ _ ___| |_ _ __ __ _| |_ _  ___  _ __  
- |  _  // _ \/ _` | / __| __| '__/ _` | __| |/ _ \| '_ \ 
- | | \ \  __/ (_| | \__ \ |_| | | (_| | |_| | (_) | | | |
- |_|  \_\___|\__, |_|___/\__|_|  \__,_|\__|_|\___/|_| |_|
-              __/ |                                      
-             |___/                                       
+      __          _______
+      /\ \        / / ____|
+    /  \ \  /\  / / (___ 
+   / /\ \ \/  \/ / \___ \
+   / ____ \  /\  /  ____) |
+ /_/    \_\/  \/  |_____/
 		</span></pre>
 		
-		<span id="changeHere">
-			
+		<span>
+
 			<form id='register-form' method="post" action="signup.php">
 				<input type='text' name='nameInput' id="account-name" required class='home-links form-input' placeholder='Name'>
 				<input type='tel' name='numberInput' required class='home-links form-input' id='account-number' placeholder='Number' maxlength="10" minlength="10">
 				<input type='text' name='collegeInput' class='home-links form-input long' id="account-college" placeholder='College Name'><br>
 				<input type='email' name='emailInput' required class='home-links form-input' id='account-email' placeholder='Email'><br>
 
-				<button type='button' class='home-links submit-butt' id='create-account'>Create Account!</button>
+				<button type='submit' class='home-links submit-butt' id='create-account'>Register for Workshop!</button>
 				<a href="http://www.interrupt2k18.in/cmd" class="home-links top-links">Go Back To Command Prompt &crarr;</span></a> <!-- The buttons on the home page. -->
-				
-				<br>	
-				<p>RULES:</p>
-				<P>* Only the first 50 registered participants are allowed to take part in the workshop.</p>
-				<p>* A registration fee of Rs.100 should be paid while attending the workshop.</p>
 			</form>
 			
 		</span>

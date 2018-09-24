@@ -1,7 +1,6 @@
 body, html{
 	background-color: black;
 	font-family: "Share Tech Mono", monospace;
-	color: #04bf00;
 	padding: 0;
 	margin: 0;
 }
@@ -36,7 +35,7 @@ body{
 	text-align: center;
 	border: 1px dashed #29B6F6;
 	padding: 1% 0%;
-	font-size: 120%;
+	font-size: 115%;
 	font-family: "Share Tech Mono", monospace;
 	cursor: pointer;
 }
@@ -50,29 +49,15 @@ body{
 	width: 25%;
 }
 
-.orange {
-    color: #fa5c18;
-    border: 1px dashed #fa5c18;
+.formText{
+	font-size: 110%;
+	width: 100%;
+	text-align: center;
+	color: yellow;
+	margin-top: 5%;
 }
-
-.lilac {
-    color: #edd5cd
-    border: 1px dashed #edd5cd;
-}
-
-.yellow {
-	color: yellow !important;
-	border: 1px dashed yellow !important;
-}
-
-.light-red {
-    color: #d97b7a;
-    border: 1px dashed #d97b7a;
-}
-
-.cyan {
-    color: #7189bf;
-    border: 1px dashed #7189bf;
+.top1{
+	margin-top: 1%;
 }
 
 .below{

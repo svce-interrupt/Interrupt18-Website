@@ -2,7 +2,7 @@
 // echo "<script>alert('Thank you for signing up!');</script>";
 
 $dbservername="localhost";
-$dbusername= "root";
+$dbusername= "arjun1001";
 $dbpassword="";
 $dbname="INTERRUPT";
 
@@ -18,12 +18,11 @@ $college=cleanString($_POST['collegeInput']);
 $email=$_POST['emailInput'];
 $mobile=$_POST['numberInput'];
 
-
-$sql="INSERT INTO aws VALUES ('$mobile','$college','$name','$email');";	
+$sql="INSERT INTO aws_workshop VALUES (SNO, '$mobile','$name','$college','$email', 0);";
 
 if(mysqli_query($connect, $sql)){
-		echo "<script>alert('Thank you for signing up!');</script>";
-		echo "<script>window.location.href='../cmd';</script>";
+		echo "<script>alert('Thank you for signing up for this workshop! An email regarding the details will be sent to you shortly!');</script>";
+		echo "<script>window.location.href='../';</script>";
 	}
 
 
