@@ -71,4 +71,6 @@ for i in range(0,iterationLength):
     server.sendmail(email_user,email_send,text)
     server.quit()
 
+    print("Sent mail to "+email_send)
+
 # The code ends here.
