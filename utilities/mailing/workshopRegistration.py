@@ -2,7 +2,7 @@
 
 hostname = 'localhost'
 username = 'arjun1001'
-password = '!'
+password = ''
 database = 'INTERRUPT'
 
 # List variables for storing all the values retrieved from the database
@@ -14,7 +14,7 @@ emailArray=[]
 def doQuery( conn ) :
     cur = conn.cursor()
 
-    cur.execute( "SELECT name, email from users where sentWorkshopRegistration=0;" )
+    cur.execute( "SELECT name, email from users where sentWorkshopRegistration=2;" )
 
     for name, email in cur.fetchall() : 
         nameArray.append(name)
@@ -41,7 +41,7 @@ iterationLength=len(emailArray)
 for i in range(0,iterationLength):
 
     email_send = emailArray[i]
-    subject = 'Pipe The Piper - Second Chance'
+    subject = 'AWS Workshop Registration'
 
     msg = MIMEMultipart()
     msg['From'] = email_user

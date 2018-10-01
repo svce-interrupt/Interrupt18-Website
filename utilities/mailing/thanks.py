@@ -14,7 +14,7 @@ emailArray=[]
 def doQuery( conn ) :
     cur = conn.cursor()
 
-    cur.execute( "SELECT name, email from users where sentOnlineEventsMail=2;" )
+    cur.execute( "SELECT name, email from users;" )
 
     for name, email in cur.fetchall() :
         nameArray.append(name)
@@ -41,15 +41,17 @@ iterationLength=len(emailArray)
 for i in range(0,iterationLength):
 
     email_send = emailArray[i]
-    subject = 'Interrupt 2k18 - Events Online!'
+    subject = 'Thank You!'
 
     msg = MIMEMultipart()
     msg['From'] = email_user
     msg['To'] = email_send
     msg['Subject'] = subject
 
-    body = "Hey "+nameArray[i]+",\nAs you might know, Interrupt 2k18 has two online events taking place this year! 'Pipe The Piper', which is an online coding event hosted on HackerRank (On September 26th and 27th, 2018), and 'Interrupt Challenge', an online puzzle-solving contest and our signature event! Also, to note, winners of these events MUST be present in college on the day of Interrupt to receive their prizes and must bring ID proof along with them. Students participating in these events must currently be in college.\n\nIf you'd like to participate in these events, click the links below.\n\nInterrupt Challenge - http://interrupt2k18.in/InterruptChallenge/\nPipe The Piper - https://www.hackerearth.com/challenge/college/pipe-the-piper-day1/\n\nHope you have fun,\nTeam Interrupt '18."
+    body = "Dear "+nameArray[i]+",\n\nWe are pleased to say that this year's Interrupt was a grand success with more than 600 registrations and participants! We thank you for your role in making this happen! Hope to see you at Interrupt next year as well! So long!\n\nHope you have a good day,\n Team Interrupt '18"
+
     msg.attach(MIMEText(body,'plain'))
+
     text = msg.as_string()
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.starttls()
