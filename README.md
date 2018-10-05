@@ -6,6 +6,7 @@ This is the git for the official website for Interrupt 2018. The design and appe
 ## Languages
 * **Front-End** - HTML, CSS and Javascript
 * **Back-End** - PHP and MySQL
+* **Mail** - Python (SMTPLib Package)
 
 ## Tools
 * **Text Editors** - TextMate, SublimeText, Vim
