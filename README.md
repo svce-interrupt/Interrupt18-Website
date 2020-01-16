@@ -1,7 +1,7 @@
 # Interrupt18-Website
 This is the git for the official website for Interrupt 2018. The design and appearance of the website has been inspired from the linux terminal, a tool that is at the heart of every passionate developer and coding enthusiast. The website lets users gain information about the event and register using the 'Interrupt Command Prompt', which recreates the experience of using a terminal. Users can register for certain events and then login and edit these events if they want.
 
-[Click here to access the site!](http://interrupt2k18.in)
+[Click here to access the site!](http://arjunaravind.in/interrupt18)
 (The site is currently a mirrored version hosted on a different server)
 
 ## Languages
